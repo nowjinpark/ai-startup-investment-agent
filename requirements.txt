@@ -1,5 +1,5 @@
-# 연결 연습과 예제 PDF 출력에 필요한 패키지만 설치합니다.
-# LangGraph는 수업 langgraph-v1의 버전에 맞춥니다.
+# 연결 틀에 필요한 패키지만 설치합니다. 모델은 다운로드하지 않습니다.
 langgraph==1.0.9
+python-dotenv==1.2.2
 reportlab==4.5.1
 pypdf==6.19.0

@@ -1,131 +1,121 @@
-# AI Startup Investment Evaluation Agent
+# Physical AI 스타트업 투자 분석
 
-**기업 자료를 읽고, 투자할 만한지 근거와 함께 평가하는 AI를 만드는 과제입니다.**
+## Overview
 
-[교수님 과제 안내](https://actually-war-1ea.notion.site/AI-1cf7f4c86693800e9e11fa490ed1a2ff)를 기준으로 진행합니다.
-대상 회사는 아직 미정입니다. 회사가 바뀌어도 같은 틀을 사용합니다.
+Physical AI 기업을 조사하고 투자 판단 보고서를 만드는 5인 팀 프로젝트입니다.
+분야는 정했으며 실제 분석 기업과 개인별 역할은 아직 정하지 않았습니다.
+지금은 **가상 기업으로 연결을 확인하는 실행 틀**입니다. 실제 LLM·RAG는 각 담당자가 구현해야 합니다.
+API 키나 모델 다운로드 없이 예제를 실행할 수 있습니다.
 
-> 지금 코드는 **가상기업으로 실행 순서와 파일 저장을 연습하는 시작 코드**입니다.
-> 실제 자료 검색·AI 분석은 앞으로 만들 부분입니다. 예제 보고서는 제출용이 아닙니다.
+## Features
 
-## Overview · 무엇을 만드나요?
+| 지금 가능한 일 | 앞으로 구현할 일 |
+| --- | --- |
+| 5개 역할을 LangGraph로 연결 | 실제 기업 자료 수집·검색·분석 |
+| 한 역할만 따로 실행 | LLM과 오픈소스 임베딩을 이용한 Agentic RAG |
+| 보류하면 다음 후보로 이동, 모두 보류하면 종료 | 근거가 있는 투자 기준·평가 |
+| 상태 JSON·보고서 Markdown·PDF 저장 | 실제 출처가 있는 최종 보고서 |
 
-자료를 모으고 → 기술·시장·경쟁사를 분석하고 → 투자 또는 보류를 판단하고 → 보고서를 저장합니다.
-찾은 자료를 답변의 근거로 사용하는 것이 **RAG**이고, 작업 순서와 갈림길을 연결하는 도구가 **LangGraph**입니다.
+교수님 [과제 안내](https://actually-war-1ea.notion.site/AI-1cf7f4c86693800e9e11fa490ed1a2ff)에 맞춰 완성할 조건입니다.
 
-## Features · 지금 되는 일과 남은 일
+- LangGraph 멀티에이전트·Agentic RAG 사용, 탐색·기술·시장 중 최소 한 역할에 RAG 적용.
+- 분석 대상은 Physical AI 분야의 비상장 Seed~Series C 기업이며, Exit를 완료하지 않은 기업.
+- 검색에 사용하는 문서는 개수와 관계없이 **전체 200쪽 이하**. 오픈소스 임베딩 사용 및 선택 이유 설명.
+- 투자 보류 시 다음 후보 분석, 모든 후보 보류 시에도 이유를 담은 보고서로 종료.
+- 최종 PDF **5쪽 이하**, Summary 반 쪽 이하, Reference에 실제 사용한 출처 기재.
+- README를 바탕으로 10분 발표. 시장과 경쟁사 분석을 합쳐 교수님 예시의 6역할을 5역할로 운영합니다.
 
-| 지금 되는 일 | 앞으로 만들 일 |
-|---|---|
-| 6단계 작업 연결 | 실제 기업 자료 읽기·검색 |
-| 보류하면 다음 후보로 이동 | 오픈소스 임베딩 비교·선정 |
-| 후보를 다 보면 종료 | 근거를 바탕으로 AI가 분석·판단 |
-| 예제 결과를 PDF로 저장 | 검색 필요성 판단·도구 호출·관련성 확인 |
-| 기본 동작 자동 확인 | 실제 결과 평가·최종 보고서 작성 |
+## Tech Stack
 
-**자료가 부족하면 재검색하거나 보류하는 동작까지 완성해야 합니다.** 단순히 함수를 순서대로 실행하는 것만으로 Agentic RAG가 완성되지는 않습니다.
+| 항목 | 사용 |
+| --- | --- |
+| Python / LangGraph | 수업 기준 Python 3.11 / LangGraph 1.0.9 |
+| 환경 설정 | python-dotenv (`main.py`가 프로젝트의 `.env`를 읽음) |
+| PDF 저장·검사 | reportlab / pypdf |
+| LLM·임베딩·검색 저장소 | 팀에서 선택 후 담당자가 추가 |
+| 검색 평가 | Hit Rate@K / MRR: **미측정**. 실제 RAG 구현 후 측정값 기록 |
 
-## Usage · 처음 시작하는 순서
+## Agents
 
-1. 아래 명령으로 저장소를 받습니다.
-2. 수업에서 사용한 **Python 3.11 / LangGraph 환경**을 선택합니다. VS Code 노트북도 같은 커널을 선택합니다.
-3. 필요한 패키지를 설치하고 `start.ipynb`를 위에서부터 실행합니다. 터미널에서는 `python app.py`로 같은 예제를 실행할 수 있습니다.
+| 역할 | 수정할 파일 | 반환할 키 |
+| --- | --- | --- |
+| A. 기업 탐색·정보 | `agents/company.py` | `company_info` |
+| B. 기술 분석 | `agents/technology.py` | `technology` |
+| C. 시장·경쟁사 분석 | `agents/market_competition.py` | `market_competition` |
+| D. 투자 판단 | `agents/investment.py` | `investment` |
+| E. 보고서 본문 전체 작성 | `agents/report.py` | `report` |
+
+각 파일의 `run(state)`를 구현하면 됩니다. 입력·출력 약속은 `shared.py`에 있습니다.
+다른 4개 역할은 예제로 둔 채 내 역할부터 시험할 수 있습니다. [담당자 안내](docs/agent-guide.md)를 먼저 읽어주세요.
+내 역할 하나의 완성은 개별 개발 단계입니다. 앞 단계에 예제가 남아 있으면 전체 결과도 연습용으로 표시됩니다.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A[후보 목록] --> B[기업 정보] --> C[기술 분석] --> D[시장·경쟁사] --> E[투자 판단]
+    E -->|투자| F[보고서 작성]
+    E -->|보류·다음 후보 있음| B
+    E -->|모두 보류| F
+    F --> G[JSON·Markdown·PDF 저장]
+```
+
+후보는 사람이 `data/companies.json`에 정해도 됩니다. 자동 후보 탐색은 선택 사항입니다.
+분석 기록은 `history`에 모으며, 보고서 담당자는 본문을 만들고 공통 저장 코드가 PDF를 만듭니다.
+
+## Directory Structure
+
+| 경로 | 용도 |
+| --- | --- |
+| `main.py` / `shared.py` | 실행·연결 / 공통 입력·출력 형식 |
+| `agents/` | 팀원별 함수 5개 |
+| `data/` | 후보 목록·단독 시험용 입력 ([설명](data/README.md)) |
+| `export_outputs.py` | 결과 파일·PDF 저장 |
+| `tests/` | 연결과 입력·출력 약속 검사 |
+| `docs/agent-guide.md` / `start.ipynb` | 담당자 안내 / 실행 노트북 |
+| `outputs/` | 실행 결과, Git에 올리지 않음 |
+
+## Usage
+
+저장소를 내려받은 후 그 폴더에서 실행합니다. 기존 수업 환경 대신 **프로젝트 전용 `.venv`**를 권장합니다.
 
 ```bash
 git clone https://github.com/nowjinpark/ai-startup-investment-agent.git
 cd ai-startup-investment-agent
+python3.11 -m venv .venv
+source .venv/bin/activate
 python -m pip install -r requirements.txt
-python app.py
+python main.py
 ```
 
-- 기존에 저장소를 받았다면 그 폴더에서 `git pull`로 갱신합니다. 작업 중인 파일은 먼저 저장·커밋합니다.
-- 예제 실행에는 API 키가 필요 없고, 유료 API 호출이나 모델 다운로드도 없습니다.
-- 결과는 `outputs/demo/`에 저장됩니다. 최종 과제 결과와 구분하세요.
-- 현재 `--mode live`는 미구현 안내로 종료됩니다.
-- 실제 RAG를 붙일 때는 [수업 코드 안내](docs/course-guide.md)의 순서로 필요한 패키지를 추가합니다.
+Windows에서는 환경 생성에 `py -3.11 -m venv .venv`, 활성화에 PowerShell 기준 `.venv\Scripts\Activate.ps1`을 사용합니다.
+전체 실행 결과는 `outputs/state.json`, `outputs/report.md`, `outputs/report.pdf`에 저장됩니다.
+PDF는 Mac의 AppleGothic, Windows의 맑은 고딕, Linux의 NanumGothic을 자동으로 찾습니다. 없으면 `.env`의 `REPORT_FONT_PATH`에 한글 TTF 파일 위치를 넣고 PDF 화면도 확인하세요.
+지금은 가상 기업 둘 다 보류하는 예제입니다. 실행 성공이 실제 AI 분석의 완성을 뜻하지는 않습니다.
 
-## Agents · 역할을 어떻게 나누나요?
-
-**팀원 수는 5명, 프로그램의 작업 단계는 6개입니다.** 한 사람이 관련된 두 단계를 맡아도 됩니다.
-
-| 담당 | 맡을 일 | 주로 볼 파일 |
-|---|---|---|
-| A | 자료 읽기·정리, 기업 기초정보 | `agents/company.py`, `data/` |
-| B | 임베딩·검색, 기술 요약 | `agents/technology.py` |
-| C | 시장 조사, 경쟁사 비교 | `agents/market.py`, `agents/competition.py` |
-| D | 평가 기준, 투자 판단, 보고서 내용 | `agents/evaluation.py`, `evaluation.json` |
-| E | 전체 연결, 보고서 파일 저장 | `app.py`, `agents/state.py`, `agents/report.py` |
-
-처음에는 **어떤 정보를 주고받을지만 함께 정하고**, 각자 예제 결과로 개발합니다.
-자세한 방법과 발표 순서는 [역할 분담](docs/team-plan.md)에 있습니다.
-
-## Architecture · 실행 순서
-
-```mermaid
-flowchart TD
-    A[기업 탐색] --> B[기술 요약]
-    B --> C[시장 평가]
-    C --> D[경쟁사 비교]
-    D --> E[투자 판단]
-    E -->|보류·다음 후보 있음| A
-    E -->|투자 또는 후보 소진| F[보고서 저장]
-    F --> G[종료]
+```bash
+python main.py --agent technology
+python main.py --agent technology --state data/test_state.json --output outputs/technology
+python main.py --companies data/companies.json --output outputs/full
 ```
 
-현재 연결 연습의 흐름입니다. B의 실제 기술 분석에는 수업 `13-AgenticRAG.ipynb`의 검색 도구·관련성 확인 흐름을 붙일 계획입니다.
+`--agent`에는 위 표의 파일명에서 `.py`를 뺀 이름을 넣습니다. 기본 입력은 `data/test_state.json`입니다.
+`--state`는 단독 실행의 입력, `--companies`는 전체 실행의 후보 목록, `--output`은 결과 폴더를 바꿉니다.
+단독 결과는 `outputs/역할명.json`에 저장됩니다. `report` 단독 실행은 Markdown·PDF도 만듭니다.
+노트북 사용자는 `start.ipynb`에서 `.venv`의 Python을 커널로 선택하고 위에서부터 실행하세요.
+노트북을 사용할 때만 필요하면 활성화한 `.venv`에 `python -m pip install ipykernel`을 실행합니다.
+실제 API 연동 때만 `.env.example`을 참고해 프로젝트 루트에 `.env`를 만드세요. 키와 `.env`는 Git에 올리지 않습니다.
 
-## Tech Stack · 사용할 도구
+작업은 **개인 브랜치 → 내 역할 단독 실행 → 전체 실행 → PR → 조원 검토 후 병합** 순서입니다.
+각자 자기 역할 파일과 필요한 프롬프트·출처 자료를 수정하고, `shared.py`·`main.py` 변경은 먼저 팀과 협의합니다.
+CI는 5개 함수를 예제로 바꿔 연결·반환 형식을 검사하며 유료 API를 호출하지 않습니다. 실제 AI 품질은 각자 수동으로 확인해야 합니다.
 
-| 항목 | 현재 상태 |
-|---|---|
-| Framework | LangGraph 1.0.9 — 수업 환경에 맞춤 |
-| LLM / Generator | 미선정·미연결 |
-| LLM / Judge | 미선정·미연결 |
-| Retrieval / VectorDB | FAISS 수업 예제부터 적용 예정, 미구현 |
-| Hit Rate@K / MRR | 실제 검색을 만든 후 측정, 아직 결과 없음 |
-| Embedding | 오픈소스 후보 비교 후 선정, 미구현 |
-| PDF 저장 | ReportLab·pypdf — 보고서를 파일로 저장·확인하는 보조 도구 |
+## Contributors
 
-## Directory Structure · 파일 위치
-
-```text
-start.ipynb       # 처음 열어볼 실행 노트북
-app.py            # 작업 순서 연결·실행
-project.json      # 회사·도메인·팀 정보 (실제 분석 연결 시 사용)
-evaluation.json   # 평가 기준 초안
-agents/           # 각 담당자의 작업 함수·함께 주고받을 정보
-data/             # 예제 입력과 자료 목록
-prompts/          # 실제 AI에게 줄 질문·작성 규칙을 넣을 곳
-outputs/          # 실행 결과가 저장되는 곳
-docs/             # 수업 코드 안내·역할 분담·과제 확인·설계 초안
-tests/            # 연결과 출력이 깨지지 않았는지 자동 확인
-```
-
-## 과제 진행 순서
-
-1. [수업 코드 안내](docs/course-guide.md)에서 자기 담당 예제를 확인합니다.
-2. [설계 초안](docs/design.md)의 빈칸을 함께 채웁니다.
-3. 역할별 최소 기능을 만들고, 일찍 한 번 연결해 봅니다.
-4. [과제 체크리스트](docs/assignment-checklist.md)로 실제 결과와 제출물을 확인합니다.
-
-**필수:** 지정 분야의 스타트업, 문서 총 200쪽 이하, 오픈소스 임베딩, 지정 역할 중 최소 하나의 RAG, LangGraph 멀티에이전트·Agentic RAG, 보류 시 후보 변경·종료 처리.
-**제출:** DAY 3 10시 설계 PDF / 15시 GitHub·README·최종 보고서 PDF. 보고서는 5쪽 이하, 발표는 README로 10분입니다.
-
-## Contributors · 팀원
-
-이름 순서는 역할 배정 순서가 아닙니다. 역할을 정한 뒤 **실제로 한 개발 작업**을 적습니다.
-
-| 이름 | GitHub | 실제 한 일 |
-|---|---|---|
-| 김민정 | 미정 | 미정 |
-| 김희윤 | 미정 | 미정 |
-| 박종찬 | 미정 | 미정 |
-| 박진원 | [nowjinpark](https://github.com/nowjinpark) | 미정 |
-| 이현우 | 미정 | 미정 |
-
-## Lessons Learned · 해보고 배운 점
-
-개발 후 작성합니다. 발표 마지막에는 **보고서 핵심 결론과 배운 점**을 함께 설명합니다.
-
-수업 원본 PDF·노트북은 각자 받은 자료를 참고합니다. 이 저장소에는 원본을 재배포하지 않습니다.
-API 키는 각자의 `.env`에 보관합니다. 현재 예제는 `.env`를 읽지 않습니다.
+| 이름 | 담당 | GitHub |
+| --- | --- | --- |
+| 김민정 | 배정 예정 | — |
+| 김희윤 | 배정 예정 | — |
+| 박종찬 | 배정 예정 | — |
+| 박진원 | 배정 예정 | [nowjinpark](https://github.com/nowjinpark) |
+| 이현우 | 배정 예정 | — |
