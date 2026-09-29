@@ -1,0 +1,4 @@
+# 기본 협업 데모 의존성. 실제 설치 버전은 requirements.txt에 고정합니다.
+langgraph>=1.0,<2
+reportlab>=4.4,<5
+pypdf>=6,<7

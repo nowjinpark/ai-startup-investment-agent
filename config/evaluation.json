@@ -1,0 +1,12 @@
+{
+  "status": "draft_requires_team_agreement",
+  "weights": {
+    "founder": 30,
+    "market": 25,
+    "technology": 15,
+    "advantage": 10,
+    "traction": 10,
+    "deal": 10
+  },
+  "invest_threshold": 70
+}

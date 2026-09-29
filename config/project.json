@@ -1,0 +1,14 @@
+{
+  "project_name": "AI Startup Investment Evaluation Agent",
+  "domain": null,
+  "as_of_date": null,
+  "candidates": [],
+  "source_manifest": "data/sources.json",
+  "max_document_pages": 200,
+  "max_retrieval_retries": 1,
+  "report_max_pages": 5,
+  "campus": null,
+  "class_name": null,
+  "contributors": ["김민정", "김희윤", "박종찬", "박진원", "이현우"],
+  "status": "team_selection_pending"
+}

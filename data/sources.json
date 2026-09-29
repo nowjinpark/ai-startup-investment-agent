@@ -1,0 +1,5 @@
+{
+  "status": "not_collected",
+  "sources": [],
+  "required_fields": ["id", "candidate_id", "title", "url", "published_at", "source_type", "local_path", "page_count", "redistribution_allowed"]
+}
