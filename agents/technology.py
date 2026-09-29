@@ -1,9 +1,9 @@
-"""B 담당: 오픈 임베딩·RAG를 만들고 기술 분석에 연결합니다."""
+"""B 담당 — 김민정: 오픈 임베딩·RAG를 만들고 기술 분석에 연결합니다."""
 from shared import Analysis, State
 
 
 def run(state: State) -> dict:
-    """B 담당 파일입니다. 입력은 state['company'], 결과는 technology에 저장됩니다.
+    """김민정 담당 파일입니다. 입력은 state['company'], 결과는 technology에 저장됩니다.
 
     TODO: 아래 예제를 오픈 임베딩·문서 검색·LLM 기술 분석으로 교체하세요.
     검색한 문서의 제목·URL·페이지를 sources에 실제로 기록하세요.

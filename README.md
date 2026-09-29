@@ -3,7 +3,7 @@
 ## Overview
 
 Physical AI 기업을 조사하고 투자 판단 보고서를 만드는 5인 팀 프로젝트입니다.
-분야는 정했으며 실제 분석 기업과 개인별 역할은 아직 정하지 않았습니다.
+분야와 개인별 담당 역할은 정했으며 실제 분석 기업은 아직 정하지 않았습니다.
 지금은 **가상 기업으로 연결을 확인하는 실행 틀**입니다. 실제 LLM·RAG는 각 담당자가 구현해야 합니다.
 API 키나 모델 다운로드 없이 예제를 실행할 수 있습니다.
 
@@ -37,13 +37,13 @@ API 키나 모델 다운로드 없이 예제를 실행할 수 있습니다.
 
 ## Agents
 
-| 역할 | 수정할 파일 | 반환할 키 |
-| --- | --- | --- |
-| A. 기업 탐색·정보 | `agents/company.py` | `company_info` |
-| B. 기술 분석 | `agents/technology.py` | `technology` |
-| C. 시장·경쟁사 분석 | `agents/market_competition.py` | `market_competition` |
-| D. 투자 판단 | `agents/investment.py` | `investment` |
-| E. 보고서 본문 전체 작성 | `agents/report.py` | `report` |
+| 역할 | 담당자 | 수정할 파일 | 반환할 키 |
+| --- | --- | --- | --- |
+| A. 기업 탐색·정보 | 박종찬 | `agents/company.py` | `company_info` |
+| B. 기술 분석 | 김민정 | `agents/technology.py` | `technology` |
+| C. 시장·경쟁사 분석 | 김희윤 | `agents/market_competition.py` | `market_competition` |
+| D. 투자 판단 | 이현우 | `agents/investment.py` | `investment` |
+| E. 보고서 본문 전체 작성 | 박진원 | `agents/report.py` | `report` |
 
 각 파일의 `run(state)`를 구현하면 됩니다. 입력·출력 약속은 `shared.py`에 있습니다.
 다른 4개 역할은 예제로 둔 채 내 역할부터 시험할 수 있습니다. [담당자 안내](docs/agent-guide.md)를 먼저 읽어주세요.
@@ -114,8 +114,8 @@ CI는 5개 함수를 예제로 바꿔 연결·반환 형식을 검사하며 유�
 
 | 이름 | 담당 | GitHub |
 | --- | --- | --- |
-| 김민정 | 배정 예정 | — |
-| 김희윤 | 배정 예정 | — |
-| 박종찬 | 배정 예정 | — |
-| 박진원 | 배정 예정 | [nowjinpark](https://github.com/nowjinpark) |
-| 이현우 | 배정 예정 | — |
+| 김민정 | B. 기술 분석 | — |
+| 김희윤 | C. 시장·경쟁사 분석 | — |
+| 박종찬 | A. 기업 탐색·정보 | — |
+| 박진원 | E. 보고서 본문 전체 작성 | [nowjinpark](https://github.com/nowjinpark) |
+| 이현우 | D. 투자 판단 | — |

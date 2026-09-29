@@ -27,11 +27,11 @@ def run(state: State) -> dict:
 
 | 담당 | 사용할 주요 입력 | 반환 키와 내용 |
 | --- | --- | --- |
-| A. 기업 | `company`, `domain` | `company_info`: 기업 정보·출처·불확실한 점 |
-| B. 기술 | `company`, `company_info` | `technology`: 기술 분석·출처·불확실한 점 |
-| C. 시장·경쟁사 | 위 정보와 `technology` | `market_competition`: 시장·경쟁사 분석·출처·불확실한 점 |
-| D. 투자 판단 | 위 세 분석 결과 | `investment`: `decision`, `reason`, `score`, `sources`, `is_example` |
-| E. 보고서 본문 전체 | 현재 분석 결과와 `history` | `report`: `summary`, `markdown`, `is_example` |
+| A. 기업 — 박종찬 | `company`, `domain` | `company_info`: 기업 정보·출처·불확실한 점 |
+| B. 기술 — 김민정 | `company`, `company_info` | `technology`: 기술 분석·출처·불확실한 점 |
+| C. 시장·경쟁사 — 김희윤 | 위 정보와 `technology` | `market_competition`: 시장·경쟁사 분석·출처·불확실한 점 |
+| D. 투자 판단 — 이현우 | 위 세 분석 결과 | `investment`: `decision`, `reason`, `score`, `sources`, `is_example` |
+| E. 보고서 본문 전체 — 박진원 | 현재 분석 결과와 `history` | `report`: `summary`, `markdown`, `is_example` |
 
 앞의 세 분석은 모두 `summary`, `sources`, `uncertainties`, `is_example`을 넣습니다.
 출처 한 건은 `{"title": "문서 제목", "url": "실제 출처 주소", "page": 3}` 형식입니다. 페이지가 없으면 `null`(Python에서는 `None`)로 둡니다.

@@ -1,9 +1,9 @@
-"""D 담당: 분석 근거를 확인하고 투자 판단과 이유를 정리합니다."""
+"""D 담당 — 이현우: 분석 근거를 확인하고 투자 판단과 이유를 정리합니다."""
 from shared import Investment, State
 
 
 def run(state: State) -> dict:
-    """D 담당 파일입니다. 입력은 앞선 분석 결과, 출력은 investment입니다.
+    """이현우 담당 파일입니다. 입력은 앞선 분석 결과, 출력은 investment입니다.
 
     TODO: company_info·technology·market_competition과 실제 근거를 검토해
     팀이 정한 기준으로 점수를 계산하고 판단하세요. LLM 판단도 근거를 확인하세요.

@@ -1,11 +1,11 @@
-"""E 담당: 보고서 본문을 만듭니다. PDF 저장은 공통 도구 export_outputs.py가 맡습니다."""
+"""E 담당 — 박진원: 보고서 본문을 만듭니다. PDF 저장은 공통 도구 export_outputs.py가 맡습니다."""
 from shared import Report, State
 
 
 def run(state: State) -> dict:
-    """E 담당 파일입니다. 입력은 state['history'], 결과는 report에 저장됩니다.
+    """박진원 담당 파일입니다. 입력은 state['history'], 결과는 report에 저장됩니다.
 
-    TODO: 실제 판단·근거와 각 담당자의 RAG/LLM 분석을 받아 E가 본문을 완성하세요.
+    TODO: 실제 판단·근거와 각 담당자의 RAG/LLM 분석을 받아 보고서 본문을 완성하세요.
     이 함수는 보고서 내용만 만듭니다. 현재 출력은 실제 투자 분석이 아닌 예제입니다.
     """
     history = state.get("history", [])
