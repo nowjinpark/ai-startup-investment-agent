@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 from agents.analysis import SECTIONS, load_demo_candidates, run_analysis
 from agents.evaluation import evaluate_candidate
-from workflow import build_graph
+from app import build_graph
 
 
 class WorkflowTests(unittest.TestCase):
@@ -87,7 +87,7 @@ class WorkflowTests(unittest.TestCase):
 
     def test_invest_stops_before_second_candidate(self):
         complete = {item["section"]: item for item in self.complete_analyses()}
-        with patch("workflow.graph.run_analysis", side_effect=lambda candidate, section, mode: complete[section]):
+        with patch("agents.analysis.run_analysis", side_effect=lambda candidate, section, mode: complete[section]):
             result = build_graph(lambda state: {"report_paths": {}}).invoke({
                 "candidates": load_demo_candidates(), "candidate_index": 0,
                 "evaluations": [], "mode": "demo"})

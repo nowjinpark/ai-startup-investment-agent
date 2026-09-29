@@ -1,20 +1,20 @@
-"""실제 조사 대신 명시적으로 합성된 입력을 사용하는 데모 구현."""
+"""data/example.json의 가상 자료를 읽는 공통 함수. 실제 AI 분석은 미구현입니다."""
 import json
 from pathlib import Path
 
-from contracts.schema import Analysis, Candidate
+from agents.state import Analysis, Candidate
 
-FIXTURE_PATH = Path(__file__).resolve().parents[1] / "fixtures" / "demo_candidates.json"
+EXAMPLE_PATH = Path(__file__).resolve().parents[1] / "data" / "example.json"
 SECTIONS = ("company", "technology", "market", "competition")
 
 
-def _load_fixture() -> dict:
-    return json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))
+def _read_example() -> dict:
+    return json.loads(EXAMPLE_PATH.read_text(encoding="utf-8"))
 
 
 def load_demo_candidates() -> list[Candidate]:
     """실제 회사와 무관한 가상의 후보 두 개를 매번 새로 읽는다."""
-    return _load_fixture()["candidates"]
+    return _read_example()["candidates"]
 
 
 def run_analysis(candidate: Candidate, section: str, mode: str) -> Analysis:
@@ -25,6 +25,6 @@ def run_analysis(candidate: Candidate, section: str, mode: str) -> Analysis:
     if section not in SECTIONS:
         raise ValueError(f"알 수 없는 분석 영역: {section}")
     try:
-        return _load_fixture()["analyses"][candidate["id"]][section]
+        return _read_example()["analyses"][candidate["id"]][section]
     except KeyError as exc:
-        raise ValueError(f"합성 fixture가 없는 후보: {candidate['id']}") from exc
+        raise ValueError(f"가상 예제 자료가 없는 후보: {candidate['id']}") from exc

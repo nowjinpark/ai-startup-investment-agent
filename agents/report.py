@@ -10,10 +10,16 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
+from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak
 from pypdf import PdfReader
 
-from contracts.schema import Evaluation
+from agents.state import Evaluation, WorkflowState
+
+
+def report(state: WorkflowState) -> dict:
+    """6단계: 가상 예제 결과를 outputs/demo에 저장합니다."""
+    output_dir = Path(__file__).resolve().parents[1] / "outputs" / "demo"
+    return {"report_paths": write_reports(state["evaluations"], output_dir)}
 
 
 def _font() -> str:
@@ -64,7 +70,7 @@ def write_reports(evaluations: list[Evaluation], output_dir: Path,
     add("SUMMARY", True)
     add(warning)
     add(summary)
-    add("확인 대상: 공통 데이터 계약, 보류 시 다음 후보 이동, 전체 후보 종료, 파일 출력.")
+    add("확인 대상: 함께 주고받는 정보 형식, 보류 시 다음 후보 이동, 전체 후보 종료, 파일 출력.")
     add("실제 RAG 검색·LLM 분석·모델 비교·기업 평가는 별도 구현 항목입니다.")
     for evaluation in evaluations:
         flow.append(PageBreak())

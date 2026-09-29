@@ -3,17 +3,17 @@ import math
 import json
 from pathlib import Path
 
-from contracts.schema import CRITERIA, Analysis, Candidate, Evaluation, Score
+from agents.state import CRITERIA, Analysis, Candidate, Evaluation, Score, WorkflowState
 
 SECTIONS = {"company", "technology", "market", "competition"}
 
 
 def load_policy() -> tuple[dict[str, float], float]:
-    path = Path(__file__).resolve().parents[1] / "config" / "evaluation.json"
+    path = Path(__file__).resolve().parents[1] / "evaluation.json"
     policy = json.loads(path.read_text(encoding="utf-8"))
     weights, threshold = policy["weights"], policy["invest_threshold"]
     if set(weights) != set(CRITERIA):
-        raise ValueError("평가 항목을 변경하려면 공통 계약과 구현도 함께 변경하세요.")
+        raise ValueError("평가 항목을 변경하려면 agents/state.py와 평가 코드도 함께 변경하세요.")
     if any(isinstance(x, bool) or not isinstance(x, (int, float))
            or not math.isfinite(x) or x <= 0 for x in weights.values()):
         raise ValueError("평가 가중치는 양의 유한한 수여야 합니다.")
@@ -96,4 +96,13 @@ def evaluate_candidate(candidate: Candidate, analyses: list[Analysis]) -> Evalua
         "decision": decision,
         "reason": f"{reason} {threshold:g}점은 팀 검토가 필요한 임시 기준이며 실제 투자 권고가 아닙니다.",
         "is_demo": any(analysis["is_demo"] for analysis in analyses),
+    }
+
+
+def judge(state: WorkflowState) -> dict:
+    """5단계: 네 담당의 결과를 모아 판단하고 회사별 결과 목록에 추가합니다."""
+    result = evaluate_candidate(state["current_candidate"], state["analyses"])
+    return {
+        "evaluations": [*state.get("evaluations", []), result],
+        "latest_decision": result["decision"],
     }

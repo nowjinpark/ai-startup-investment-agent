@@ -4,13 +4,13 @@
     {
       "id": "demo-alpha",
       "name": "합성 후보 알파 (실제 기업 아님)",
-      "domain": "offline workflow demo",
+      "domain": "가상 실행 예제",
       "eligibility": "eligible"
     },
     {
       "id": "demo-beta",
       "name": "합성 후보 베타 (실제 기업 아님)",
-      "domain": "offline workflow demo",
+      "domain": "가상 실행 예제",
       "eligibility": "eligible"
     }
   ],
@@ -24,7 +24,7 @@
           {
             "id": "demo-alpha-company",
             "candidate_id": "demo-alpha",
-            "title": "합성 company fixture",
+            "title": "가상 회사 정보 예제",
             "url": "https://example.invalid/demo-alpha/company",
             "published_at": null,
             "page": null,
@@ -65,7 +65,7 @@
           {
             "id": "demo-alpha-technology",
             "candidate_id": "demo-alpha",
-            "title": "합성 technology fixture",
+            "title": "가상 기술 정보 예제",
             "url": "https://example.invalid/demo-alpha/technology",
             "published_at": null,
             "page": null,
@@ -93,7 +93,7 @@
           {
             "id": "demo-alpha-market",
             "candidate_id": "demo-alpha",
-            "title": "합성 market fixture",
+            "title": "가상 시장 정보 예제",
             "url": "https://example.invalid/demo-alpha/market",
             "published_at": null,
             "page": null,
@@ -121,7 +121,7 @@
           {
             "id": "demo-alpha-competition",
             "candidate_id": "demo-alpha",
-            "title": "합성 competition fixture",
+            "title": "가상 경쟁 정보 예제",
             "url": "https://example.invalid/demo-alpha/competition",
             "published_at": null,
             "page": null,
@@ -151,7 +151,7 @@
           {
             "id": "demo-beta-company",
             "candidate_id": "demo-beta",
-            "title": "합성 company fixture",
+            "title": "가상 회사 정보 예제",
             "url": "https://example.invalid/demo-beta/company",
             "published_at": null,
             "page": null,
@@ -192,7 +192,7 @@
           {
             "id": "demo-beta-technology",
             "candidate_id": "demo-beta",
-            "title": "합성 technology fixture",
+            "title": "가상 기술 정보 예제",
             "url": "https://example.invalid/demo-beta/technology",
             "published_at": null,
             "page": null,
@@ -220,7 +220,7 @@
           {
             "id": "demo-beta-market",
             "candidate_id": "demo-beta",
-            "title": "합성 market fixture",
+            "title": "가상 시장 정보 예제",
             "url": "https://example.invalid/demo-beta/market",
             "published_at": null,
             "page": null,
@@ -248,7 +248,7 @@
           {
             "id": "demo-beta-competition",
             "candidate_id": "demo-beta",
-            "title": "합성 competition fixture",
+            "title": "가상 경쟁 정보 예제",
             "url": "https://example.invalid/demo-beta/competition",
             "published_at": null,
             "page": null,

@@ -9,8 +9,8 @@ from unittest.mock import patch
 
 from pypdf import PdfReader
 
-from reporting.export import write_reports
-from workflow import build_graph, load_demo_candidates
+from agents.report import write_reports
+from app import build_graph, load_demo_candidates
 
 
 class ReportingTests(unittest.TestCase):
@@ -78,8 +78,8 @@ class ReportingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             # 한글 TTF가 없는 환경도 지원해야 하므로 fallback을 제외하지 않는다.
             # 이 검증은 PDF 구조·추출 검증이며 모든 뷰어의 한글 렌더링 보장은 아니다.
-            with patch("reporting.export.os.environ", {}), \
-                 patch("reporting.export.Path.is_file", return_value=False):
+            with patch("agents.report.os.environ", {}), \
+                 patch("agents.report.Path.is_file", return_value=False):
                 paths = write_reports(state["evaluations"], Path(temporary), stem="DEMO-cid-report")
             self.assert_pdf_structure(paths["pdf"])
 

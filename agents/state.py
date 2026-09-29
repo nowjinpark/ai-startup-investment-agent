@@ -1,7 +1,7 @@
-"""JSON으로 저장할 수 있는 공통 계약 v0.1 (Python 3.11+).
+"""분석 담당들이 함께 읽고 쓰는 데이터 모양.
 
-section별 에이전트는 Analysis를 반환합니다. 점수 미확인은 None이며 0과 다릅니다.
-이 파일을 합의하면 다른 담당자의 구현 없이 fixtures로 병렬 개발할 수 있습니다.
+수업의 TypedDict 예제처럼 필요한 항목을 정리합니다.
+None은 '아직 모름'이며, 점수 0과 다릅니다. demo는 가상 자료로 흐름만 확인하는 모드입니다.
 """
 from typing import Literal, TypedDict
 
@@ -10,6 +10,7 @@ CRITERIA = {"founder": 30, "market": 25, "technology": 15,
 
 
 class Candidate(TypedDict):
+    """분석할 회사 후보."""
     id: str
     name: str
     domain: str
@@ -17,6 +18,7 @@ class Candidate(TypedDict):
 
 
 class Evidence(TypedDict):
+    """출처와 원문을 함께 보관하는 근거."""
     id: str
     candidate_id: str
     title: str
@@ -34,6 +36,7 @@ class Score(TypedDict):
 
 
 class Analysis(TypedDict):
+    """회사·기술·시장·경쟁 담당이 각각 만든 분석 결과."""
     candidate_id: str
     section: Literal["company", "technology", "market", "competition"]
     summary: str
@@ -44,6 +47,7 @@ class Analysis(TypedDict):
 
 
 class Evaluation(TypedDict):
+    """한 회사의 분석을 모아 계산한 판단 결과."""
     candidate: Candidate
     analyses: list[Analysis]
     scores: dict[str, Score]
@@ -55,6 +59,7 @@ class Evaluation(TypedDict):
 
 
 class WorkflowState(TypedDict, total=False):
+    """그래프에서 다음 단계로 전달할 공용 데이터."""
     candidates: list[Candidate]
     candidate_index: int
     current_candidate: Candidate
