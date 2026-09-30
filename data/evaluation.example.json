@@ -1,0 +1,5 @@
+[
+  {"question": "대상 기업의 투자 단계는 무엇인가요?", "company_id": "candidates.json의 company_id", "doc_type": "company", "expected_source_ids": ["원문을 읽고 확인한 source_id"]},
+  {"question": "대상 기업의 실제 현장 성능 근거는 무엇인가요?", "company_id": "candidates.json의 company_id", "doc_type": "technology", "expected_source_ids": ["원문을 읽고 확인한 source_id"]},
+  {"question": "유료 계약이나 고객 도입 사례가 있나요?", "company_id": "candidates.json의 company_id", "doc_type": "market", "expected_source_ids": ["원문을 읽고 확인한 source_id"]}
+]

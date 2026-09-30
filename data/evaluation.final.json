@@ -1,0 +1,468 @@
+[
+  {
+    "id": "LIVE-01",
+    "question": "엔닷라이트가 생성하는 로봇 학습용 3D 데이터에는 어떤 물리 정보가 포함되나요?",
+    "company_id": "co-c533e3536ce3",
+    "company_name": "엔닷라이트",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1"
+    ],
+    "answer": "질량·마찰 등의 물리 속성과 관절 구조, 충돌 범위를 반영합니다.",
+    "evidence": [
+      {
+        "source_id": "S-3d9907cf2ea30aea",
+        "quote": "엔닷라이트는 질량, 마찰 등 물리 속성을 비롯해 관절 구조, 충돌 범위 정보까지 정교하게 반영된 3D 데이터 생성을 자",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034581",
+        "original_page": null
+      },
+      {
+        "source_id": "S-f58e2b59d52e03fd",
+        "quote": "엔닷라이트는 질량, 마찰 등 물리 속성을 비롯해 관절 구조, 충돌 범위 정보까지 정교하게 반영된 3D 데이터 생성을 자",
+        "url": "https://ndotlight.com/ko/newsroom/n.dot.light-raises-about-10.6-million-to-scale-its-physical-ai-simulation-data-infrastructure",
+        "original_page": null
+      },
+      {
+        "source_id": "S-6a82aa0732082fdd",
+        "quote": "엔닷라이트는 질량, 마찰 등 물리 속성을 비롯해 관절 구조, 충돌 범위 정보까지 정교하게 반영된 3D 데이터 생성을 자",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=47867",
+        "original_page": null
+      },
+      {
+        "source_id": "S-eff36abe805cf9e1",
+        "quote": "질량과 마찰 등 물리적 속성은 물론 관절 구조와 충돌 범위까지 반영\n된 3D 데이터를 자동으로 생성한다.",
+        "url": "https://www.unicornfactory.co.kr/article/2026081108482651455",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "2026년 8월 공개된 기업·투자자 발표 및 보도 내용입니다. 독립 성능 시험의 결과를 뜻하지 않습니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-02",
+    "question": "엔닷라이트는 3D 시뮬레이션 데이터를 공급하기 위해 엔비디아의 어떤 플랫폼과 연동하나요?",
+    "company_id": "co-c533e3536ce3",
+    "company_name": "엔닷라이트",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1"
+    ],
+    "answer": "엔비디아 옴니버스(Omniverse)와 연동합니다.",
+    "evidence": [
+      {
+        "source_id": "S-3d9907cf2ea30aea",
+        "quote": "특히 엔비디아(NVIDIA)의 시뮬레이션 플랫폼 ‘옴니버스(Omniverse)’와\n연동해",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034581",
+        "original_page": null
+      },
+      {
+        "source_id": "S-f58e2b59d52e03fd",
+        "quote": "특히 엔비디아(NVIDIA)의 시뮬레이션 플랫폼 ‘옴니버스(Omniverse)’와 연동해",
+        "url": "https://ndotlight.com/ko/newsroom/n.dot.light-raises-about-10.6-million-to-scale-its-physical-ai-simulation-data-infrastructure",
+        "original_page": null
+      },
+      {
+        "source_id": "S-6a82aa0732082fdd",
+        "quote": "특히 엔비디아(NVIDIA)의 시뮬레이션 플랫폼 ‘옴니버스(Omniverse)’와 연동해",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=47867",
+        "original_page": null
+      },
+      {
+        "source_id": "S-eff36abe805cf9e1",
+        "quote": "엔비디아의 시뮬레이션 플랫폼 '옴니버스(Omniverse)'와 연동해 데이터 생성부터\n평가까지 대규모 3D 시뮬레이션 데이터를 구축할 수 있다.",
+        "url": "https://www.unicornfactory.co.kr/article/2026081108482651455",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "기존 연동과 향후 아이작 심 연동 확대 계획을 구분합니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-03",
+    "question": "엔닷라이트 창업자 박진영과 김선태는 이전에 어느 회사에서 어떤 3D·AI 개발 경험을 쌓았나요?",
+    "company_id": "co-c533e3536ce3",
+    "company_name": "엔닷라이트",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1"
+    ],
+    "answer": "박진영 대표는 삼성전자의 3D 런처 개발, 김선태 CTO는 네이버·삼성전자의 AI 및 3D 엔진 개발 경험이 있습니다.",
+    "evidence": [
+      {
+        "source_id": "S-3d9907cf2ea30aea",
+        "quote": "박진영 대표는 삼성전자에서 3D 런처 개발을 경\n험했고, 김선태 CTO는 네이버와 삼성전자에서 AI와 3D 엔진 개발을 리드한 바 있다.",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034581",
+        "original_page": null
+      },
+      {
+        "source_id": "S-f58e2b59d52e03fd",
+        "quote": "엔닷라이트는 삼성전자에서 3D 런처 개발을 이끈 박진영 대표와 네이버와 삼성전자에서 AI 및 3D 엔진 개발을 리드한\n김선태 CTO가 공동 창업한 회사다.",
+        "url": "https://ndotlight.com/ko/newsroom/n.dot.light-raises-about-10.6-million-to-scale-its-physical-ai-simulation-data-infrastructure",
+        "original_page": null
+      },
+      {
+        "source_id": "S-6a82aa0732082fdd",
+        "quote": "엔닷라이트는 삼성전자에서 3D 런처 개발을 이끈 박진영 대표와 네이버와 삼성전자에서 AI 및 3D 엔진 개발을 리드한\n김선태 CTO가 공동 창업한 회사다.",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=47867",
+        "original_page": null
+      },
+      {
+        "source_id": "S-eff36abe805cf9e1",
+        "quote": "엔닷라이트는 삼성전자에서 3D 런처 개발을 이끈 박진영 대표와 네이버와 삼성전자에서 AI·3D 엔진 개발을 담당한 김\n선태 최고기술책임자(CTO)가 공동 창업했다.",
+        "url": "https://www.unicornfactory.co.kr/article/2026081108482651455",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "회사명·개발 분야 확인 질문입니다. 원문에 없는 경력 연수나 학위를 추정하지 않습니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-04",
+    "question": "엔닷라이트가 피지컬 AI 프로젝트에 학습 데이터를 공급한다고 밝힌 국내 대기업 두 곳은 어디인가요?",
+    "company_id": "co-c533e3536ce3",
+    "company_name": "엔닷라이트",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1"
+    ],
+    "answer": "현대자동차(현대차)와 LG전자입니다.",
+    "evidence": [
+      {
+        "source_id": "S-3d9907cf2ea30aea",
+        "quote": "현대차, LG전자 등 대기업의 피지컬 AI 프로젝트에도 데이터 공급사로 참여하며,",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034581",
+        "original_page": null
+      },
+      {
+        "source_id": "S-f58e2b59d52e03fd",
+        "quote": "현재 엔닷라이트는 현대자동차, LG전자 등 대기업의 피지컬 AI 프로젝트에도 핵심 데이터 공급사로 참여하며 산업 현장",
+        "url": "https://ndotlight.com/ko/newsroom/n.dot.light-raises-about-10.6-million-to-scale-its-physical-ai-simulation-data-infrastructure",
+        "original_page": null
+      },
+      {
+        "source_id": "S-6a82aa0732082fdd",
+        "quote": "현재 엔닷라이트는 현대자동차, LG전자 등 대기업의 피지컬 AI 프로젝트에도 핵심 데이터 공급사로 참여하며 산업 현장",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=47867",
+        "original_page": null
+      },
+      {
+        "source_id": "S-eff36abe805cf9e1",
+        "quote": "엔닷라이트는 현재 현대자동차와 LG전자 등 대기업이 추진하는 피지컬 AI 프로젝트에 데이터 공급사로 참여하고 있다.",
+        "url": "https://www.unicornfactory.co.kr/article/2026081108482651455",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "공급사 참여 발표의 확인입니다. 계약 금액, 유료 여부, 재구매를 확인한 질문이 아닙니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-05",
+    "question": "로보아르테는 자사 회사소개에서 조리 로봇의 실효성을 어떤 방식으로 검증했다고 설명하나요?",
+    "company_id": "co-46aa697b3022",
+    "company_name": "로보아르테",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6"
+    ],
+    "answer": "2020년부터 조리 로봇 매장을 직접 운영해 실효성을 검증했다고 설명합니다.",
+    "evidence": [
+      {
+        "source_id": "S-3e4ab9c201e987a6",
+        "quote": "2020년부터 매일 조리 로봇 매장을 운영한 유\n일한 로봇 회사로\n로봇 시스템의 실효성을 직접 검증하였습니다.",
+        "url": "https://roboarete.com/kr/company/intro.php",
+        "original_page": null
+      },
+      {
+        "source_id": "S-c40162da0adabda6",
+        "quote": "로보아르테는 2020년 2월부터 F&B 매장을 직접 운영하며 조리 로봇의 실효성을 검증했고,",
+        "url": "https://www.unicornfactory.co.kr/article/2024060516275184648",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "자사 소개에 실린 운영 방식입니다. 독립 검증이나 안전 인증으로 확대 해석하지 않습니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-06",
+    "question": "2024년 6월 보도에서 로보아르테의 조리 로봇 판매처로 제시된 고객사는 어디인가요?",
+    "company_id": "co-46aa697b3022",
+    "company_name": "로보아르테",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-c40162da0adabda6"
+    ],
+    "answer": "GS리테일, GS프레쉬, BHC, 행그리조핫치킨 코리아, 누리 치킨입니다.",
+    "evidence": [
+      {
+        "source_id": "S-c40162da0adabda6",
+        "quote": "2022년부터는 본격적으로 \n로봇 판매에 돌입해 GS리테일, GS프레쉬, BHC, 행그리조핫치킨 코리아, 누리 치킨 등에 조리 로봇을 판매했다.",
+        "url": "https://www.unicornfactory.co.kr/article/2024060516275184648",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "2024년 6월 5일 기사에 기재된 과거 판매 사례입니다. 현재 계약 유지나 재계약 여부는 별도 확인 대상입니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-07",
+    "question": "비욘드허니컴 공식 뉴스 목록에는 2024년 11월 어느 외식 브랜드와 조리 로봇 공급 계약을 맺었다는 항목이 있나요?",
+    "company_id": "co-28e1788fa6b5",
+    "company_name": "비욘드허니컴",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-830455754fee728f"
+    ],
+    "answer": "고반식당과의 공급 계약 항목이며 목록 날짜는 2024년 11월 14일입니다.",
+    "evidence": [
+      {
+        "source_id": "S-830455754fee728f",
+        "quote": "비욘드허니컴, 고반식당에 조리로봇 공급 계약\n2024.11.14",
+        "url": "https://www.beyondhoneycomb.com/News",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "공식 뉴스 목록의 제목·날짜만 확인합니다. 연결 기사의 본문, 계약 이행, 판매 금액은 이 원문만으로 확정하지 않습니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-08",
+    "question": "2024년 11월 로지스올의 플로틱 로봇 실증 보도에서 오더피킹 10건의 작업 인원·로봇 수와 작업 시간은 어떻게 달라졌나요?",
+    "company_id": "co-73d4c3e11a6f",
+    "company_name": "플로틱",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-4b22deb70cca9dcf"
+    ],
+    "answer": "기존 평균 약 20분 작업을 로봇 3대와 인력 1명으로 수행해 같은 작업량의 시간을 10분 이내로 줄였다고 보도했습니다.",
+    "evidence": [
+      {
+        "source_id": "S-4b22deb70cca9dcf",
+        "quote": "로지스올 측은 PoC 당시 총 10개의 오더피킹 작업에 플로웨어를 적용했다고 설명했습니다. 기존 작업은 모두 인력을\n투입해 진행했으며, 평균 20분 정도 소요됐는데요. 이를 로봇 3대와 인력 1명으로 대체했다고 합니다. 그 결과 같은 양\n의 작업 시간을 10분 이내로 단축하는 데 성공했다고 합니다. 이것이 로지스올이 플로틱 로봇 도입으로 생산성을 2배 이\n상 향상했다고 주장하는 근거입니다.",
+        "url": "https://contents.premium.naver.com/connectx/us/contents/241119205708723qo",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "2024년의 특정 PoC에 관한 보도입니다. 이후 사업 상태나 다른 현장의 성능을 보증하지 않습니다. 본 질문은 투자 적격성 평가가 아닙니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-09",
+    "question": "IFR의 World Robotics 2026 공개 자료에서 한국의 2025년 산업용 로봇 신규 설치 대수와 전년 대비 증감률은 얼마인가요?",
+    "company_id": "__sector__",
+    "company_name": "산업 공통",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-28613722a6d41b0c"
+    ],
+    "answer": "약 30,000대이며 전년 대비 1% 감소입니다.",
+    "evidence": [
+      {
+        "source_id": "S-28613722a6d41b0c",
+        "quote": "Republic of Korea\ninstalled 30,000 units in 2025 – down 1%.",
+        "url": "https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "한국 산업용 로봇의 1년 신규 설치량입니다. 누적 가동 대수·금액 시장 규모·특정 기업의 세부시장 CAGR과 구분합니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-10",
+    "question": "삼일PwC의 산업 현장 보고서는 2060년까지 한국의 생산연령인구가 몇 퍼센트 감소할 것으로 소개하나요?",
+    "company_id": "__sector__",
+    "company_name": "산업 공통",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-7c95904560611c54"
+    ],
+    "answer": "한국의 생산연령인구가 46.7% 감소할 것으로 소개합니다.",
+    "evidence": [
+      {
+        "source_id": "S-7c95904560611c54",
+        "quote": "OECD 국가생산연령인구(20~64세) \n2060년까지8.05% 감소전망\n→ 한국은46.7% 급감예상되어감소폭\n가장큰 국가로분류",
+        "url": "https://www.pwc.com/kr/ko/insights/issue-brief/samilpwc_physical-ai-robot.pdf",
+        "original_page": 6
+      }
+    ],
+    "answer_scope": "PwC가 OECD 자료를 인용한 장기 인구 전망입니다. 로봇 시장 성장률이나 기업 수요의 확정치로 바꾸지 않습니다. PDF 원본 6쪽(인쇄 쪽수 5쪽)입니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다.",
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "FINAL-11",
+    "question": "IFR의 2024년 서비스로봇 판매 통계는 산업 전체 추정치인가요, 표본인가요?",
+    "company_id": null,
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-7f883e9a75a4ab43"
+    ],
+    "answer": "294개 공급업체 표본이며 산업 전체로 외삽하지 않습니다.",
+    "human_reviewed": false,
+    "review_status": "Codex 원문대조, 팀 독립검토 전",
+    "evidence": [
+      {
+        "source_id": "S-7f883e9a75a4ab43",
+        "quote": "a total number of 3,100 units were sold in 2024, placing it in fifth position up 19%. Three out of four\nrobots in this application class were for security services.\nMedical Robots\nIn accordance with ISO standard the World Robotics 2025 yearbook considers\nmedical robots\nas a third category alongside service robots and industrial robots: Sales of medical robots increased strongly\nby 91% to around 16,700 units in 2024. Sales of\nrehabilitation and non-invasive\ntherapy robots were up 106%. Demand for\nsurgery\nrobots rose by 41% and sales of robots for\ndiagnostics and medical laboratory analysis\nincreased by 610%.\n“In a special chapter of the World Robotics 2025 report, we focus on the exciting opportunities presented\nby the automation of medical laboratories,” says Dr. Werner Kraus, Chair of the IFR Service Robot\nCommittee. “In times of labor scarcity, service robots help to reduce manual labor and open up new ways\nto deal with the rising demand for medical services from the rapidly growing elderly population.”\nRobots for consumer use\nConsumer service robots\nare produced for the mass market. Service robots for consumer use have experienced a solid growth rate of\n11% with close to 20 million units sold in 2024. Robots for\ndomestic tasks\n(floor cleaning, lawn moving etc.) were by far the largest group of consumer robots. Growth was largely\ndriven by companies from Europe and Asia-Pacific, which both experienced growth rates of 16%, whereas\nsales from the Americas decreased by 1%. This was due to a loss in the market share for robotic vacuum\ncleaners.\nPlease note:\nWorld Robotics Service Robots report is sample data. Data is NOT projected to the whole industry. Sample\ncomposition varies each year. All numbers at the World Robotics Service Robots 2025 report are based on a\nsample of 294 service robot suppliers.\nCompiling or comparing data from different World Robotics Reports is strongly discouraged.\nOrders for World Robotics 2025 Service Robots and Industrial Robots reports can be placed\nonline (https://ifr.org/worldrobotics/)\n. Further downloads on the service robot content are available\nhere (https://ifr.org/wr-service-robots)\n.\nVideo\nDr. Werner Kraus explains the market presentation on Service Robots at our press conference for the World\nRobotics 2025 publication below. You can find the recording of the Industrial Robots market on our\nYouTube channel (https://www.youtube.com/watch?v=w1xGp-S3Mf4&t=2s)"
+      }
+    ],
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다."
+  },
+  {
+    "id": "FINAL-12",
+    "question": "Flippy는 음식점에서 어떤 조리 공정을 자동화하나요?",
+    "company_id": null,
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-c16d5887638a0fd9"
+    ],
+    "answer": "튀김 조리 공정입니다.",
+    "human_reviewed": false,
+    "review_status": "Codex 원문대조, 팀 독립검토 전",
+    "evidence": [
+      {
+        "source_id": "S-c16d5887638a0fd9",
+        "quote": "Miso Robotics Flippy 조리 자동화 제품\nhttps://www.misorobotics.com/\nThe AI Platform Behind Modern Restaurants.\nMiso combines automation and intelligence to give you visibility, control, and consistency across every shift,\nempowering your team to operate like owners.\nLEARN MORE\nSEE HOW IT WORKS\nAutomate the hardest work.\nFlippy handles your fry station so your team does not have to. Consistent results, every order, every shift.\nRun a smarter operation.\nZignyl turns daily activity into visibility, accountability, and results across every location.\nBuilt to work together.\nTwo products. One connected platform. A restaurant that finally runs like a modern business.\nOne Platform.\nComplete Kitchen Intelligence\nHow Miso Works\nAutomate Critical Tasks\nAI-powered robotics handles your most challenging stations with precision\nAggregate Kitchen Data\nConnect all your devices, POS, and operations into one platform\nDeliver Actionable Insights\nReal-time visibility and analytics that drive better decisions\nEmpower Your Team\nGive frontline staff the tools to operate with ownership and efficiency\nStart with Automation or Intelligence - Scale with Both\nFlippy Fry Station\nMore Output. Lower Costs. Zero Injuries.\nAutomates the most dangerous station so teams can focus on higher value roles\nHandles your entire fried menu 2x faster than a human\nAI-controlled cooking eliminates inconsistency and food waste\nZero burns in live deployments\nExplore Flippy\nZignyl Digital Shift Manager\nRestaurant Revenue Generator\nReal-time visibility keeps every location on track\nClear goals and live incentives drive accountability and reduce turnover"
+      }
+    ],
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다."
+  },
+  {
+    "id": "FINAL-13",
+    "question": "Isaac Sim은 로봇 개발자가 어떤 종류의 데이터를 생성하도록 지원하나요?",
+    "company_id": null,
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-bd94dcca828b0bce"
+    ],
+    "answer": "물리 기반 가상 환경에서 합성 데이터를 생성합니다.",
+    "human_reviewed": false,
+    "review_status": "Codex 원문대조, 팀 독립검토 전",
+    "evidence": [
+      {
+        "source_id": "S-bd94dcca828b0bce",
+        "quote": "NVIDIA Isaac Sim 합성 데이터 생성 대안\nhttps://developer.nvidia.com/isaac/sim/\nNVIDIA Isaac Sim\nNVIDIA Isaac Sim™ is an open source reference framework built on\nNVIDIA Omniverse\n™ libraries for robotics simulation, testing, and synthetic data generation in physically based virtual\nenvironments.\nIsaac Sim is fully extensible, so developers can build custom\nOpenUSD (https://www.nvidia.com/en-us/glossary/openusd/)\n-based simulators or integrate framework capabilities into existing testing and validation pipelines.\nReady to get started?\nDownload Now From GitHub (https://github.com/isaac-sim/IsaacSim)\nIsaac Sim on Brev (https://docs.isaacsim.omniverse.nvidia.com/5.1.0/installation/install_advanced_cloud_set\nup_brev.html)\nHow Isaac Sim Works\nIsaac Sim can ingest data from multiple sources—such as computer-aided design (CAD), Unified Robot\nDescription Format (URDF), or real-world captures via\nNVIDIA Omniverse NuRec (https://docs.nvidia.com/nurec/index.html)\nand Isaac TeleOp—and convert it into USD. Developers then assemble simulation scenes by assigning\nmaterials, enabling physics, and configuring robot and sensor models. From there, robots can be used with\nNVIDIA Isaac Lab\nfor\nrobot learning (https://www.nvidia.com/en-us/use-cases/robot-learning/)\nand simulated in Isaac Sim.\nIsaac Sim also supports controllable synthetic data generation, letting developers build custom data\npipelines that complement their existing data sources. That data can be further augmented with NVIDIA\nCosmos™ world foundation models. Finally, developers can train perception and mobility stacks in\nsimulation and evaluate the end-to-end system in Isaac Sim using software-in-the-loop or\nhardware-in-the-loop testing.\nNVIDIA NeMo Retriever collection of NIM microservices are used to build optimized ingestion and retrieval\npipelines for highly accurate information retrieval at scale.\nIsaac Sim Documentation\nBrowse documentation and learn how to get started on Isaac Sim.\nRead the Quick Start Guide (https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)\nRobotics Simulation Overview\nLearn how robotics simulation helps developers virtually train, test, and validate robots, and the advantages\nof a simulation-first approach.\nLearn More (https://www.nvidia.com/en-us/use-cases/robotics-simulation/)\nIsaac Sim Courses"
+      }
+    ],
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다."
+  },
+  {
+    "id": "FINAL-14",
+    "question": "Schnell X-TIE는 어떤 재료의 작업을 자동화하나요?",
+    "company_id": null,
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-202c6dfa263ed8d0"
+    ],
+    "answer": "철근 결속 작업입니다.",
+    "human_reviewed": false,
+    "review_status": "Codex 원문대조, 팀 독립검토 전",
+    "evidence": [
+      {
+        "source_id": "S-202c6dfa263ed8d0",
+        "quote": "Schnell 철근 가공 자동화 설비\nhttps://www.schnell.it/en/\nSustainability (https://www.schnellgroup.com/sustainability/en/)\nTHE EXPERTS IN PLANT ENGINEERING SOLUTIONS FOR REBAR PROCESSING.\nFor over 30 years, Schnell has been offering the most innovative and effective solutions for many shaping\ncenters.\nCLICK HERE AND FIND OUT THE NEW GENERATION OF SYSTEMS\n(https://www.schnellgroup.com/en/Products/Plants-and-Logistics/)\nTHE EXPERTS IN PLANT ENGINEERING SOLUTIONS FOR REBAR PROCESSING.\nFor over 30 years, Schnell has been offering the most innovative and effective solutions for many shaping\ncenters.\nCLICK HERE AND FIND OUT THE NEW GENERATION OF SYSTEMS\n(https://www.schnellgroup.com/en/Products/Plants-and-Logistics/)\nX-TIE is an automatic\nrebar tying machine.\nX-TIE reduces costs, health risks, and environmental impact.\nCLICK TO LEARN MORE (https://www.schnellgroup.com/en/Products/Automatic-rebar-tying-machine-X-TIE\n/)\nX-TIE is an automatic\nrebar tying machine.\nX-TIE reduces costs, health risks, and environmental impact.\nCLICK TO LEARN MORE (https://www.schnellgroup.com/en/Products/Automatic-rebar-tying-machine-X-TIE\n/)\nOur new IoT platform designed\nto monitor machine consumption\nand performance in real time.\nLEARN MORE (https://www.schnellgroup.com/apollo/en/)\nOur new IoT platform designed\nto monitor machine consumption\nand performance in real time.\nLEARN MORE (https://www.schnellgroup.com/apollo/en/)\nVERSALINE 2750:\nmuch more than a new machine\nMORE (https://www.schnellgroup.com/en/Products/Versa-Line-Mesh-welding-machine-for-the-production-\nof-reinforcing-meshes-standard-and-engineered/)\nVERSALINE 2750:\nmuch more than a new machine"
+      }
+    ],
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다."
+  },
+  {
+    "id": "FINAL-15",
+    "question": "Mech-Vision으로 구성할 수 있는 로봇 자동화 작업에는 무엇이 있나요?",
+    "company_id": null,
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-73d113c400d0b229"
+    ],
+    "answer": "빈피킹·머신텐딩·팔레타이징·조립 등의 작업입니다.",
+    "human_reviewed": false,
+    "review_status": "Codex 원문대조, 팀 독립검토 전",
+    "evidence": [
+      {
+        "source_id": "S-73d113c400d0b229",
+        "quote": "Online Exhibition Hall (https://www.mech-mind.com/online-exhibition-hall/online-exhibition-hall.html)\nMech-Vision Machine Vision Software\nMech-Vision is an industry-leading machine vision software. It is designed to quickly build vision\napplications, whether simple or complex. With Mech-Vision, users can manage a wide range of automation\ntasks, including bin picking, machine tending, piece picking, depalletizing and palletizing, assembly, and\nmore.\nEase of use\nPowerful functionality\nMultiple languages\nEasy to use\nNo-code user interface\nUnlock the potential for non-experts with our intuitive graphical user interface—code-free, with a\nstreamlined UI design and distinct functional partitions. Seamlessly deploy a wide range of vision\napplications with ease.\nOut-of-the-box templates\nEffortlessly set up your machine tending project in under 10 minutes with our General Workpiece Picking\nTemplate. Just follow our simple four-step process.\nEasy robot communication\nDive into the world's most extensive robot model library, offering over 1,000 models to choose from.\nEffortlessly enhance your robot's path optimization in no time.\nPowerful functions\nBuilt-in powerful algorithms\nAn extensive array of vision algorithm modules, including 3D general processing, 3D feature processing, 3D\nmodel creation and matching, 2D/3D deep learning, 2D general processing, 2D feature processing, 2D\nmatching, pose adjustment, and more — tailored for your applications.\nIntegrated extensive tools\nMany tools make your setup and deployment more accurate and efficient, such as 3D workpiece\nrecognition tool and pose adjustment tool.\nRich solution library\nExplore our solution library, featuring a diverse array of proven real-world cases spanning multiple\nindustries. Access ready-to-use resources for understanding, deploying, modifying, and maintaining\napplications effortlessly.\nIntuitive production interface\nYou can set up a production interface in just two steps. The graphical production interface allows users to\nmonitor each stage of production and check the results in real time.\nMulti-languages\nMultiple languages\nMech-Vision machine vision software has built-in language packs (English, Japanese, Chinese, and Korean),\nsupporting one-button switching of software languages."
+      }
+    ],
+    "source_snapshot": "data/prepared/corpus/sources.json",
+    "source_snapshot_sha256": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "limitations": "15문항의 소규모 회귀 점검이며 팀 독립 검토·전체 답변 정확도·투자 판단 정확도를 입증하지 않습니다."
+  }
+]

@@ -1,0 +1,239 @@
+{
+  "source_run": "final-reviewed-20260930",
+  "rules": {
+    "pass_score": 12,
+    "maximum_score": 18,
+    "grades": {
+      "3": "상",
+      "2": "중",
+      "1": "하"
+    },
+    "criteria": [
+      {
+        "id": 2,
+        "name": "문제 해결 효과",
+        "owner": "technology",
+        "field": "category_value",
+        "rule": "category",
+        "values": {
+          "proven": 3,
+          "poc": 2,
+          "lab": 1
+        },
+        "description": "실제 고객 환경에서 확인한 문제 해결 효과",
+        "evidence_requirements": "proven: 실제 고객 현장에서 비용·시간·생산성·성능 개선이 검증됨. poc: 고객 환경 PoC·실증 진행. lab: 자체 실험실·데모 단계임이 확인됨. KC/FCC 등 인증만으로 고객 문제 해결 효과를 proven으로 판정하지 않습니다.",
+        "display_number": 1
+      },
+      {
+        "id": 3,
+        "name": "고객 구매 의사",
+        "owner": "market",
+        "field": "category_value",
+        "rule": "category",
+        "values": {
+          "paid": 3,
+          "contact": 2,
+          "none": 1
+        },
+        "description": "고객의 실제 지불 또는 구체적 도입 접점",
+        "evidence_requirements": "paid: 유료 공급 계약·유료 PoC가 확인됨. contact: 무료 PoC·실증·LOI·MOU·구체적 도입 협의가 확인됨. none: 고객 접점이 없다는 명시적 근거. PoC 후 유료 계약이 실패했더라도 확인된 PoC는 contact의 근거가 됩니다. 투자 유치를 고객 구매로 보지 않습니다.",
+        "display_number": 2
+      },
+      {
+        "id": 6,
+        "name": "외부 고객·현장 검증",
+        "owner": "market",
+        "field": "numeric_value",
+        "rule": "threshold",
+        "high": 2,
+        "medium": 1,
+        "minimum": 0,
+        "integer": true,
+        "unit": "고객·현장",
+        "description": "외부 고객 또는 사용 현장의 실제 검증 수",
+        "evidence_requirements": "실제 PoC·실증·사용·납품이 확인된 서로 다른 고객 또는 현장 수입니다. 재계약은 필수가 아닙니다. 동일 고객의 같은 목적 사업장과 재인용 기사는 중복 집계하지 않습니다. 단순 고객 레퍼런스 숫자·계약 없는 제휴·누적 이용자 수만으로 검증 수를 확정하지 않습니다.",
+        "display_number": 3
+      },
+      {
+        "id": 7,
+        "name": "수익모델 명확성",
+        "owner": "market",
+        "field": "items",
+        "rule": "items",
+        "allowed": [
+          "payer",
+          "product",
+          "price_unit",
+          "price_basis"
+        ],
+        "high": 4,
+        "medium": 2,
+        "description": "누가 무엇에 어떤 방식으로 돈을 내는지 확인된 정도",
+        "evidence_requirements": "payer=지불 주체, product=판매 제품·서비스, price_unit=대당·월당·건당 등의 과금 단위, price_basis=사용량·대수·등급·범위 등에 따른 가격 산정 방식입니다. 공개된 금액 자체는 필수가 아니지만 선급금·지급 시점만으로 과금 단위나 산정 근거를 추정하지 않습니다.",
+        "display_number": 4
+      },
+      {
+        "id": 8,
+        "name": "적용 분야 확장",
+        "owner": "market",
+        "field": "numeric_value",
+        "rule": "threshold",
+        "high": 2,
+        "medium": 1,
+        "minimum": 0,
+        "integer": true,
+        "unit": "산업·사용 목적",
+        "description": "같은 핵심 기술의 검증된 적용 산업 또는 사용 목적 수",
+        "evidence_requirements": "서로 다른 산업 또는 구별되는 사용 목적에서 실제 PoC·실증·도입된 수를 셉니다. 제조 검사와 물류 운반처럼 구별되는 사용 목적은 인정합니다. 같은 용도의 고객 수·사업장 수와 진출 계획만으로 확장성을 점수화하지 않습니다.",
+        "display_number": 5
+      },
+      {
+        "id": 10,
+        "name": "실행 지속성",
+        "owner": "technology",
+        "field": "category_value",
+        "rule": "category",
+        "values": {
+          "achievements_2plus": 3,
+          "active": 2,
+          "stopped": 1
+        },
+        "description": "현재 사업 활동과 날짜가 확인되는 달성 성과",
+        "evidence_requirements": "achievements_2plus: 현재 활동과 서로 다른 날짜의 완료 성과 2개 이상. active: 최근 제품 개발·검증·공급 등 실제 활동. stopped: 공식 폐업·관련 사업 중단이 확인됨. 미래 계획이나 같은 사건의 재인용은 달성 성과로 세지 않습니다. 오래된 폐업 기사와 최근 재개 자료가 충돌하면 날짜와 법인을 확인합니다.",
+        "display_number": 6
+      }
+    ],
+    "version": "3.0",
+    "score_policy": "6개 항목을 모두 확인한 뒤 합계 12점 이상이면 점수 기준을 충족합니다. 미확인 항목은 0점으로 채우거나 환산하지 않습니다.",
+    "eligibility_pending_policy": "conditional",
+    "threshold_reason": "상·중·하를 3·2·1점으로 계산하며, 6개 항목의 평균이 중(2점)에 해당하는 12점을 초기 투자 검토 기준으로 정했습니다."
+  },
+  "original_analyses": [
+    {
+      "file": "analyses/co-c533e3536ce3-technology.json",
+      "sha256": "185f936af55564e54a0ffd2552fe70c8e6660587b19286ff7b3cda1f7a42d76d"
+    },
+    {
+      "file": "analyses/co-c533e3536ce3-market.json",
+      "sha256": "0e50cb4b5e9e5beec88e82ae8b055bdf4dfc3049ac9aa2953c22107816663b94"
+    },
+    {
+      "file": "analyses/co-28e1788fa6b5-technology.json",
+      "sha256": "69e6308f96dfd2b85d1a7cf069be9398d18d7c5e05246ecc36b5ea8424feb5b4"
+    },
+    {
+      "file": "analyses/co-28e1788fa6b5-market.json",
+      "sha256": "233bff01c199c1d6844ff84464688963452457c31082ec46c24b590905ccbbed"
+    },
+    {
+      "file": "analyses/co-46aa697b3022-technology.json",
+      "sha256": "9228372b30e65b5438aabbb46241eab23fb57f70fd4bf1a5eceb327a0d51bc9b"
+    },
+    {
+      "file": "analyses/co-46aa697b3022-market.json",
+      "sha256": "34469755c214055934322bd5ea653a979718b4bbf3f18a74bf9639d52ab77ef0"
+    },
+    {
+      "file": "analyses/co-596c2826a016-technology.json",
+      "sha256": "032a7750d769a3e39f99bb444a028b04500790649ecee939224b7b07afe33d93"
+    },
+    {
+      "file": "analyses/co-596c2826a016-market.json",
+      "sha256": "0c0dc941a7e843e5119b5d5284a136add3204381ef5a98b92da972564b90bc07"
+    },
+    {
+      "file": "analyses/co-9d07ca84baf6-technology.json",
+      "sha256": "ea6b3ea2e8f59651efef72aedf0a67a6a695b3209fe2e21279760ad63927f61a"
+    },
+    {
+      "file": "analyses/co-9d07ca84baf6-market.json",
+      "sha256": "6ae7d671b3220f3c0777853f849ef4b6e9fab247cdde8d83860a9374521cc7e4"
+    },
+    {
+      "file": "analyses/co-7320faf46875-technology.json",
+      "sha256": "495456d39b66dbab98b0996270b3b4ce89e7a418b2ac3aedbffae9b2b6ba8328"
+    },
+    {
+      "file": "analyses/co-7320faf46875-market.json",
+      "sha256": "42b0295e80378525d1c3f9769268c1af687c7031b9fa2f45aec19d0437b5bbf2"
+    },
+    {
+      "file": "analyses/co-34ea438e56b3-technology.json",
+      "sha256": "bff88346d087556dfd55de5bddb3248f51d6d7e0491a948768c65854e601f402"
+    },
+    {
+      "file": "analyses/co-34ea438e56b3-market.json",
+      "sha256": "b48c5e45d41fdd2504d249f49ad6139174b08e76f9f9040d4599f426b05657cd"
+    },
+    {
+      "file": "analyses/co-a7737ff4931e-technology.json",
+      "sha256": "2bd05fbedb5a8aea97fffe0df4a874bfb7d8402bcb45c9466cad941d1ebb016a"
+    },
+    {
+      "file": "analyses/co-a7737ff4931e-market.json",
+      "sha256": "3a093298d17fcfd26d77bee834c1305cc826533026fb99bd2ccad0f90c8bfde9"
+    },
+    {
+      "file": "analyses/co-bc6f6312fdc9-technology.json",
+      "sha256": "7d3adecf06a8146467fd0d2f4fa0f194e8cc9a7576df0d5d8168cf56c4db6e7a"
+    },
+    {
+      "file": "analyses/co-bc6f6312fdc9-market.json",
+      "sha256": "c1533ad1bf00da0cda17801a73d7572ed92f3060df92b8de0ec06d8a1eca8dca"
+    },
+    {
+      "file": "analyses/co-1ebc2f3a474b-technology.json",
+      "sha256": "ae51cd2e9d76eb3ec0c6efc364ccdb78ffc7e5940aeb3115628687457bc25f03"
+    },
+    {
+      "file": "analyses/co-1ebc2f3a474b-market.json",
+      "sha256": "6838544c03a5a790ae1018ac221c73eacd6bbb81e330ee58e443a757bc8f29e0"
+    },
+    {
+      "file": "analyses/co-e50bbfd4f5cd-technology.json",
+      "sha256": "77fed2507cb3956615399959dd21124b14ad756931e8622dcbcd522f711828a4"
+    },
+    {
+      "file": "analyses/co-e50bbfd4f5cd-market.json",
+      "sha256": "88bee2a2692489c430d5fbc1daddf3744d8cbe3a7f487341392e2e5e076eef7c"
+    },
+    {
+      "file": "analyses/co-2334a75e8868-technology.json",
+      "sha256": "66344420f9312d554851dffdd3044fb2da896a9ea092075af166b74f36c41184"
+    },
+    {
+      "file": "analyses/co-2334a75e8868-market.json",
+      "sha256": "487aa2ecb40e8a8223e9d119d15b39777dfb412511636b83a979b79fd35db5b0"
+    },
+    {
+      "file": "analyses/co-1c4d8612062c-technology.json",
+      "sha256": "9f42a189f884038a3b98c4437fe26826c2b4231896beb51d54ac6065794d7802"
+    },
+    {
+      "file": "analyses/co-1c4d8612062c-market.json",
+      "sha256": "3e34756a4f151016f5d0e7cf6b2a03383cd53082abe08ca1aaee259a95f7d05c"
+    },
+    {
+      "file": "analyses/co-03194c1c7cda-technology.json",
+      "sha256": "d7c00f6f87cf2dd6e7cdd8368173761e39c01dd759d6c00d20194ba888bd9b36"
+    },
+    {
+      "file": "analyses/co-03194c1c7cda-market.json",
+      "sha256": "fa5c5d63064f5b3c27292bf16366ba856891a9d912ec4d85c594a7b848daa53b"
+    },
+    {
+      "file": "analyses/co-634b5b5f71a9-technology.json",
+      "sha256": "a8992e02ea4acdf20616a1d38d02ff42a769efbec812495f113909e42196834c"
+    },
+    {
+      "file": "analyses/co-634b5b5f71a9-market.json",
+      "sha256": "a4b79e580950dc1808b9d0237977ad762964bbe3acea153b683033fa51c64a6f"
+    }
+  ],
+  "new_api_calls": 0,
+  "new_api_cost_usd": 0,
+  "new_documents": 0,
+  "evaluated_count": 9,
+  "unassessed_count": 6,
+  "method": "기존 원문·분석 근거는 유지하고 제외 항목 제거 및 점수·분기만 재계산"
+}

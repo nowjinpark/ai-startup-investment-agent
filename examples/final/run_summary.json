@@ -1,0 +1,17 @@
+{
+  "candidate_count": 15,
+  "evaluated_count": 9,
+  "stop_reason": "five_candidates",
+  "page_count": 164,
+  "demo": false,
+  "rubric_version": "3.0",
+  "score_scale": 18,
+  "criterion_count": 6,
+  "pass_score": 12,
+  "execution_mode": "saved_evidence_regrade",
+  "confirmed_count": 0,
+  "conditional_count": 5,
+  "excluded_count": 7,
+  "source_review": "Codex 원문 대조·교정; 팀 검토 전",
+  "human_reviewed": false
+}

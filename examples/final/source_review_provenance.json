@@ -1,0 +1,152 @@
+{
+  "reviewed_at": "2026-09-30T05:33:41.351266+00:00",
+  "reviewer": "Codex",
+  "human_reviewed": false,
+  "review_scope": "15개 후보의 6개 항목(90개)·기업 자격·정성 주장과 저장된 149쪽 원문 대조",
+  "original_run": "live-test-20260930-141240",
+  "original_hashes": [
+    {
+      "file": "candidates.json",
+      "sha256": "bb9a27496ed74fd06d98db7d25ec8cd9233c13a464906d64eec30fec488a8032"
+    },
+    {
+      "file": "corpus/sources.json",
+      "sha256": "97e1b776509a9db18d3c2ffe02a355bddc3083ee5066344de13d613b071e8441"
+    },
+    {
+      "file": "corpus/rag-documents.pdf",
+      "sha256": "08c1c7a96ec12a7df107ad6c92737be805c6522b2b41fd6f966ca4f1418f4718"
+    },
+    {
+      "file": "analyses/co-03194c1c7cda-market.json",
+      "sha256": "7b664fb06f0dfa23de6f2276b85fa468774da7e48d4e3d269c854482816530b6"
+    },
+    {
+      "file": "analyses/co-03194c1c7cda-technology.json",
+      "sha256": "ef46b721a028678825db3d564fa070f251c034c74226e2bdb787eb1332dd0576"
+    },
+    {
+      "file": "analyses/co-1c4d8612062c-market.json",
+      "sha256": "b9e00bc683509f23541173250b4d1535a498d8d3f4e337dedac2b2573c52a8eb"
+    },
+    {
+      "file": "analyses/co-1c4d8612062c-technology.json",
+      "sha256": "8a2badf8979b6cc4fee592e8aabc55efcbc1fa0740e7d409224c052ebc38ca17"
+    },
+    {
+      "file": "analyses/co-1ebc2f3a474b-market.json",
+      "sha256": "aba8010932c031e0d41cd4c26267e960bd04cca8157d1915f75dc914078ea8db"
+    },
+    {
+      "file": "analyses/co-1ebc2f3a474b-technology.json",
+      "sha256": "0c4892842827a1a0a2ec0670445ceeb1ca6fa82f25db734ecab1e78a75c2d43d"
+    },
+    {
+      "file": "analyses/co-2334a75e8868-market.json",
+      "sha256": "79efcf4539fa66f99bb6a949f3e78bba6f95bd214d9f3223ac786004d232271f"
+    },
+    {
+      "file": "analyses/co-2334a75e8868-technology.json",
+      "sha256": "43520ff0ce1154dec19ea6b21e8eea6cca5f60064429456eae92599c0cd9e6c6"
+    },
+    {
+      "file": "analyses/co-28e1788fa6b5-market.json",
+      "sha256": "0e038d34b49342e05ca8af71c6a85c4a1d43b4ea77a7684e56ef611a328a6ffe"
+    },
+    {
+      "file": "analyses/co-28e1788fa6b5-technology.json",
+      "sha256": "ff4d360aff9b49efb10978d67939e523576c42856bbaadf6182d54b44469eccd"
+    },
+    {
+      "file": "analyses/co-34ea438e56b3-market.json",
+      "sha256": "7fe5d0349212e9be68d801734bb2de1eabce793e57b43e2a91d838dae9030336"
+    },
+    {
+      "file": "analyses/co-34ea438e56b3-technology.json",
+      "sha256": "4b57f1f300470f58d72338994895716ec7c03d6ae90e2546894084adc0fed7b0"
+    },
+    {
+      "file": "analyses/co-46aa697b3022-market.json",
+      "sha256": "7cb0df984d899c66ec94a3313c970c0cb4ad44731e14cf3806d3811d59510123"
+    },
+    {
+      "file": "analyses/co-46aa697b3022-technology.json",
+      "sha256": "2e7f93ef8eb0ad913bd41a1e6ab95394cd80badea4a5f2eeb6b2e84096bc89af"
+    },
+    {
+      "file": "analyses/co-596c2826a016-market.json",
+      "sha256": "23d5cfaad1797472c9075aa4c9d96e1d81fb61583966f996a89c274391d822fa"
+    },
+    {
+      "file": "analyses/co-596c2826a016-technology.json",
+      "sha256": "54dc60ba3d4648f4d73cbaaf9bf6d234b7cb4c3e0d4db0f44384b8e0b0ce1c2c"
+    },
+    {
+      "file": "analyses/co-634b5b5f71a9-market.json",
+      "sha256": "8c84ed6ef3783dcbfa52a0b06a1e7bee73c2d11d3946078e90bd10946f434a04"
+    },
+    {
+      "file": "analyses/co-634b5b5f71a9-technology.json",
+      "sha256": "2195d8a602896f4e002bfef6b76f4ae733a5db67363a1c1e3bfa394e905f12df"
+    },
+    {
+      "file": "analyses/co-7320faf46875-market.json",
+      "sha256": "12a1e7f6181faca8e4a498729a9629bcc9b53c296723e1e822b05b23245b10a6"
+    },
+    {
+      "file": "analyses/co-7320faf46875-technology.json",
+      "sha256": "b0e4a6c4d9fe7dc9a336278a8ed96f536b237d772e0012ae563b418a22e71468"
+    },
+    {
+      "file": "analyses/co-9d07ca84baf6-market.json",
+      "sha256": "0e7d0bcee541ded8a9fae29b88c633ca3cea5da10f835f9e262b7629259ed9cc"
+    },
+    {
+      "file": "analyses/co-9d07ca84baf6-technology.json",
+      "sha256": "6cbf193473f47a90b8feb34ed2fcc9b98389f91293370e01972229dba20bcc1f"
+    },
+    {
+      "file": "analyses/co-a7737ff4931e-market.json",
+      "sha256": "ef7ae865da9205084aba46e7efe49a3ce547bb78e62c879649b067930947fd59"
+    },
+    {
+      "file": "analyses/co-a7737ff4931e-technology.json",
+      "sha256": "ba38c616466eef02148517ab7ceec4d85a13d97653e40590819e97596eb53238"
+    },
+    {
+      "file": "analyses/co-bc6f6312fdc9-market.json",
+      "sha256": "d923c4e1ed5eedaf0036a516bd7a3ff3ffbd9ec54a2f677cf4e85e6e80e05fe9"
+    },
+    {
+      "file": "analyses/co-bc6f6312fdc9-technology.json",
+      "sha256": "d3f77ffbbbb43ee5d0c7ccccf73d2d8f576c371a9c3adcc238936b31749686f9"
+    },
+    {
+      "file": "analyses/co-c533e3536ce3-market.json",
+      "sha256": "cf8b538250d7a5beb7fe3483ea8481bc2dc4ee6db1b9cc9a7e3d55957b5f21dd"
+    },
+    {
+      "file": "analyses/co-c533e3536ce3-technology.json",
+      "sha256": "7026b0425545a449f7be548956cb8c6a9d274375c5a10b505cc2bda4bd2d924a"
+    },
+    {
+      "file": "analyses/co-e50bbfd4f5cd-market.json",
+      "sha256": "3e9f7c60e728f10a1779d5f1882624f41e4a93cecd4fa4c1b1bb6ba768f34636"
+    },
+    {
+      "file": "analyses/co-e50bbfd4f5cd-technology.json",
+      "sha256": "ef32c439ef9bc266335ea6ce62c3081b1f3f189250bb11643710677c56c806df"
+    }
+  ],
+  "source_pages_unchanged": 149,
+  "new_documents": 0,
+  "new_api_calls": 0,
+  "new_api_cost_usd": 0,
+  "changed_claim_quotes_verified": 175,
+  "limitations": [
+    "새 웹 조사·인간 검토가 아닙니다.",
+    "회사·투자사 설명과 독립 검증을 구분합니다.",
+    "비공개 사실과 검색 실패에 점수 0을 대입하지 않습니다.",
+    "기존 records/state/보고서는 원본 실행 기록이며 최종 교정 후보·분석으로 별도 재채점해야 합니다."
+  ]
+}

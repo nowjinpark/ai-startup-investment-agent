@@ -1,0 +1,387 @@
+{
+  "checked_at": "2026-09-30",
+  "seed_urls": [
+    {
+      "url": "https://d2sf.naver.com/ko/portfolio?sector=Robotics",
+      "title": "네이버 D2SF 공식 Robotics 포트폴리오",
+      "max_pages": 8
+    },
+    {
+      "url": "https://www.kakao.vc/en/family",
+      "title": "카카오벤처스 공식 투자 기업 목록",
+      "max_pages": 4
+    },
+    {
+      "url": "https://www.kakao.vc/en/family?bd68ea8e_page=2",
+      "title": "카카오벤처스 공식 투자 기업 목록 2",
+      "max_pages": 4
+    },
+    {
+      "url": "https://www.bonangels.net/portfolio",
+      "title": "본엔젤스 공식 포트폴리오",
+      "max_pages": 4
+    },
+    {
+      "url": "https://futureplay.co/our-companies",
+      "title": "퓨처플레이 공식 포트폴리오",
+      "max_pages": 4
+    },
+    {
+      "url": "https://internal-wordpress.futureplay.co/wp-content/uploads/2023/10/FP_Introduction_eng_250331.pdf",
+      "title": "퓨처플레이 2025년 공식 기업 소개: 글로벌 진출 사례",
+      "pages": [
+        6
+      ],
+      "max_pages": 1
+    },
+    {
+      "url": "https://startuprecipe.co.kr/invest",
+      "title": "StartupRecipe 투자 DB",
+      "max_pages": 4
+    }
+  ],
+  "common_sources": [
+    {
+      "url": "https://www.pwc.com/kr/ko/insights/issue-brief/samilpwc_physical-ai-robot.pdf",
+      "title": "삼일PwC: 지능형 로봇이 바꾸는 산업 현장",
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "max_pages": 4
+    },
+    {
+      "url": "https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally",
+      "title": "IFR: World Robotics 2026 공개 보도자료",
+      "max_pages": 4
+    },
+    {
+      "url": "https://ifr.org/ifr-press-releases/news/service-robots-see-global-growth-boom",
+      "title": "IFR 서비스로봇 2024년 표본 판매 통계",
+      "max_pages": 3
+    },
+    {
+      "url": "https://www.misorobotics.com/",
+      "title": "Miso Robotics 조리 자동화 비교 대안",
+      "max_pages": 3
+    },
+    {
+      "url": "https://developer.nvidia.com/isaac/sim/",
+      "title": "NVIDIA Isaac Sim 합성 데이터 자체구현 대안",
+      "max_pages": 3
+    },
+    {
+      "url": "https://www.schnell.it/en/",
+      "title": "Schnell 철근 가공 자동화 비교 대안",
+      "max_pages": 3
+    },
+    {
+      "url": "https://www.mech-mind.com/products/mech-vision-machine-vision-software.html",
+      "title": "Mech-Mind 로봇 비전 비교 대안",
+      "max_pages": 3
+    }
+  ],
+  "sources": [
+    {
+      "id": "startuprecipe",
+      "name": "StartupRecipe 투자 DB",
+      "url": "https://startuprecipe.co.kr/invest",
+      "doc_types": [
+        "company"
+      ],
+      "mode": "public_html",
+      "verified": "공개 투자 표 본문 확인",
+      "note": "기업명·투자일·사업 분야·투자 단계 후보 수집. 지원금·팁스는 투자 라운드와 구분하며 공식 발표로 현재 단계를 확인합니다. 전체 기업 목록을 적격으로 간주하지 않습니다."
+    },
+    {
+      "id": "company_official",
+      "name": "기업·고객사·투자사 공식 홈페이지",
+      "url": "",
+      "doc_types": [
+        "company",
+        "technology",
+        "market"
+      ],
+      "mode": "public_html_or_pdf",
+      "verified": "기업별 주소를 탐색 후 확인",
+      "note": "About/Team/Product/Solution/News/IR의 공개 본문과 PDF. 법인명·핵심인력·기술 성능·투자 단계·유료 사례·과금 구조를 수집합니다. 링크만 찾은 경우 원문 근거로 사용하지 않습니다."
+    },
+    {
+      "id": "kipris",
+      "name": "KIPRIS",
+      "url": "https://www.kipris.or.kr/",
+      "doc_types": [
+        "company",
+        "technology"
+      ],
+      "mode": "manual_or_official_api",
+      "verified": "포털 접근 확인, 검색 본문 자동 추출 미검증",
+      "note": "출원인·등록권자·발명자·특허 상태 확인. 현재 코드는 대화형 검색을 자동 실행하지 않습니다. 공개 특허 PDF를 저장해 추가하거나 KIPRIS Plus에서 신청한 API로 별도 연동하세요."
+    },
+    {
+      "id": "scienceon",
+      "name": "ScienceON",
+      "url": "https://scienceon.kisti.re.kr/",
+      "doc_types": [
+        "technology"
+      ],
+      "mode": "manual_or_official_api",
+      "verified": "자동 접근 실패; 원문 공개 여부 개별 확인 필요",
+      "note": "논문·연구보고서 제목·저자·소속 확인. 공개 원문 PDF만 추가하며 원문 없는 검색 결과를 기술 성능 근거로 사용하지 않습니다. API 연동은 현재 구현 범위에 포함하지 않습니다."
+    },
+    {
+      "id": "g2b",
+      "name": "나라장터",
+      "url": "https://www.g2b.go.kr/",
+      "doc_types": [
+        "market"
+      ],
+      "mode": "manual_or_official_api",
+      "verified": "일반 웹 수집 접근 실패",
+      "note": "계약 당사자·제품·체결일·공개 금액 확인. 공공데이터포털에서 사용할 계약정보 API의 승인과 명세를 확인한 뒤 연결하거나 공개 계약 자료를 파일로 추가합니다. 계약 검색 실패를 계약 0건으로 처리하지 않습니다."
+    },
+    {
+      "id": "venture_g2b",
+      "name": "벤처나라",
+      "url": "https://venture.g2b.go.kr/",
+      "doc_types": [
+        "market"
+      ],
+      "mode": "manual_or_official_api",
+      "verified": "접근 가능 브라우저 안내만 반환",
+      "note": "업체명·수요기관·실적일자·판매 수량·단가 확인. 상품 등록과 실제 판매 실적을 구분합니다. 현재 일반 수집기로 대화형 통합실적 검색을 자동 실행하지 않습니다."
+    },
+    {
+      "id": "thevc",
+      "name": "THE VC",
+      "url": "https://thevc.kr/",
+      "doc_types": [
+        "company",
+        "market"
+      ],
+      "mode": "public_preview_manual",
+      "verified": "공개 본문과 로그인 필요 항목 확인",
+      "note": "공개 기업 소개로 경쟁 후보를 찾습니다. 로그인·유료 영역은 수집하지 않으며 비교 수치는 기업 공식 자료로 확인합니다."
+    },
+    {
+      "id": "kind",
+      "name": "KRX KIND",
+      "url": "https://kind.krx.co.kr/",
+      "doc_types": [
+        "company"
+      ],
+      "mode": "manual_or_public_export",
+      "verified": "홈페이지 본문 자동 추출 미검증",
+      "note": "코스피·코스닥·코넥스 상장 여부를 기업 법인명으로 확인합니다. 검색 결과가 없다는 사실만으로 비상장을 확정하지 않습니다. 공개 조회 결과를 저장해 추가할 수 있습니다."
+    },
+    {
+      "id": "dart",
+      "name": "DART",
+      "url": "https://dart.fss.or.kr/",
+      "doc_types": [
+        "company",
+        "market"
+      ],
+      "mode": "manual_or_official_api",
+      "verified": "현재 일반 웹 수집 실패",
+      "note": "기업개황·공시에서 상장·합병·영업양도·고객 계약을 확인합니다. 공시 대상이 아닌 스타트업이 있으므로 조회되지 않으면 미확인입니다. OpenDART 키 연동은 별도 구현 대상입니다."
+    },
+    {
+      "id": "ifr",
+      "name": "IFR",
+      "url": "https://ifr.org/",
+      "doc_types": [
+        "market"
+      ],
+      "mode": "public_html_or_pdf",
+      "verified": "공개 뉴스와 무료 다운로드 링크 확인",
+      "note": "공개 보도자료·무료 요약에서 로봇 유형별 설치량·시장 구조를 조사합니다. 유료 World Robotics 보고서 전체 접근을 전제하지 않습니다. 같은 범위·단위·기간의 수치만 성장률 계산에 사용합니다."
+    },
+    {
+      "id": "kiria",
+      "name": "한국로봇산업진흥원",
+      "url": "https://www.kiria.org/portal/policysut/portalPlcyReports.do",
+      "doc_types": [
+        "market"
+      ],
+      "mode": "public_pdf_manual_if_blocked",
+      "verified": "공개 보고서 게시판이나 현재 자동 접근 실패",
+      "note": "로봇산업 실태조사의 국내 매출·생산·고용·R&D 자료. 게시글과 첨부 PDF 직접 주소를 사용하고 실패하면 공개 PDF를 직접 저장해 추가합니다."
+    },
+    {
+      "id": "pwc_physical_ai",
+      "name": "삼일PwC Physical AI 산업 보고서",
+      "url": "https://www.pwc.com/kr/ko/insights/issue-brief/samilpwc_physical-ai-robot.pdf",
+      "doc_types": [
+        "market"
+      ],
+      "mode": "public_pdf",
+      "verified": "공개 PDF 46쪽 확인",
+      "note": "산업 구조·수요·사업화 위험의 공통 자료. 전체 자동 수집 대신 관련 원본 쪽을 선택해 추가하는 것을 권장합니다. 문서별 기본 한도로 일부만 수집될 경우 오류 기록에 남습니다."
+    },
+    {
+      "id": "kosis",
+      "name": "KOSIS",
+      "url": "https://kosis.kr/",
+      "doc_types": [
+        "market"
+      ],
+      "mode": "manual_or_official_api",
+      "verified": "이 작업에서 자동 수집 미검증",
+      "note": "동일한 통계 분류와 단위의 시계열을 내려받아 출처를 기록합니다. 전체 로봇시장 수치를 기업의 세부시장 수치로 바꾸어 사용하지 않습니다."
+    },
+    {
+      "id": "kosha",
+      "name": "한국산업안전보건공단",
+      "url": "https://www.kosha.or.kr/",
+      "doc_types": [
+        "technology"
+      ],
+      "mode": "public_pdf_manual_if_blocked",
+      "verified": "이 작업에서 자동 수집 미검증",
+      "note": "안전 자료와 공개 인증·검사 근거. 제품 모델·인증 날짜·적용 범위를 확인하고 일반 안전 지침을 해당 기업의 인증 취득 근거로 사용하지 않습니다."
+    },
+    {
+      "id": "kats",
+      "name": "국가기술표준원",
+      "url": "https://www.kats.go.kr/",
+      "doc_types": [
+        "technology"
+      ],
+      "mode": "public_pdf_manual_if_blocked",
+      "verified": "이 작업에서 자동 수집 미검증",
+      "note": "공개 표준·안전 규정의 적용 범위를 확인합니다. 인증 필요성과 기업의 인증 취득 사실은 구분합니다."
+    },
+    {
+      "id": "iso",
+      "name": "ISO",
+      "url": "https://www.iso.org/",
+      "doc_types": [
+        "technology"
+      ],
+      "mode": "public_preview_manual",
+      "verified": "이 작업에서 자동 수집 미검증",
+      "note": "공개 표준 설명만 참고합니다. 유료 표준 전문 자동 수집은 지원하지 않습니다."
+    },
+    {
+      "id": "kiet",
+      "name": "산업연구원",
+      "url": "https://www.kiet.re.kr/",
+      "doc_types": [
+        "market"
+      ],
+      "mode": "public_pdf_manual_if_blocked",
+      "verified": "이 작업에서 자동 수집 미검증",
+      "note": "공개 산업·시장 보고서의 대상 산업, 지역, 기준 연도와 전망 기간을 확인합니다. 필요한 게시물·첨부 PDF 주소를 common_sources에 추가하거나 공개 파일을 직접 추가합니다."
+    },
+    {
+      "id": "kakao_portfolio",
+      "name": "카카오벤처스 공식 투자 기업 목록",
+      "url": "https://www.kakao.vc/en/family",
+      "doc_types": [
+        "company"
+      ],
+      "mode": "public_html",
+      "verified": "2026-09-30: 공개 HTML에서 기업명·사업 설명·공식 홈페이지 링크 확인",
+      "note": "투자사 포트폴리오 소속만으로 현재 비상장·영업 지속을 확정하지 않습니다. 해외 기업과 Alumni도 후속 자격 확인 대상입니다. 공개 페이지 2 주소도 확인했습니다."
+    },
+    {
+      "id": "bonangels_portfolio",
+      "name": "본엔젤스 공식 포트폴리오",
+      "url": "https://www.bonangels.net/portfolio",
+      "doc_types": [
+        "company"
+      ],
+      "mode": "public_html",
+      "verified": "2026-09-30: 공개 본문에서 로봇 관련 기업명·사업 설명·홈페이지 확인",
+      "note": "리옵스·에이로봇 등 기술 설명이 있는 공개 투자사 자료입니다. 현재 자격은 기업별 최신 원문으로 다시 확인합니다."
+    },
+    {
+      "id": "futureplay_portfolio",
+      "name": "퓨처플레이 공식 포트폴리오",
+      "url": "https://futureplay.co/our-companies",
+      "doc_types": [
+        "company"
+      ],
+      "mode": "public_html_or_pdf",
+      "verified": "2026-09-30: 공개 목록과 기업 상세 링크 확인, 2025-03-31 공식 소개 PDF 6쪽에 기술·고객 사례 확인",
+      "note": "목록의 무한 스크롤 전체 수집을 전제하지 않습니다. Seed에 지정한 공개 PDF 6쪽과 분야별 검색으로 보완합니다. 상장·해외 기업도 섞여 있어 자동 적격 목록으로 사용하지 않습니다."
+    },
+    {
+      "id": "bluepoint_portfolio",
+      "name": "블루포인트 포트폴리오",
+      "url": "https://bluepoint.ac/portfolio/",
+      "doc_types": [
+        "company"
+      ],
+      "mode": "manual_or_search",
+      "verified": "2026-09-30: 공개 페이지가 검색 결과 없음만 반환하여 목록 자동 추출 불가",
+      "note": "현재 seed에서는 제외합니다. 공개 기업 상세 기사나 투자 발표가 검색될 때 해당 원문만 수집합니다."
+    },
+    {
+      "id": "robot_association",
+      "name": "한국AI·로봇산업협회",
+      "url": "https://www.korearobot.or.kr/",
+      "doc_types": [
+        "company",
+        "market"
+      ],
+      "mode": "manual_or_public_pdf",
+      "verified": "2026-09-30: 기본 HTTP 응답이 76바이트로 회원사 목록 미확인; 공개 가이드북 PDF 존재 확인",
+      "note": "검증하지 못한 회원사 검색 API나 주소를 만들지 않습니다. 가이드북은 기업 명단이 아니므로 seed에 사용하지 않고 공개 기업 자료를 직접 저장해 추가합니다."
+    },
+    {
+      "id": "nicebizinfo",
+      "name": "NICE 기업정보 공개 기업 개요",
+      "url": "https://www.nicebizinfo.com/",
+      "doc_types": [
+        "company"
+      ],
+      "mode": "public_preview_manual",
+      "verified": "2026-09-30: 플로틱 개요 상세 페이지에 대표·설립일·폐업 표시 확인",
+      "note": "공개 기업 상태의 보완 근거로만 사용합니다. 상세 신용정보 유료 영역을 수집하지 않으며 기업명·대표·설립일로 동일 법인을 확인합니다."
+    },
+    {
+      "id": "d2sf_robotics",
+      "name": "네이버 D2SF Robotics 포트폴리오",
+      "url": "https://d2sf.naver.com/ko/portfolio?sector=Robotics",
+      "doc_types": [
+        "company",
+        "technology",
+        "market"
+      ],
+      "mode": "public_html",
+      "verified": "2026-09-30: 공개 페이지에서 로봇 기업 9곳의 사업·지역·투자 단계·대표·홈페이지 확인",
+      "note": "상장 기업·해외 기업·과거 투자 기업도 포함됩니다. 예전 투자 설명을 현재 영업이나 미상장 근거로 단정하지 않고 최신 상태 검색으로 보완합니다."
+    }
+  ],
+  "discovery_queries": [
+    {
+      "query": "국내 로봇 스타트업 투자 포트폴리오 제조 협동로봇 2024 2025",
+      "domains": [
+        "futureplay.co",
+        "kakao.vc",
+        "bonangels.net",
+        "bluepoint.ac",
+        "d2sf.naver.com"
+      ]
+    },
+    {
+      "query": "국내 자율주행 물류 로봇 스타트업 시리즈 투자 2023 2024 2025"
+    },
+    {
+      "query": "국내 휴머노이드 로봇 파운데이션 모델 스타트업 시드 투자 2025 2026"
+    },
+    {
+      "query": "국내 의료 수술 재활 로봇 스타트업 시리즈A 시리즈B"
+    },
+    {
+      "query": "국내 농업 로봇 드론 자율운항 스타트업 투자 2024 2025 2026"
+    },
+    {
+      "query": "국내 제조 로봇 지능 제어 스타트업 고객 납품 시리즈C 2025 2026"
+    }
+  ]
+}

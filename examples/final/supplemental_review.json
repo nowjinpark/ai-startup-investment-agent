@@ -1,0 +1,434 @@
+{
+  "reviewer": "Codex",
+  "human_reviewed": false,
+  "new_api_calls": 0,
+  "original_pages": 149,
+  "additional_pages": 15,
+  "total_pages": 164,
+  "added_source_ids": [
+    "S-f893a98887913f2e",
+    "S-7f883e9a75a4ab43",
+    "S-a114752986458cd4",
+    "S-c16d5887638a0fd9",
+    "S-e992356c1eb219b0",
+    "S-be1c088934d35b24",
+    "S-bd94dcca828b0bce",
+    "S-bff47648b1f9455b",
+    "S-63e2c1b90ddb2a1c",
+    "S-202c6dfa263ed8d0",
+    "S-09acce98e5b18bc0",
+    "S-de27f0bd75a102d2",
+    "S-a46f4f80b7576ea7",
+    "S-d509e8739832fee4",
+    "S-73d113c400d0b229"
+  ],
+  "overlay": {
+    "companies": [
+      {
+        "company_id": "co-c533e3536ce3",
+        "name": "엔닷라이트",
+        "details": {
+          "market": {
+            "market_size": "산업 자동화의 참고지표로 2025년 글로벌 산업용 로봇 신규 설치는 60만대 초과, 한국은 3만대입니다. 2026년 글로벌 65.5만대는 IFR 전망치입니다. 3D 학습데이터의 국내 TAM·SAM 금액으로 환산하지 않습니다.",
+            "market_size_evidence": [
+              {
+                "source_id": "S-28613722a6d41b0c",
+                "quote": "The global operational stock of industrial robots surged 9% to a record 5 million units in 2025. This was driven by an 11% jump in annual installations: Factories worldwide installed more than 600,000 new units over the year."
+              },
+              {
+                "source_id": "S-28613722a6d41b0c",
+                "quote": "The market in the Republic of Korea installed 30,000 units in 2025 – down 1%."
+              },
+              {
+                "source_id": "S-5f46b16fc92becec",
+                "quote": "Installations are forecast to rise by 9% to 655,000 units in 2026 and reach 806,000 units in 2029."
+              }
+            ],
+            "market_scope": "참고 업계 통계; 3D 학습데이터의 국내 TAM·SAM 아님",
+            "competitors": [
+              {
+                "name": "NVIDIA Isaac Sim",
+                "comparison": "TRINIX는 물리정보를 반영한 3D 데이터를 제공하고 Omniverse와 연동합니다. Isaac Sim은 같은 생태계에서 고객이 시뮬레이션·합성데이터 작업을 직접 구성하는 플랫폼 대안입니다. 독립 실측 비교가 없어 직접 경쟁관계나 비용·성능 우위를 확정하지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-eff36abe805cf9e1",
+                    "quote": "엔닷라이트는 자체 개발한 심레디(SimReady·Simulation-Ready) 3D 에셋 생성 솔루션 '트리닉스(TRINIX)'를 기반으 로 시뮬레이션과 디지털트윈 환경에서 바로 활용할 수 있는 고정밀 3D 데이터를 제공한다. 로봇을 실제 산업 현장에 투입하기 위해서는 대규모 학습 데이터 확보가 필수적이다. 하지만 텔레오퍼레이션이나 모션 캡처 등 실제 환경에서 데이터를 수집하는 방식은 비용이 많이 들고, 수집 속도가 느린 데다 데이터 품질을 일정하게 유 지하기 어렵다는 한계가 있다. 엔닷라이트는 이를 시뮬레이션 데이터로 해결한다. 질량과 마찰 등 물리적 속성은 물론 관절 구조와 충돌 범위까지 반영 된 3D 데이터를 자동으로 생성한다. 엔비디아의 시뮬레이션 플랫폼 '옴니버스(Omniverse)'와 연동해 데이터 생성부터 평가까지 대규모 3D 시뮬레이션 데이터를 구축할 수 있다."
+                  },
+                  {
+                    "source_id": "S-bd94dcca828b0bce",
+                    "quote": "NVIDIA Isaac Sim™ is an open source reference framework built on NVIDIA Omniverse ™ libraries for robotics simulation, testing, and synthetic data generation in physically based virtual environments."
+                  }
+                ],
+                "comparison_kind": "alternative"
+              }
+            ],
+            "context_risks": [
+              {
+                "type": "시장",
+                "reason": "산업용 로봇 설치 수량과 해당 기업의 소프트웨어·솔루션 수요는 다릅니다. 세부 고객군의 유료 도입 규모와 구매 전환은 별도 확인이 필요합니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-28613722a6d41b0c",
+                    "quote": "The global operational stock of industrial robots surged 9% to a record 5 million units in 2025. This was driven by an 11% jump in annual installations: Factories worldwide installed more than 600,000 new units over the year."
+                  },
+                  {
+                    "source_id": "S-28613722a6d41b0c",
+                    "quote": "The market in the Republic of Korea installed 30,000 units in 2025 – down 1%."
+                  },
+                  {
+                    "source_id": "S-5f46b16fc92becec",
+                    "quote": "Installations are forecast to rise by 9% to 655,000 units in 2026 and reach 806,000 units in 2029."
+                  }
+                ]
+              },
+              {
+                "type": "경쟁",
+                "reason": "제품 설명을 비교한 자료이며, 같은 조건의 제3자 실측이 없어 상대 가격·성능 우위와 교체비용은 확인되지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-eff36abe805cf9e1",
+                    "quote": "엔닷라이트는 자체 개발한 심레디(SimReady·Simulation-Ready) 3D 에셋 생성 솔루션 '트리닉스(TRINIX)'를 기반으 로 시뮬레이션과 디지털트윈 환경에서 바로 활용할 수 있는 고정밀 3D 데이터를 제공한다. 로봇을 실제 산업 현장에 투입하기 위해서는 대규모 학습 데이터 확보가 필수적이다. 하지만 텔레오퍼레이션이나 모션 캡처 등 실제 환경에서 데이터를 수집하는 방식은 비용이 많이 들고, 수집 속도가 느린 데다 데이터 품질을 일정하게 유 지하기 어렵다는 한계가 있다. 엔닷라이트는 이를 시뮬레이션 데이터로 해결한다. 질량과 마찰 등 물리적 속성은 물론 관절 구조와 충돌 범위까지 반영 된 3D 데이터를 자동으로 생성한다. 엔비디아의 시뮬레이션 플랫폼 '옴니버스(Omniverse)'와 연동해 데이터 생성부터 평가까지 대규모 3D 시뮬레이션 데이터를 구축할 수 있다."
+                  },
+                  {
+                    "source_id": "S-bd94dcca828b0bce",
+                    "quote": "NVIDIA Isaac Sim™ is an open source reference framework built on NVIDIA Omniverse ™ libraries for robotics simulation, testing, and synthetic data generation in physically based virtual environments."
+                  }
+                ]
+              },
+              {
+                "type": "규제",
+                "reason": "산업 현장의 공통 과제로 안전 책임·규제 부담이 제시됩니다. 해당 기업에서 위험이 발생했다는 판단이 아니며, 적용 현장의 인증·책임 범위는 별도 확인이 필요합니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-7c95904560611c54",
+                    "quote": "위험한공정과작업 에 사람을투입하는방식은규제강화와책임비용증가로부담이커지고있고,"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "company_id": "co-28e1788fa6b5",
+        "name": "비욘드허니컴",
+        "details": {
+          "market": {
+            "market_size": "2024년 글로벌 hospitality 서비스로봇 표본 판매는 4.2만대 초과입니다. 안내·텔레프레즌스 등이 포함되어 조리로봇만의 규모는 아닙니다. 공급자 294개 표본으로 전체시장 추정치가 아니며, 연도 간 직접 비교에 주의가 필요합니다. 자동 굽기 로봇의 국내 TAM·SAM 금액으로 환산하지 않습니다.",
+            "market_size_evidence": [
+              {
+                "source_id": "S-f893a98887913f2e",
+                "quote": "Hospitality robots remain second place with more than 42,000 sold – down 11%. Robots for mobile guidance, information points in public environments and telepresence account for the majority of these robots. Such service robots are taking over small services or promoting sales in stores, shopping malls, or at front desks. As the sector is evolving, new applications have emerged, such as food and beverage preparation."
+              },
+              {
+                "source_id": "S-7f883e9a75a4ab43",
+                "quote": "World Robotics Service Robots report is sample data. Data is NOT projected to the whole industry. Sample composition varies each year. All numbers at the World Robotics Service Robots 2025 report are based on a sample of 294 service robot suppliers. Compiling or comparing data from different World Robotics Reports is strongly discouraged."
+              }
+            ],
+            "market_scope": "참고 업계 통계; 자동 굽기 로봇의 국내 TAM·SAM 아님",
+            "competitors": [
+              {
+                "name": "Flippy",
+                "comparison": "GRILL X는 고기·생선 굽기와 재료 상태에 따른 제어를, Flippy는 튀김 스테이션 자동화를 설명합니다. 주방 자동화라는 대안 관계이지만 조리 용도가 달라 일대일 대체성이나 비용·성능 우위를 판단할 수 없습니다. 독립 비교 실측은 확인되지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-e91a36a856825291",
+                    "quote": "비욘드허니컴 ‘GRILL X(그릴엑스)’는 돼지고기, 소고기, 생선 등 다양한 종류의 고기를 자동으로 구워주는 AI 조리 로봇 이다. 고기의 상태를 실시간으로 분석해 조리 과정을 자동으로 조정함으로써, 일관된 맛과 품질을 구현할 수 있는 것이 특징이다."
+                  },
+                  {
+                    "source_id": "S-c16d5887638a0fd9",
+                    "quote": "Flippy handles your fry station so your team does not have to. Consistent results, every order, every shift."
+                  }
+                ],
+                "comparison_kind": "alternative"
+              }
+            ],
+            "context_risks": [
+              {
+                "type": "시장",
+                "reason": "업계 표본 통계로 개별 기업의 수요·매출을 추정할 수 없습니다. 국내 조리로봇 세부시장과 유료 설치 규모는 별도 확인이 필요합니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-f893a98887913f2e",
+                    "quote": "Hospitality robots remain second place with more than 42,000 sold – down 11%. Robots for mobile guidance, information points in public environments and telepresence account for the majority of these robots. Such service robots are taking over small services or promoting sales in stores, shopping malls, or at front desks. As the sector is evolving, new applications have emerged, such as food and beverage preparation."
+                  },
+                  {
+                    "source_id": "S-7f883e9a75a4ab43",
+                    "quote": "World Robotics Service Robots report is sample data. Data is NOT projected to the whole industry. Sample composition varies each year. All numbers at the World Robotics Service Robots 2025 report are based on a sample of 294 service robot suppliers. Compiling or comparing data from different World Robotics Reports is strongly discouraged."
+                  }
+                ]
+              },
+              {
+                "type": "경쟁",
+                "reason": "제품 설명을 비교한 자료이며, 같은 조건의 제3자 실측이 없어 상대 가격·성능 우위와 교체비용은 확인되지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-e91a36a856825291",
+                    "quote": "비욘드허니컴 ‘GRILL X(그릴엑스)’는 돼지고기, 소고기, 생선 등 다양한 종류의 고기를 자동으로 구워주는 AI 조리 로봇 이다. 고기의 상태를 실시간으로 분석해 조리 과정을 자동으로 조정함으로써, 일관된 맛과 품질을 구현할 수 있는 것이 특징이다."
+                  },
+                  {
+                    "source_id": "S-c16d5887638a0fd9",
+                    "quote": "Flippy handles your fry station so your team does not have to. Consistent results, every order, every shift."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "company_id": "co-46aa697b3022",
+        "name": "로보아르테",
+        "details": {
+          "market": {
+            "market_size": "2024년 글로벌 hospitality 서비스로봇 표본 판매는 4.2만대 초과입니다. 안내·텔레프레즌스 등이 포함되어 조리로봇만의 규모는 아닙니다. 공급자 294개 표본으로 전체시장 추정치가 아니며, 연도 간 직접 비교에 주의가 필요합니다. 조리로봇의 국내 TAM·SAM 금액으로 환산하지 않습니다.",
+            "market_size_evidence": [
+              {
+                "source_id": "S-f893a98887913f2e",
+                "quote": "Hospitality robots remain second place with more than 42,000 sold – down 11%. Robots for mobile guidance, information points in public environments and telepresence account for the majority of these robots. Such service robots are taking over small services or promoting sales in stores, shopping malls, or at front desks. As the sector is evolving, new applications have emerged, such as food and beverage preparation."
+              },
+              {
+                "source_id": "S-7f883e9a75a4ab43",
+                "quote": "World Robotics Service Robots report is sample data. Data is NOT projected to the whole industry. Sample composition varies each year. All numbers at the World Robotics Service Robots 2025 report are based on a sample of 294 service robot suppliers. Compiling or comparing data from different World Robotics Reports is strongly discouraged."
+              }
+            ],
+            "market_scope": "참고 업계 통계; 조리로봇의 국내 TAM·SAM 아님",
+            "competitors": [
+              {
+                "name": "Flippy",
+                "comparison": "로보아르테는 F&B 매장용 조리로봇 시스템을, Flippy는 튀김 스테이션 자동화를 제공합니다. 조리 자동화의 비교 대안이며 메뉴·설치 범위가 같은 조건의 독립 비교 실측은 확인되지 않습니다. 비용·성능 우위는 판단하지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-c40162da0adabda6",
+                    "quote": "2018년 설립된 로보아르테는 F&B 매장에 최적화된 조리 로봇 시스템을 개발했다."
+                  },
+                  {
+                    "source_id": "S-c16d5887638a0fd9",
+                    "quote": "Flippy handles your fry station so your team does not have to. Consistent results, every order, every shift."
+                  }
+                ],
+                "comparison_kind": "alternative"
+              }
+            ],
+            "context_risks": [
+              {
+                "type": "시장",
+                "reason": "업계 표본 통계로 개별 기업의 수요·매출을 추정할 수 없습니다. 국내 조리로봇 세부시장과 유료 설치 규모는 별도 확인이 필요합니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-f893a98887913f2e",
+                    "quote": "Hospitality robots remain second place with more than 42,000 sold – down 11%. Robots for mobile guidance, information points in public environments and telepresence account for the majority of these robots. Such service robots are taking over small services or promoting sales in stores, shopping malls, or at front desks. As the sector is evolving, new applications have emerged, such as food and beverage preparation."
+                  },
+                  {
+                    "source_id": "S-7f883e9a75a4ab43",
+                    "quote": "World Robotics Service Robots report is sample data. Data is NOT projected to the whole industry. Sample composition varies each year. All numbers at the World Robotics Service Robots 2025 report are based on a sample of 294 service robot suppliers. Compiling or comparing data from different World Robotics Reports is strongly discouraged."
+                  }
+                ]
+              },
+              {
+                "type": "경쟁",
+                "reason": "제품 설명을 비교한 자료이며, 같은 조건의 제3자 실측이 없어 상대 가격·성능 우위와 교체비용은 확인되지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-c40162da0adabda6",
+                    "quote": "2018년 설립된 로보아르테는 F&B 매장에 최적화된 조리 로봇 시스템을 개발했다."
+                  },
+                  {
+                    "source_id": "S-c16d5887638a0fd9",
+                    "quote": "Flippy handles your fry station so your team does not have to. Consistent results, every order, every shift."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "company_id": "co-bc6f6312fdc9",
+        "name": "로보콘",
+        "details": {
+          "market": {
+            "market_size": "산업 자동화의 참고지표로 2025년 글로벌 산업용 로봇 신규 설치는 60만대 초과, 한국은 3만대입니다. 2026년 글로벌 65.5만대는 IFR 전망치입니다. 철근 자동화 솔루션의 국내 TAM·SAM 금액으로 환산하지 않습니다.",
+            "market_size_evidence": [
+              {
+                "source_id": "S-28613722a6d41b0c",
+                "quote": "The global operational stock of industrial robots surged 9% to a record 5 million units in 2025. This was driven by an 11% jump in annual installations: Factories worldwide installed more than 600,000 new units over the year."
+              },
+              {
+                "source_id": "S-28613722a6d41b0c",
+                "quote": "The market in the Republic of Korea installed 30,000 units in 2025 – down 1%."
+              },
+              {
+                "source_id": "S-5f46b16fc92becec",
+                "quote": "Installations are forecast to rise by 9% to 655,000 units in 2026 and reach 806,000 units in 2029."
+              }
+            ],
+            "market_scope": "참고 업계 통계; 철근 자동화 솔루션의 국내 TAM·SAM 아님",
+            "competitors": [
+              {
+                "name": "Schnell",
+                "comparison": "로보콘은 ARON 철근 가공·ANTON 선조립·Mobile Plant를, Schnell은 철근 가공 플랜트 설비를 제공합니다. 철근 공정 자동화의 비교 대안이며, 독립 실측 비교가 없어 처리량·원가·안전성 우위를 확정하지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-c634d53722c54665",
+                    "quote": "로보콘은 ARON(철근 가공), ANTON(선조립), Mobile Plant 등의 솔루션 제품군을 보유하고 있으며, 영국 미들랜드스 틸 가공장(ARON 납품)과 대만 타이페이 터미널(Mobile Plant 납품) 등 국내외 현장에 납품하고 있다."
+                  },
+                  {
+                    "source_id": "S-202c6dfa263ed8d0",
+                    "quote": "THE EXPERTS IN PLANT ENGINEERING SOLUTIONS FOR REBAR PROCESSING. For over 30 years, Schnell has been offering the most innovative and effective solutions for many shaping centers."
+                  }
+                ],
+                "comparison_kind": "alternative"
+              }
+            ],
+            "context_risks": [
+              {
+                "type": "시장",
+                "reason": "산업용 로봇 설치 수량과 해당 기업의 소프트웨어·솔루션 수요는 다릅니다. 세부 고객군의 유료 도입 규모와 구매 전환은 별도 확인이 필요합니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-28613722a6d41b0c",
+                    "quote": "The global operational stock of industrial robots surged 9% to a record 5 million units in 2025. This was driven by an 11% jump in annual installations: Factories worldwide installed more than 600,000 new units over the year."
+                  },
+                  {
+                    "source_id": "S-28613722a6d41b0c",
+                    "quote": "The market in the Republic of Korea installed 30,000 units in 2025 – down 1%."
+                  },
+                  {
+                    "source_id": "S-5f46b16fc92becec",
+                    "quote": "Installations are forecast to rise by 9% to 655,000 units in 2026 and reach 806,000 units in 2029."
+                  }
+                ]
+              },
+              {
+                "type": "경쟁",
+                "reason": "제품 설명을 비교한 자료이며, 같은 조건의 제3자 실측이 없어 상대 가격·성능 우위와 교체비용은 확인되지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-c634d53722c54665",
+                    "quote": "로보콘은 ARON(철근 가공), ANTON(선조립), Mobile Plant 등의 솔루션 제품군을 보유하고 있으며, 영국 미들랜드스 틸 가공장(ARON 납품)과 대만 타이페이 터미널(Mobile Plant 납품) 등 국내외 현장에 납품하고 있다."
+                  },
+                  {
+                    "source_id": "S-202c6dfa263ed8d0",
+                    "quote": "THE EXPERTS IN PLANT ENGINEERING SOLUTIONS FOR REBAR PROCESSING. For over 30 years, Schnell has been offering the most innovative and effective solutions for many shaping centers."
+                  }
+                ]
+              },
+              {
+                "type": "규제",
+                "reason": "산업 현장의 공통 과제로 안전 책임·규제 부담이 제시됩니다. 해당 기업에서 위험이 발생했다는 판단이 아니며, 적용 현장의 인증·책임 범위는 별도 확인이 필요합니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-7c95904560611c54",
+                    "quote": "위험한공정과작업 에 사람을투입하는방식은규제강화와책임비용증가로부담이커지고있고,"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "company_id": "co-9d07ca84baf6",
+        "name": "리옵스",
+        "details": {
+          "market": {
+            "market_size": "산업 자동화의 참고지표로 2025년 글로벌 산업용 로봇 신규 설치는 60만대 초과, 한국은 3만대입니다. 2026년 글로벌 65.5만대는 IFR 전망치입니다. 공장 공간지능의 국내 TAM·SAM 금액으로 환산하지 않습니다.",
+            "market_size_evidence": [
+              {
+                "source_id": "S-28613722a6d41b0c",
+                "quote": "The global operational stock of industrial robots surged 9% to a record 5 million units in 2025. This was driven by an 11% jump in annual installations: Factories worldwide installed more than 600,000 new units over the year."
+              },
+              {
+                "source_id": "S-28613722a6d41b0c",
+                "quote": "The market in the Republic of Korea installed 30,000 units in 2025 – down 1%."
+              },
+              {
+                "source_id": "S-5f46b16fc92becec",
+                "quote": "Installations are forecast to rise by 9% to 655,000 units in 2026 and reach 806,000 units in 2029."
+              }
+            ],
+            "market_scope": "참고 업계 통계; 공장 공간지능의 국내 TAM·SAM 아님",
+            "competitors": [
+              {
+                "name": "Mech-Vision",
+                "comparison": "리옵스는 공장 공간의 3D 재현과 인식을, Mech-Vision은 피킹·머신텐딩·조립 등 비전 기반 자동화 도구를 제공합니다. 공정 비전 구현의 대안이며 공장 전체 공간 관리와 동일 범위라고 단정하지 않습니다. 독립 비교 실측이 없어 성능·비용 우위는 미확인입니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-7af8ffde39fe53fc",
+                    "quote": "공간 MES 공장 전체를 3D로 재현합니다 리옵스의 공간 MES는 단순히 텍스트 전송에 그치지 않습니다. 실제 현장을 3D 스캔으로 정밀하게 재현합니다. 도면 위 에만 있던 도로, 벽체뿐 아니라 도면 밖에 있는 적재물부터 장애물까지 공간 AI가 단번에 인식합니다."
+                  },
+                  {
+                    "source_id": "S-73d113c400d0b229",
+                    "quote": "Mech-Vision is an industry-leading machine vision software. It is designed to quickly build vision applications, whether simple or complex. With Mech-Vision, users can manage a wide range of automation tasks, including bin picking, machine tending, piece picking, depalletizing and palletizing, assembly, and more."
+                  }
+                ],
+                "comparison_kind": "alternative"
+              }
+            ],
+            "context_risks": [
+              {
+                "type": "시장",
+                "reason": "산업용 로봇 설치 수량과 해당 기업의 소프트웨어·솔루션 수요는 다릅니다. 세부 고객군의 유료 도입 규모와 구매 전환은 별도 확인이 필요합니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-28613722a6d41b0c",
+                    "quote": "The global operational stock of industrial robots surged 9% to a record 5 million units in 2025. This was driven by an 11% jump in annual installations: Factories worldwide installed more than 600,000 new units over the year."
+                  },
+                  {
+                    "source_id": "S-28613722a6d41b0c",
+                    "quote": "The market in the Republic of Korea installed 30,000 units in 2025 – down 1%."
+                  },
+                  {
+                    "source_id": "S-5f46b16fc92becec",
+                    "quote": "Installations are forecast to rise by 9% to 655,000 units in 2026 and reach 806,000 units in 2029."
+                  }
+                ]
+              },
+              {
+                "type": "경쟁",
+                "reason": "제품 설명을 비교한 자료이며, 같은 조건의 제3자 실측이 없어 상대 가격·성능 우위와 교체비용은 확인되지 않습니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-7af8ffde39fe53fc",
+                    "quote": "공간 MES 공장 전체를 3D로 재현합니다 리옵스의 공간 MES는 단순히 텍스트 전송에 그치지 않습니다. 실제 현장을 3D 스캔으로 정밀하게 재현합니다. 도면 위 에만 있던 도로, 벽체뿐 아니라 도면 밖에 있는 적재물부터 장애물까지 공간 AI가 단번에 인식합니다."
+                  },
+                  {
+                    "source_id": "S-73d113c400d0b229",
+                    "quote": "Mech-Vision is an industry-leading machine vision software. It is designed to quickly build vision applications, whether simple or complex. With Mech-Vision, users can manage a wide range of automation tasks, including bin picking, machine tending, piece picking, depalletizing and palletizing, assembly, and more."
+                  }
+                ]
+              },
+              {
+                "type": "규제",
+                "reason": "산업 현장의 공통 과제로 안전 책임·규제 부담이 제시됩니다. 해당 기업에서 위험이 발생했다는 판단이 아니며, 적용 현장의 인증·책임 범위는 별도 확인이 필요합니다.",
+                "evidence": [
+                  {
+                    "source_id": "S-7c95904560611c54",
+                    "quote": "위험한공정과작업 에 사람을투입하는방식은규제강화와책임비용증가로부담이커지고있고,"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/isaac/sim/",
+      "https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally",
+      "https://ifr.org/ifr-press-releases/news/service-robots-see-global-growth-boom",
+      "https://www.irobotnews.com/news/articleView.html?idxno=41115",
+      "https://www.liops.io/",
+      "https://www.mech-mind.com/products/mech-vision-machine-vision-software.html",
+      "https://www.misorobotics.com/",
+      "https://www.pwc.com/kr/ko/insights/issue-brief/samilpwc_physical-ai-robot.pdf",
+      "https://www.schnell.it/en/",
+      "https://www.steelin.co.kr/news/articleView.html?idxno=11884",
+      "https://www.unicornfactory.co.kr/article/2024060516275184648",
+      "https://www.unicornfactory.co.kr/article/2026081108482651455"
+    ],
+    "scope": "전체 원문은 팀 공유 준비 자료에 보관"
+  },
+  "scope": "시장·경쟁·업계 위험 정성 설명 보완. 기업 점수와 자격은 수정하지 않음"
+}

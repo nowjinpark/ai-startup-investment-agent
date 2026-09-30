@@ -1,0 +1,1896 @@
+[
+  {
+    "candidate": {
+      "company_id": "demo-01",
+      "name": "가상로봇기업1",
+      "aliases": [],
+      "overview": "테스트용 자율 이동 물류 로봇 기업입니다.",
+      "eligibility": {
+        "domestic": {
+          "status": "pass",
+          "reason": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-basic",
+              "quote": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "unlisted": {
+          "status": "pass",
+          "reason": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-basic",
+              "quote": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "stage": {
+          "status": "pass",
+          "reason": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-basic",
+              "quote": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "no_exit": {
+          "status": "pass",
+          "reason": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-basic",
+              "quote": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "physical_ai": {
+          "status": "pass",
+          "reason": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-basic",
+              "quote": "가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "source_id": "demo-01-basic",
+          "company_id": "demo-01",
+          "text": "테스트용 가상 기업 자료입니다.\n가상로봇기업1은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.\n가상로봇기업1는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다.",
+          "title": "가상로봇기업1 테스트 문서",
+          "url": "https://example.invalid/demo/1",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "source_ids": [
+        "demo-01-basic"
+      ],
+      "website": "",
+      "identity": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-01-basic",
+            "quote": "가상로봇기업1는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      },
+      "operating": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-01-basic",
+            "quote": "가상로봇기업1는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "company_id": "demo-01",
+      "round_id": 1,
+      "status": "completed",
+      "summary": "테스트용 자율 이동 로봇의 현장 검증과 현재 개발 활동을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 2,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "lab",
+          "items": [],
+          "reason": "제품은 연구실 데모 단계이며 고객 생산 현장 검증은 아직 진행하지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-tech",
+              "quote": "제품은 연구실 데모 단계이며 고객 생산 현장 검증은 아직 진행하지 않았습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 10,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "active",
+          "items": [],
+          "reason": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-tech",
+              "quote": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-01-tech",
+          "company_id": "demo-01",
+          "text": "테스트용 가상 기업 가상로봇기업1의 자료입니다.\n제품은 연구실 데모 단계이며 고객 생산 현장 검증은 아직 진행하지 않았습니다.\n대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.\n자율 이동 로봇을 개발하며 CTO는 관련 연구 경력 3년입니다.\n가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+          "title": "가상로봇기업1 테스트 문서",
+          "url": "https://example.invalid/demo/1",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "critical_risk": false,
+        "critical_risk_reason": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+        "critical_risk_evidence": [
+          {
+            "source_id": "demo-01-tech",
+            "quote": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다."
+          }
+        ],
+        "technology": "자율 이동 로봇",
+        "team": "CTO 경력 3년"
+      },
+      "rubric_version": "3.0"
+    },
+    "market": {
+      "company_id": "demo-01",
+      "round_id": 1,
+      "status": "completed",
+      "summary": "테스트용 기업의 계약, 외부 검증, 과금 구조와 적용 목적을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 3,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "paid",
+          "items": [],
+          "reason": "외부 연구기관과 로봇 연구용 제품의 유료 공급 계약을 체결했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-market",
+              "quote": "외부 연구기관과 로봇 연구용 제품의 유료 공급 계약을 체결했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 6,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "외부 연구시설 한 곳에서 연구용 제품의 시험 검증을 진행했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-market",
+              "quote": "외부 연구시설 한 곳에서 연구용 제품의 시험 검증을 진행했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 7,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": null,
+          "items": [
+            "payer",
+            "product"
+          ],
+          "reason": "지불 주체는 연구기관이며 판매 제품은 연구용 로봇입니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-market",
+              "quote": "지불 주체는 연구기관이며 판매 제품은 연구용 로봇입니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 8,
+          "status": "verified",
+          "numeric_value": 0,
+          "category_value": null,
+          "items": [],
+          "reason": "현재 연구실 시험 단계로 실제 산업이나 고객 사용 목적에 적용해 검증한 사례는 없습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-01-market",
+              "quote": "현재 연구실 시험 단계로 실제 산업이나 고객 사용 목적에 적용해 검증한 사례는 없습니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-01-market",
+          "company_id": "demo-01",
+          "text": "테스트용 가상 기업 가상로봇기업1의 자료입니다.\n외부 연구기관과 로봇 연구용 제품의 유료 공급 계약을 체결했습니다.\n외부 연구시설 한 곳에서 연구용 제품의 시험 검증을 진행했습니다.\n지불 주체는 연구기관이며 판매 제품은 연구용 로봇입니다.\n현재 연구실 시험 단계로 실제 산업이나 고객 사용 목적에 적용해 검증한 사례는 없습니다.",
+          "title": "가상로봇기업1 테스트 문서",
+          "url": "https://example.invalid/demo/1",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "market_scope": "국내 물류 로봇 시장",
+        "cagr_period": "",
+        "market_size": "확인 필요",
+        "business_model": "연구용 로봇 판매",
+        "competitors": [],
+        "market_size_evidence": []
+      },
+      "rubric_version": "3.0"
+    }
+  },
+  {
+    "candidate": {
+      "company_id": "demo-02",
+      "name": "가상로봇기업2",
+      "aliases": [],
+      "overview": "테스트용 자율 이동 물류 로봇 기업입니다.",
+      "eligibility": {
+        "domestic": {
+          "status": "pass",
+          "reason": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-basic",
+              "quote": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "unlisted": {
+          "status": "pass",
+          "reason": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-basic",
+              "quote": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "stage": {
+          "status": "pass",
+          "reason": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-basic",
+              "quote": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "no_exit": {
+          "status": "pass",
+          "reason": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-basic",
+              "quote": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "physical_ai": {
+          "status": "pass",
+          "reason": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-basic",
+              "quote": "가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "source_id": "demo-02-basic",
+          "company_id": "demo-02",
+          "text": "테스트용 가상 기업 자료입니다.\n가상로봇기업2은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.\n가상로봇기업2는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다.",
+          "title": "가상로봇기업2 테스트 문서",
+          "url": "https://example.invalid/demo/2",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "source_ids": [
+        "demo-02-basic"
+      ],
+      "website": "",
+      "identity": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-02-basic",
+            "quote": "가상로봇기업2는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      },
+      "operating": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-02-basic",
+            "quote": "가상로봇기업2는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "company_id": "demo-02",
+      "round_id": 2,
+      "status": "completed",
+      "summary": "테스트용 자율 이동 로봇의 현장 검증과 현재 개발 활동을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 2,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "poc",
+          "items": [],
+          "reason": "고객의 물류 현장에서 로봇 PoC를 진행했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-tech",
+              "quote": "고객의 물류 현장에서 로봇 PoC를 진행했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 10,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "active",
+          "items": [],
+          "reason": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-tech",
+              "quote": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-02-tech",
+          "company_id": "demo-02",
+          "text": "테스트용 가상 기업 가상로봇기업2의 자료입니다.\n고객의 물류 현장에서 로봇 PoC를 진행했습니다.\n대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.\n자율 이동 로봇을 개발하며 CTO는 관련 연구 경력 3년입니다.\n가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+          "title": "가상로봇기업2 테스트 문서",
+          "url": "https://example.invalid/demo/2",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "critical_risk": false,
+        "critical_risk_reason": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+        "critical_risk_evidence": [
+          {
+            "source_id": "demo-02-tech",
+            "quote": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다."
+          }
+        ],
+        "technology": "자율 이동 로봇",
+        "team": "CTO 경력 3년"
+      },
+      "rubric_version": "3.0"
+    },
+    "market": {
+      "company_id": "demo-02",
+      "round_id": 2,
+      "status": "completed",
+      "summary": "테스트용 기업의 계약, 외부 검증, 과금 구조와 적용 목적을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 3,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "contact",
+          "items": [],
+          "reason": "고객과 로봇 도입 MOU를 체결하고 무료 실증을 협의했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-market",
+              "quote": "고객과 로봇 도입 MOU를 체결하고 무료 실증을 협의했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 6,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-market",
+              "quote": "서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 7,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": null,
+          "items": [
+            "payer",
+            "product"
+          ],
+          "reason": "지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-market",
+              "quote": "지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 8,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-02-market",
+              "quote": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-02-market",
+          "company_id": "demo-02",
+          "text": "테스트용 가상 기업 가상로봇기업2의 자료입니다.\n고객과 로봇 도입 MOU를 체결하고 무료 실증을 협의했습니다.\n서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다.\n지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다.\n고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "title": "가상로봇기업2 테스트 문서",
+          "url": "https://example.invalid/demo/2",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "market_scope": "국내 물류 로봇 시장",
+        "cagr_period": "",
+        "market_size": "확인 필요",
+        "business_model": "로봇 판매 또는 구독",
+        "competitors": [],
+        "market_size_evidence": []
+      },
+      "rubric_version": "3.0"
+    }
+  },
+  {
+    "candidate": {
+      "company_id": "demo-03",
+      "name": "가상로봇기업3",
+      "aliases": [],
+      "overview": "테스트용 자율 이동 물류 로봇 기업입니다.",
+      "eligibility": {
+        "domestic": {
+          "status": "pass",
+          "reason": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-basic",
+              "quote": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "unlisted": {
+          "status": "pass",
+          "reason": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-basic",
+              "quote": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "stage": {
+          "status": "pass",
+          "reason": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-basic",
+              "quote": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "no_exit": {
+          "status": "pass",
+          "reason": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-basic",
+              "quote": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "physical_ai": {
+          "status": "pass",
+          "reason": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-basic",
+              "quote": "가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "source_id": "demo-03-basic",
+          "company_id": "demo-03",
+          "text": "테스트용 가상 기업 자료입니다.\n가상로봇기업3은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.\n가상로봇기업3는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다.",
+          "title": "가상로봇기업3 테스트 문서",
+          "url": "https://example.invalid/demo/3",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "source_ids": [
+        "demo-03-basic"
+      ],
+      "website": "",
+      "identity": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-03-basic",
+            "quote": "가상로봇기업3는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      },
+      "operating": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-03-basic",
+            "quote": "가상로봇기업3는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "company_id": "demo-03",
+      "round_id": 3,
+      "status": "completed",
+      "summary": "테스트용 자율 이동 로봇의 현장 검증과 현재 개발 활동을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 2,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "proven",
+          "items": [],
+          "reason": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-tech",
+              "quote": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 10,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "active",
+          "items": [],
+          "reason": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-tech",
+              "quote": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-03-tech",
+          "company_id": "demo-03",
+          "text": "테스트용 가상 기업 가상로봇기업3의 자료입니다.\n고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.\n대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.\n자율 이동 로봇을 개발하며 CTO는 관련 연구 경력 3년입니다.\n가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+          "title": "가상로봇기업3 테스트 문서",
+          "url": "https://example.invalid/demo/3",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "critical_risk": false,
+        "critical_risk_reason": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+        "critical_risk_evidence": [
+          {
+            "source_id": "demo-03-tech",
+            "quote": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다."
+          }
+        ],
+        "technology": "자율 이동 로봇",
+        "team": "CTO 경력 3년"
+      },
+      "rubric_version": "3.0"
+    },
+    "market": {
+      "company_id": "demo-03",
+      "round_id": 3,
+      "status": "completed",
+      "summary": "테스트용 기업의 계약, 외부 검증, 과금 구조와 적용 목적을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 3,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "contact",
+          "items": [],
+          "reason": "고객과 로봇 도입 MOU를 체결하고 무료 실증을 협의했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-market",
+              "quote": "고객과 로봇 도입 MOU를 체결하고 무료 실증을 협의했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 6,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-market",
+              "quote": "서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 7,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": null,
+          "items": [
+            "payer",
+            "product"
+          ],
+          "reason": "지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-market",
+              "quote": "지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 8,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-03-market",
+              "quote": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-03-market",
+          "company_id": "demo-03",
+          "text": "테스트용 가상 기업 가상로봇기업3의 자료입니다.\n고객과 로봇 도입 MOU를 체결하고 무료 실증을 협의했습니다.\n서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다.\n지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다.\n고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "title": "가상로봇기업3 테스트 문서",
+          "url": "https://example.invalid/demo/3",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "market_scope": "국내 물류 로봇 시장",
+        "cagr_period": "",
+        "market_size": "확인 필요",
+        "business_model": "로봇 판매 또는 구독",
+        "competitors": [],
+        "market_size_evidence": []
+      },
+      "rubric_version": "3.0"
+    }
+  },
+  {
+    "candidate": {
+      "company_id": "demo-04",
+      "name": "가상로봇기업4",
+      "aliases": [],
+      "overview": "테스트용 자율 이동 물류 로봇 기업입니다.",
+      "eligibility": {
+        "domestic": {
+          "status": "pass",
+          "reason": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-basic",
+              "quote": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "unlisted": {
+          "status": "pass",
+          "reason": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-basic",
+              "quote": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "stage": {
+          "status": "pass",
+          "reason": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-basic",
+              "quote": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "no_exit": {
+          "status": "pass",
+          "reason": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-basic",
+              "quote": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "physical_ai": {
+          "status": "pass",
+          "reason": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-basic",
+              "quote": "가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "source_id": "demo-04-basic",
+          "company_id": "demo-04",
+          "text": "테스트용 가상 기업 자료입니다.\n가상로봇기업4은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.\n가상로봇기업4는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다.",
+          "title": "가상로봇기업4 테스트 문서",
+          "url": "https://example.invalid/demo/4",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "source_ids": [
+        "demo-04-basic"
+      ],
+      "website": "",
+      "identity": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-04-basic",
+            "quote": "가상로봇기업4는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      },
+      "operating": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-04-basic",
+            "quote": "가상로봇기업4는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "company_id": "demo-04",
+      "round_id": 4,
+      "status": "completed",
+      "summary": "테스트용 자율 이동 로봇의 현장 검증과 현재 개발 활동을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 2,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "proven",
+          "items": [],
+          "reason": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-tech",
+              "quote": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 10,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "active",
+          "items": [],
+          "reason": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-tech",
+              "quote": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-04-tech",
+          "company_id": "demo-04",
+          "text": "테스트용 가상 기업 가상로봇기업4의 자료입니다.\n고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.\n대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.\n자율 이동 로봇을 개발하며 CTO는 관련 연구 경력 3년입니다.\n가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+          "title": "가상로봇기업4 테스트 문서",
+          "url": "https://example.invalid/demo/4",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "critical_risk": false,
+        "critical_risk_reason": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+        "critical_risk_evidence": [
+          {
+            "source_id": "demo-04-tech",
+            "quote": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다."
+          }
+        ],
+        "technology": "자율 이동 로봇",
+        "team": "CTO 경력 3년"
+      },
+      "rubric_version": "3.0"
+    },
+    "market": {
+      "company_id": "demo-04",
+      "round_id": 4,
+      "status": "completed",
+      "summary": "테스트용 기업의 계약, 외부 검증, 과금 구조와 적용 목적을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 3,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "paid",
+          "items": [],
+          "reason": "고객과 로봇 제품의 유료 공급 계약을 체결했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-market",
+              "quote": "고객과 로봇 제품의 유료 공급 계약을 체결했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 6,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-market",
+              "quote": "서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 7,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": null,
+          "items": [
+            "payer",
+            "product"
+          ],
+          "reason": "지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-market",
+              "quote": "지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 8,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-04-market",
+              "quote": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-04-market",
+          "company_id": "demo-04",
+          "text": "테스트용 가상 기업 가상로봇기업4의 자료입니다.\n고객과 로봇 제품의 유료 공급 계약을 체결했습니다.\n서로 다른 외부 고객 1곳에서 실제 현장 실증을 진행했습니다.\n지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다.\n고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "title": "가상로봇기업4 테스트 문서",
+          "url": "https://example.invalid/demo/4",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "market_scope": "국내 물류 로봇 시장",
+        "cagr_period": "",
+        "market_size": "확인 필요",
+        "business_model": "로봇 판매 또는 구독",
+        "competitors": [],
+        "market_size_evidence": []
+      },
+      "rubric_version": "3.0"
+    }
+  },
+  {
+    "candidate": {
+      "company_id": "demo-05",
+      "name": "가상로봇기업5",
+      "aliases": [],
+      "overview": "테스트용 자율 이동 물류 로봇 기업입니다.",
+      "eligibility": {
+        "domestic": {
+          "status": "pass",
+          "reason": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-basic",
+              "quote": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "unlisted": {
+          "status": "pass",
+          "reason": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-basic",
+              "quote": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "stage": {
+          "status": "pass",
+          "reason": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-basic",
+              "quote": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "no_exit": {
+          "status": "pass",
+          "reason": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-basic",
+              "quote": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "physical_ai": {
+          "status": "pass",
+          "reason": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-basic",
+              "quote": "가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "source_id": "demo-05-basic",
+          "company_id": "demo-05",
+          "text": "테스트용 가상 기업 자료입니다.\n가상로봇기업5은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.\n가상로봇기업5는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다.",
+          "title": "가상로봇기업5 테스트 문서",
+          "url": "https://example.invalid/demo/5",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "source_ids": [
+        "demo-05-basic"
+      ],
+      "website": "",
+      "identity": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-05-basic",
+            "quote": "가상로봇기업5는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      },
+      "operating": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-05-basic",
+            "quote": "가상로봇기업5는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "company_id": "demo-05",
+      "round_id": 5,
+      "status": "completed",
+      "summary": "테스트용 자율 이동 로봇의 현장 검증과 현재 개발 활동을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 2,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "proven",
+          "items": [],
+          "reason": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-tech",
+              "quote": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 10,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "active",
+          "items": [],
+          "reason": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-tech",
+              "quote": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-05-tech",
+          "company_id": "demo-05",
+          "text": "테스트용 가상 기업 가상로봇기업5의 자료입니다.\n고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.\n대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.\n자율 이동 로봇을 개발하며 CTO는 관련 연구 경력 3년입니다.\n가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+          "title": "가상로봇기업5 테스트 문서",
+          "url": "https://example.invalid/demo/5",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "critical_risk": false,
+        "critical_risk_reason": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+        "critical_risk_evidence": [
+          {
+            "source_id": "demo-05-tech",
+            "quote": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다."
+          }
+        ],
+        "technology": "자율 이동 로봇",
+        "team": "CTO 경력 3년"
+      },
+      "rubric_version": "3.0"
+    },
+    "market": {
+      "company_id": "demo-05",
+      "round_id": 5,
+      "status": "completed",
+      "summary": "테스트용 기업의 계약, 외부 검증, 과금 구조와 적용 목적을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 3,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "paid",
+          "items": [],
+          "reason": "고객과 로봇 제품의 유료 공급 계약을 체결했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-market",
+              "quote": "고객과 로봇 제품의 유료 공급 계약을 체결했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 6,
+          "status": "verified",
+          "numeric_value": 2,
+          "category_value": null,
+          "items": [],
+          "reason": "서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-market",
+              "quote": "서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 7,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": null,
+          "items": [
+            "payer",
+            "product"
+          ],
+          "reason": "지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-market",
+              "quote": "지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 8,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-05-market",
+              "quote": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-05-market",
+          "company_id": "demo-05",
+          "text": "테스트용 가상 기업 가상로봇기업5의 자료입니다.\n고객과 로봇 제품의 유료 공급 계약을 체결했습니다.\n서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다.\n지불 주체는 물류 기업이며 판매 제품은 자율 이동 로봇입니다.\n고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "title": "가상로봇기업5 테스트 문서",
+          "url": "https://example.invalid/demo/5",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "market_scope": "국내 물류 로봇 시장",
+        "cagr_period": "",
+        "market_size": "확인 필요",
+        "business_model": "로봇 판매 또는 구독",
+        "competitors": [],
+        "market_size_evidence": []
+      },
+      "rubric_version": "3.0"
+    }
+  },
+  {
+    "candidate": {
+      "company_id": "demo-06",
+      "name": "가상로봇기업6",
+      "aliases": [],
+      "overview": "테스트용 자율 이동 물류 로봇 기업입니다.",
+      "eligibility": {
+        "domestic": {
+          "status": "pass",
+          "reason": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-basic",
+              "quote": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "unlisted": {
+          "status": "pass",
+          "reason": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-basic",
+              "quote": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "stage": {
+          "status": "pass",
+          "reason": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-basic",
+              "quote": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "no_exit": {
+          "status": "pass",
+          "reason": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-basic",
+              "quote": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "physical_ai": {
+          "status": "pass",
+          "reason": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-basic",
+              "quote": "가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "source_id": "demo-06-basic",
+          "company_id": "demo-06",
+          "text": "테스트용 가상 기업 자료입니다.\n가상로봇기업6은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.\n가상로봇기업6는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다.",
+          "title": "가상로봇기업6 테스트 문서",
+          "url": "https://example.invalid/demo/6",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "source_ids": [
+        "demo-06-basic"
+      ],
+      "website": "",
+      "identity": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-06-basic",
+            "quote": "가상로봇기업6는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      },
+      "operating": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-06-basic",
+            "quote": "가상로봇기업6는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "company_id": "demo-06",
+      "round_id": 6,
+      "status": "completed",
+      "summary": "테스트용 자율 이동 로봇의 현장 검증과 현재 개발 활동을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 2,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "proven",
+          "items": [],
+          "reason": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-tech",
+              "quote": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 10,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "active",
+          "items": [],
+          "reason": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-tech",
+              "quote": "대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-06-tech",
+          "company_id": "demo-06",
+          "text": "테스트용 가상 기업 가상로봇기업6의 자료입니다.\n고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.\n대표는 현재 로봇 제품 개발과 외부 시험에 참여합니다.\n자율 이동 로봇을 개발하며 CTO는 관련 연구 경력 3년입니다.\n가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+          "title": "가상로봇기업6 테스트 문서",
+          "url": "https://example.invalid/demo/6",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "critical_risk": false,
+        "critical_risk_reason": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+        "critical_risk_evidence": [
+          {
+            "source_id": "demo-06-tech",
+            "quote": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다."
+          }
+        ],
+        "technology": "자율 이동 로봇",
+        "team": "CTO 경력 3년"
+      },
+      "rubric_version": "3.0"
+    },
+    "market": {
+      "company_id": "demo-06",
+      "round_id": 6,
+      "status": "completed",
+      "summary": "테스트용 기업의 계약, 외부 검증, 과금 구조와 적용 목적을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 3,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "paid",
+          "items": [],
+          "reason": "고객과 로봇 제품의 유료 공급 계약을 체결했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-market",
+              "quote": "고객과 로봇 제품의 유료 공급 계약을 체결했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 6,
+          "status": "verified",
+          "numeric_value": 2,
+          "category_value": null,
+          "items": [],
+          "reason": "서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-market",
+              "quote": "서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 7,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": null,
+          "items": [
+            "payer",
+            "product",
+            "price_unit",
+            "price_basis"
+          ],
+          "reason": "물류 기업이 로봇 1대당 월 구독료를 내며 보유 로봇 대수에 따라 가격을 산정합니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-market",
+              "quote": "물류 기업이 로봇 1대당 월 구독료를 내며 보유 로봇 대수에 따라 가격을 산정합니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 8,
+          "status": "verified",
+          "numeric_value": 1,
+          "category_value": null,
+          "items": [],
+          "reason": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-06-market",
+              "quote": "고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-06-market",
+          "company_id": "demo-06",
+          "text": "테스트용 가상 기업 가상로봇기업6의 자료입니다.\n고객과 로봇 제품의 유료 공급 계약을 체결했습니다.\n서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다.\n물류 기업이 로봇 1대당 월 구독료를 내며 보유 로봇 대수에 따라 가격을 산정합니다.\n고객의 물류 운반 한 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "title": "가상로봇기업6 테스트 문서",
+          "url": "https://example.invalid/demo/6",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "market_scope": "국내 물류 로봇 시장",
+        "cagr_period": "",
+        "market_size": "확인 필요",
+        "business_model": "로봇 판매 또는 구독",
+        "competitors": [],
+        "market_size_evidence": []
+      },
+      "rubric_version": "3.0"
+    }
+  },
+  {
+    "candidate": {
+      "company_id": "demo-07",
+      "name": "가상로봇기업7",
+      "aliases": [],
+      "overview": "테스트용 자율 이동 물류 로봇 기업입니다.",
+      "eligibility": {
+        "domestic": {
+          "status": "pass",
+          "reason": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-basic",
+              "quote": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "unlisted": {
+          "status": "pass",
+          "reason": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-basic",
+              "quote": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "stage": {
+          "status": "pass",
+          "reason": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-basic",
+              "quote": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "no_exit": {
+          "status": "pass",
+          "reason": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-basic",
+              "quote": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        },
+        "physical_ai": {
+          "status": "pass",
+          "reason": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-basic",
+              "quote": "가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "source_id": "demo-07-basic",
+          "company_id": "demo-07",
+          "text": "테스트용 가상 기업 자료입니다.\n가상로봇기업7은 국내 비상장 Physical AI 기업이며 Seed 단계이고 인수 또는 Exit가 완료되지 않았습니다.\n가상로봇기업7는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다.",
+          "title": "가상로봇기업7 테스트 문서",
+          "url": "https://example.invalid/demo/7",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "source_ids": [
+        "demo-07-basic"
+      ],
+      "website": "",
+      "identity": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-07-basic",
+            "quote": "가상로봇기업7는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      },
+      "operating": {
+        "status": "pass",
+        "reason": "테스트용 기업 확인",
+        "evidence": [
+          {
+            "source_id": "demo-07-basic",
+            "quote": "가상로봇기업7는 동일 법인으로 현재 제품 개발과 고객 납품 사업을 운영하고 있습니다."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "company_id": "demo-07",
+      "round_id": 7,
+      "status": "completed",
+      "summary": "테스트용 자율 이동 로봇의 현장 검증과 현재 개발 활동을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 2,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "proven",
+          "items": [],
+          "reason": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-tech",
+              "quote": "고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 10,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "achievements_2plus",
+          "items": [],
+          "reason": "대표는 현재 사업에 참여하며 2025년 1월 제품 출시와 2026년 3월 상용 납품을 완료했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-tech",
+              "quote": "대표는 현재 사업에 참여하며 2025년 1월 제품 출시와 2026년 3월 상용 납품을 완료했습니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-07-tech",
+          "company_id": "demo-07",
+          "text": "테스트용 가상 기업 가상로봇기업7의 자료입니다.\n고객 물류 현장 시험에서 작업 시간이 20% 단축됐습니다.\n대표는 현재 사업에 참여하며 2025년 1월 제품 출시와 2026년 3월 상용 납품을 완료했습니다.\n자율 이동 로봇을 개발하며 CTO는 관련 연구 경력 3년입니다.\n가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+          "title": "가상로봇기업7 테스트 문서",
+          "url": "https://example.invalid/demo/7",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "critical_risk": false,
+        "critical_risk_reason": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다.",
+        "critical_risk_evidence": [
+          {
+            "source_id": "demo-07-tech",
+            "quote": "가상 안전 시험과 운영 점검에서 확인된 위험에 대한 대응을 완료했습니다."
+          }
+        ],
+        "technology": "자율 이동 로봇",
+        "team": "CTO 경력 3년"
+      },
+      "rubric_version": "3.0"
+    },
+    "market": {
+      "company_id": "demo-07",
+      "round_id": 7,
+      "status": "completed",
+      "summary": "테스트용 기업의 계약, 외부 검증, 과금 구조와 적용 목적을 확인했습니다.",
+      "missing": [],
+      "risks": [],
+      "findings": [
+        {
+          "criterion_id": 3,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": "paid",
+          "items": [],
+          "reason": "고객과 로봇 제품의 유료 공급 계약을 체결했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-market",
+              "quote": "고객과 로봇 제품의 유료 공급 계약을 체결했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 6,
+          "status": "verified",
+          "numeric_value": 2,
+          "category_value": null,
+          "items": [],
+          "reason": "서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-market",
+              "quote": "서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 7,
+          "status": "verified",
+          "numeric_value": null,
+          "category_value": null,
+          "items": [
+            "payer",
+            "product",
+            "price_unit",
+            "price_basis"
+          ],
+          "reason": "물류 기업이 로봇 1대당 월 구독료를 내며 보유 로봇 대수에 따라 가격을 산정합니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-market",
+              "quote": "물류 기업이 로봇 1대당 월 구독료를 내며 보유 로봇 대수에 따라 가격을 산정합니다."
+            }
+          ]
+        },
+        {
+          "criterion_id": 8,
+          "status": "verified",
+          "numeric_value": 2,
+          "category_value": null,
+          "items": [],
+          "reason": "제조 검사와 물류 운반 두 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "evidence": [
+            {
+              "source_id": "demo-07-market",
+              "quote": "제조 검사와 물류 운반 두 가지 사용 목적에서 실제 적용을 검증했습니다."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "demo-07-market",
+          "company_id": "demo-07",
+          "text": "테스트용 가상 기업 가상로봇기업7의 자료입니다.\n고객과 로봇 제품의 유료 공급 계약을 체결했습니다.\n서로 다른 외부 고객 2곳에서 실제 현장 실증을 진행했습니다.\n물류 기업이 로봇 1대당 월 구독료를 내며 보유 로봇 대수에 따라 가격을 산정합니다.\n제조 검사와 물류 운반 두 가지 사용 목적에서 실제 적용을 검증했습니다.",
+          "title": "가상로봇기업7 테스트 문서",
+          "url": "https://example.invalid/demo/7",
+          "doc_type": "company",
+          "published_at": "2026-09-01",
+          "collected_at": "2026-09-30",
+          "original_page": 1,
+          "file": "",
+          "doc_types": [
+            "company",
+            "technology",
+            "market"
+          ]
+        }
+      ],
+      "details": {
+        "market_scope": "국내 물류 로봇 시장",
+        "cagr_period": "",
+        "market_size": "확인 필요",
+        "business_model": "로봇 판매 또는 구독",
+        "competitors": [],
+        "market_size_evidence": []
+      },
+      "rubric_version": "3.0"
+    }
+  }
+]

@@ -1,0 +1,363 @@
+[
+  {
+    "id": "LIVE-01",
+    "question": "엔닷라이트가 생성하는 로봇 학습용 3D 데이터에는 어떤 물리 정보가 포함되나요?",
+    "company_id": "co-c533e3536ce3",
+    "company_name": "엔닷라이트",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1"
+    ],
+    "answer": "질량·마찰 등의 물리 속성과 관절 구조, 충돌 범위를 반영합니다.",
+    "evidence": [
+      {
+        "source_id": "S-3d9907cf2ea30aea",
+        "quote": "엔닷라이트는 질량, 마찰 등 물리 속성을 비롯해 관절 구조, 충돌 범위 정보까지 정교하게 반영된 3D 데이터 생성을 자",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034581",
+        "original_page": null
+      },
+      {
+        "source_id": "S-f58e2b59d52e03fd",
+        "quote": "엔닷라이트는 질량, 마찰 등 물리 속성을 비롯해 관절 구조, 충돌 범위 정보까지 정교하게 반영된 3D 데이터 생성을 자",
+        "url": "https://ndotlight.com/ko/newsroom/n.dot.light-raises-about-10.6-million-to-scale-its-physical-ai-simulation-data-infrastructure",
+        "original_page": null
+      },
+      {
+        "source_id": "S-6a82aa0732082fdd",
+        "quote": "엔닷라이트는 질량, 마찰 등 물리 속성을 비롯해 관절 구조, 충돌 범위 정보까지 정교하게 반영된 3D 데이터 생성을 자",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=47867",
+        "original_page": null
+      },
+      {
+        "source_id": "S-eff36abe805cf9e1",
+        "quote": "질량과 마찰 등 물리적 속성은 물론 관절 구조와 충돌 범위까지 반영\n된 3D 데이터를 자동으로 생성한다.",
+        "url": "https://www.unicornfactory.co.kr/article/2026081108482651455",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "2026년 8월 공개된 기업·투자자 발표 및 보도 내용입니다. 독립 성능 시험의 결과를 뜻하지 않습니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-02",
+    "question": "엔닷라이트는 3D 시뮬레이션 데이터를 공급하기 위해 엔비디아의 어떤 플랫폼과 연동하나요?",
+    "company_id": "co-c533e3536ce3",
+    "company_name": "엔닷라이트",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1"
+    ],
+    "answer": "엔비디아 옴니버스(Omniverse)와 연동합니다.",
+    "evidence": [
+      {
+        "source_id": "S-3d9907cf2ea30aea",
+        "quote": "특히 엔비디아(NVIDIA)의 시뮬레이션 플랫폼 ‘옴니버스(Omniverse)’와\n연동해",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034581",
+        "original_page": null
+      },
+      {
+        "source_id": "S-f58e2b59d52e03fd",
+        "quote": "특히 엔비디아(NVIDIA)의 시뮬레이션 플랫폼 ‘옴니버스(Omniverse)’와 연동해",
+        "url": "https://ndotlight.com/ko/newsroom/n.dot.light-raises-about-10.6-million-to-scale-its-physical-ai-simulation-data-infrastructure",
+        "original_page": null
+      },
+      {
+        "source_id": "S-6a82aa0732082fdd",
+        "quote": "특히 엔비디아(NVIDIA)의 시뮬레이션 플랫폼 ‘옴니버스(Omniverse)’와 연동해",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=47867",
+        "original_page": null
+      },
+      {
+        "source_id": "S-eff36abe805cf9e1",
+        "quote": "엔비디아의 시뮬레이션 플랫폼 '옴니버스(Omniverse)'와 연동해 데이터 생성부터\n평가까지 대규모 3D 시뮬레이션 데이터를 구축할 수 있다.",
+        "url": "https://www.unicornfactory.co.kr/article/2026081108482651455",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "기존 연동과 향후 아이작 심 연동 확대 계획을 구분합니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-03",
+    "question": "엔닷라이트 창업자 박진영과 김선태는 이전에 어느 회사에서 어떤 3D·AI 개발 경험을 쌓았나요?",
+    "company_id": "co-c533e3536ce3",
+    "company_name": "엔닷라이트",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1"
+    ],
+    "answer": "박진영 대표는 삼성전자의 3D 런처 개발, 김선태 CTO는 네이버·삼성전자의 AI 및 3D 엔진 개발 경험이 있습니다.",
+    "evidence": [
+      {
+        "source_id": "S-3d9907cf2ea30aea",
+        "quote": "박진영 대표는 삼성전자에서 3D 런처 개발을 경\n험했고, 김선태 CTO는 네이버와 삼성전자에서 AI와 3D 엔진 개발을 리드한 바 있다.",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034581",
+        "original_page": null
+      },
+      {
+        "source_id": "S-f58e2b59d52e03fd",
+        "quote": "엔닷라이트는 삼성전자에서 3D 런처 개발을 이끈 박진영 대표와 네이버와 삼성전자에서 AI 및 3D 엔진 개발을 리드한\n김선태 CTO가 공동 창업한 회사다.",
+        "url": "https://ndotlight.com/ko/newsroom/n.dot.light-raises-about-10.6-million-to-scale-its-physical-ai-simulation-data-infrastructure",
+        "original_page": null
+      },
+      {
+        "source_id": "S-6a82aa0732082fdd",
+        "quote": "엔닷라이트는 삼성전자에서 3D 런처 개발을 이끈 박진영 대표와 네이버와 삼성전자에서 AI 및 3D 엔진 개발을 리드한\n김선태 CTO가 공동 창업한 회사다.",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=47867",
+        "original_page": null
+      },
+      {
+        "source_id": "S-eff36abe805cf9e1",
+        "quote": "엔닷라이트는 삼성전자에서 3D 런처 개발을 이끈 박진영 대표와 네이버와 삼성전자에서 AI·3D 엔진 개발을 담당한 김\n선태 최고기술책임자(CTO)가 공동 창업했다.",
+        "url": "https://www.unicornfactory.co.kr/article/2026081108482651455",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "회사명·개발 분야 확인 질문입니다. 원문에 없는 경력 연수나 학위를 추정하지 않습니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-04",
+    "question": "엔닷라이트가 피지컬 AI 프로젝트에 학습 데이터를 공급한다고 밝힌 국내 대기업 두 곳은 어디인가요?",
+    "company_id": "co-c533e3536ce3",
+    "company_name": "엔닷라이트",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1"
+    ],
+    "answer": "현대자동차(현대차)와 LG전자입니다.",
+    "evidence": [
+      {
+        "source_id": "S-3d9907cf2ea30aea",
+        "quote": "현대차, LG전자 등 대기업의 피지컬 AI 프로젝트에도 데이터 공급사로 참여하며,",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034581",
+        "original_page": null
+      },
+      {
+        "source_id": "S-f58e2b59d52e03fd",
+        "quote": "현재 엔닷라이트는 현대자동차, LG전자 등 대기업의 피지컬 AI 프로젝트에도 핵심 데이터 공급사로 참여하며 산업 현장",
+        "url": "https://ndotlight.com/ko/newsroom/n.dot.light-raises-about-10.6-million-to-scale-its-physical-ai-simulation-data-infrastructure",
+        "original_page": null
+      },
+      {
+        "source_id": "S-6a82aa0732082fdd",
+        "quote": "현재 엔닷라이트는 현대자동차, LG전자 등 대기업의 피지컬 AI 프로젝트에도 핵심 데이터 공급사로 참여하며 산업 현장",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=47867",
+        "original_page": null
+      },
+      {
+        "source_id": "S-eff36abe805cf9e1",
+        "quote": "엔닷라이트는 현재 현대자동차와 LG전자 등 대기업이 추진하는 피지컬 AI 프로젝트에 데이터 공급사로 참여하고 있다.",
+        "url": "https://www.unicornfactory.co.kr/article/2026081108482651455",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "공급사 참여 발표의 확인입니다. 계약 금액, 유료 여부, 재구매를 확인한 질문이 아닙니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-05",
+    "question": "로보아르테는 자사 회사소개에서 조리 로봇의 실효성을 어떤 방식으로 검증했다고 설명하나요?",
+    "company_id": "co-46aa697b3022",
+    "company_name": "로보아르테",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6"
+    ],
+    "answer": "2020년부터 조리 로봇 매장을 직접 운영해 실효성을 검증했다고 설명합니다.",
+    "evidence": [
+      {
+        "source_id": "S-3e4ab9c201e987a6",
+        "quote": "2020년부터 매일 조리 로봇 매장을 운영한 유\n일한 로봇 회사로\n로봇 시스템의 실효성을 직접 검증하였습니다.",
+        "url": "https://roboarete.com/kr/company/intro.php",
+        "original_page": null
+      },
+      {
+        "source_id": "S-c40162da0adabda6",
+        "quote": "로보아르테는 2020년 2월부터 F&B 매장을 직접 운영하며 조리 로봇의 실효성을 검증했고,",
+        "url": "https://www.unicornfactory.co.kr/article/2024060516275184648",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "자사 소개에 실린 운영 방식입니다. 독립 검증이나 안전 인증으로 확대 해석하지 않습니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-06",
+    "question": "2024년 6월 보도에서 로보아르테의 조리 로봇 판매처로 제시된 고객사는 어디인가요?",
+    "company_id": "co-46aa697b3022",
+    "company_name": "로보아르테",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-c40162da0adabda6"
+    ],
+    "answer": "GS리테일, GS프레쉬, BHC, 행그리조핫치킨 코리아, 누리 치킨입니다.",
+    "evidence": [
+      {
+        "source_id": "S-c40162da0adabda6",
+        "quote": "2022년부터는 본격적으로 \n로봇 판매에 돌입해 GS리테일, GS프레쉬, BHC, 행그리조핫치킨 코리아, 누리 치킨 등에 조리 로봇을 판매했다.",
+        "url": "https://www.unicornfactory.co.kr/article/2024060516275184648",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "2024년 6월 5일 기사에 기재된 과거 판매 사례입니다. 현재 계약 유지나 재계약 여부는 별도 확인 대상입니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-07",
+    "question": "비욘드허니컴 공식 뉴스 목록에는 2024년 11월 어느 외식 브랜드와 조리 로봇 공급 계약을 맺었다는 항목이 있나요?",
+    "company_id": "co-28e1788fa6b5",
+    "company_name": "비욘드허니컴",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-830455754fee728f"
+    ],
+    "answer": "고반식당과의 공급 계약 항목이며 목록 날짜는 2024년 11월 14일입니다.",
+    "evidence": [
+      {
+        "source_id": "S-830455754fee728f",
+        "quote": "비욘드허니컴, 고반식당에 조리로봇 공급 계약\n2024.11.14",
+        "url": "https://www.beyondhoneycomb.com/News",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "공식 뉴스 목록의 제목·날짜만 확인합니다. 연결 기사의 본문, 계약 이행, 판매 금액은 이 원문만으로 확정하지 않습니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-08",
+    "question": "2024년 11월 로지스올의 플로틱 로봇 실증 보도에서 오더피킹 10건의 작업 인원·로봇 수와 작업 시간은 어떻게 달라졌나요?",
+    "company_id": "co-73d4c3e11a6f",
+    "company_name": "플로틱",
+    "doc_type": "technology",
+    "expected_source_ids": [
+      "S-4b22deb70cca9dcf"
+    ],
+    "answer": "기존 평균 약 20분 작업을 로봇 3대와 인력 1명으로 수행해 같은 작업량의 시간을 10분 이내로 줄였다고 보도했습니다.",
+    "evidence": [
+      {
+        "source_id": "S-4b22deb70cca9dcf",
+        "quote": "로지스올 측은 PoC 당시 총 10개의 오더피킹 작업에 플로웨어를 적용했다고 설명했습니다. 기존 작업은 모두 인력을\n투입해 진행했으며, 평균 20분 정도 소요됐는데요. 이를 로봇 3대와 인력 1명으로 대체했다고 합니다. 그 결과 같은 양\n의 작업 시간을 10분 이내로 단축하는 데 성공했다고 합니다. 이것이 로지스올이 플로틱 로봇 도입으로 생산성을 2배 이\n상 향상했다고 주장하는 근거입니다.",
+        "url": "https://contents.premium.naver.com/connectx/us/contents/241119205708723qo",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "2024년의 특정 PoC에 관한 보도입니다. 이후 사업 상태나 다른 현장의 성능을 보증하지 않습니다. 본 질문은 투자 적격성 평가가 아닙니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-09",
+    "question": "IFR의 World Robotics 2026 공개 자료에서 한국의 2025년 산업용 로봇 신규 설치 대수와 전년 대비 증감률은 얼마인가요?",
+    "company_id": "__sector__",
+    "company_name": "산업 공통",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-28613722a6d41b0c"
+    ],
+    "answer": "약 30,000대이며 전년 대비 1% 감소입니다.",
+    "evidence": [
+      {
+        "source_id": "S-28613722a6d41b0c",
+        "quote": "Republic of Korea\ninstalled 30,000 units in 2025 – down 1%.",
+        "url": "https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally",
+        "original_page": null
+      }
+    ],
+    "answer_scope": "한국 산업용 로봇의 1년 신규 설치량입니다. 누적 가동 대수·금액 시장 규모·특정 기업의 세부시장 CAGR과 구분합니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  },
+  {
+    "id": "LIVE-10",
+    "question": "삼일PwC의 산업 현장 보고서는 2060년까지 한국의 생산연령인구가 몇 퍼센트 감소할 것으로 소개하나요?",
+    "company_id": "__sector__",
+    "company_name": "산업 공통",
+    "doc_type": "market",
+    "expected_source_ids": [
+      "S-7c95904560611c54"
+    ],
+    "answer": "한국의 생산연령인구가 46.7% 감소할 것으로 소개합니다.",
+    "evidence": [
+      {
+        "source_id": "S-7c95904560611c54",
+        "quote": "OECD 국가생산연령인구(20~64세) \n2060년까지8.05% 감소전망\n→ 한국은46.7% 급감예상되어감소폭\n가장큰 국가로분류",
+        "url": "https://www.pwc.com/kr/ko/insights/issue-brief/samilpwc_physical-ai-robot.pdf",
+        "original_page": 6
+      }
+    ],
+    "answer_scope": "PwC가 OECD 자료를 인용한 장기 인구 전망입니다. 로봇 시장 성장률이나 기업 수요의 확정치로 바꾸지 않습니다. PDF 원본 6쪽(인쇄 쪽수 5쪽)입니다.",
+    "review_status": "Codex가 원문대조한 소규모 점검, 팀 검토 전",
+    "human_reviewed": false,
+    "authorship": "질문과 정답은 Codex가 수집 원문을 읽고 작성했으며, 인용문은 해당 원문에서 그대로 추출했습니다.",
+    "limitations": "10문항, 4개 기업과 산업 공통 자료에 한정됩니다. 엔닷라이트 4문항 및 중복 보도 비중이 높고, 정답이 있는 질문만 포함되어 있습니다. 일반 검색 성능·답변 정확도·투자 판단 성능 또는 팀의 검수를 증명하지 않습니다.",
+    "source_snapshot": "output/live-v2-final/corpus/sources.json",
+    "source_snapshot_sha256": "6fc45c0adf39c87c1a8d5e99acf0b97a15c55cb97fe7bce51ea641123b61899f",
+    "expected_match_policy": "expected_source_ids 중 하나에서 질문의 답변 근거가 검색되면 출처 검색 성공으로 집계합니다. 동일 발표를 재인용한 문서는 독립 증거로 세지 않습니다."
+  }
+]

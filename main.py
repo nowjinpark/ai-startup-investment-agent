@@ -1,191 +1,123 @@
-"""5개 담당 파일을 순서대로 연결합니다. 현재 담당 파일의 내용은 연습용입니다."""
 import argparse
-from copy import deepcopy
 import json
+from datetime import datetime
 from pathlib import Path
-import sys
 
-from langgraph.graph import END, START, StateGraph
-
-from agents import company, investment, market_competition, report, technology
-from shared import AGENT_KEYS, State
-from validation import validate_agent_result, validate_candidates, validate_state
-
-ROOT = Path(__file__).resolve().parent
-EXAMPLE_NOTICE = "연습용 결과입니다. 예제 데이터가 포함되어 실제 투자 판단에 사용할 수 없습니다."
+from common import ROOT, Runtime, save_json, settings
+from prepared_data import DEFAULT_REQUEST, prepare
 
 
-def load_candidates(path=ROOT / "data" / "companies.json"):
-    candidates = json.loads(Path(path).read_text(encoding="utf-8"))
-    validate_candidates(candidates)
-    return candidates
+def main():
+    parser = argparse.ArgumentParser(description='국내 Physical AI 스타트업 투자 분석')
+    parser.add_argument('mode', choices=['demo', 'live', 'report', 'regrade'])
+    parser.add_argument('--output', type=Path)
+    parser.add_argument('--request', default=DEFAULT_REQUEST)
+    parser.add_argument('--max-candidates', type=int, default=20)
+    parser.add_argument('--records', type=Path)
+    parser.add_argument('--source-run', type=Path, help='재채점할 기존 실제 실행 폴더입니다.')
+    parser.add_argument('--all-hold', action='store_true')
+    parser.add_argument('--max-cost-usd', type=float, default=2.0)
+    parser.add_argument('--resume-from', type=Path, help='자료 수집이 끝난 실행 폴더에서 분석을 이어갑니다.')
+    parser.add_argument('--reuse-corpus', type=Path, help='저장된 원문을 재사용하면서 후보 추출부터 다시 수행합니다.')
+    parser.add_argument('--recheck-eligibility', action='store_true', help='재개 시 저장 자료로 기업 자격을 다시 확인합니다.')
+    parser.add_argument('--refresh-data', action='store_true', help='저장 자료 대신 문서·후보를 새로 수집합니다.')
+    args = parser.parse_args()
+    if args.refresh_data and (args.mode != 'live' or args.resume_from or args.reuse_corpus):
+        parser.error('--refresh-data는 live 기본 실행에서만 사용합니다.')
+    if not 1 <= args.max_candidates <= 20:
+        parser.error('--max-candidates는 1~20입니다.')
+    if not 0 < args.max_cost_usd <= 20:
+        parser.error('--max-cost-usd는 0 초과 20 이하입니다.')
+    if args.resume_from and args.reuse_corpus:
+        parser.error('--resume-from과 --reuse-corpus는 함께 사용할 수 없습니다.')
+    if args.recheck_eligibility and not args.resume_from:
+        parser.error('--recheck-eligibility는 --resume-from과 함께 사용합니다.')
+    output = (args.output or ROOT / 'output' / f'{args.mode}-{datetime.now():%Y%m%d-%H%M%S}').resolve()
+    output.mkdir(parents=True, exist_ok=True)
+    if args.mode == 'live' and ((output / 'cost.json').exists() or (args.refresh_data and any(output.iterdir()))):
+        parser.error('기존 실행의 결과 보존을 위해 새 --output 폴더를 지정하세요. 분석 재개는 --resume-from으로 지정합니다.')
+    config = settings()
+    config['max_candidates'] = args.max_candidates
+    config['max_cost_usd'] = args.max_cost_usd
+    config['refresh_data'] = args.refresh_data
+    if args.mode == 'regrade':
+        if not args.source_run:
+            parser.error('regrade에는 --source-run 폴더가 필요합니다.')
+        from regrade import regrade_run
+        result = regrade_run(args.source_run, output)
+        save_json(output / 'settings.json', config)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+    save_json(output / 'settings.json', config)
+    if args.mode == 'report':
+        if not args.records:
+            parser.error('report에는 --records 경로가 필요합니다.')
+        from agents.report import create_report
+        records = json.loads(args.records.read_text(encoding='utf-8'))
+        summary_path = args.records.parent / 'run_summary.json'
+        metadata = json.loads(summary_path.read_text(encoding='utf-8')) if summary_path.exists() else {'stop_reason': 'candidates_exhausted', 'demo': False}
+        result = create_report(records, output, metadata)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+    from workflow import build_graph
+    if args.mode == 'demo':
+        from demo import DemoRuntime
+        runtime = DemoRuntime(config, output, all_hold=args.all_hold)
+    else:
+        runtime = Runtime(config, output)
+        if not args.resume_from and not args.reuse_corpus:
+            runtime.prepare = lambda request: prepare(runtime, request)
+        if args.resume_from or args.reuse_corpus:
+            import shutil
+            from rag import Corpus
+            previous = (args.resume_from or args.reuse_corpus).resolve()
+            previous_cost = previous / 'cost.json'
+            if previous_cost.exists():
+                cost = json.loads(previous_cost.read_text(encoding='utf-8'))
+                runtime.spent_usd = float(cost['estimated_spent_usd']) + float(cost.get('reserved_usd', 0))
+                runtime.carried_cost_from = str(previous)
+                if runtime.spent_usd >= runtime.cost_limit:
+                    parser.error('이전 실행이 API 비용 한도를 소진했습니다. API 호출 없이 저장 결과를 확인하세요.')
+                runtime._budget_file()
+            shutil.copytree(previous / 'corpus', output / 'corpus')
+            if args.resume_from:
+                candidates = json.loads((previous / 'candidates.json').read_text(encoding='utf-8'))[:config['max_candidates']]
+                sources = json.loads((output / 'corpus/sources.json').read_text(encoding='utf-8'))
+                runtime.corpus = Corpus(sources, config, ROOT / '.cache')
+                for filename in ['candidates.json', 'excluded_candidates.json', 'unresolved_candidates.json', 'discovery_diagnostics.json']:
+                    if (previous / filename).exists():
+                        shutil.copy2(previous / filename, output / filename)
+                save_json(output / 'candidates.json', candidates)
+                def resume_prepared(request):
+                    current = candidates
+                    excluded = json.loads((previous / 'excluded_candidates.json').read_text()) if (previous / 'excluded_candidates.json').exists() else []
+                    if args.recheck_eligibility:
+                        from agents.discovery import requalify
+                        current, newly_excluded = requalify(runtime, candidates)
+                        excluded += newly_excluded
+                        save_json(output / 'candidates.json', current)
+                        save_json(output / 'excluded_candidates.json', excluded)
+                    return {'candidate_list': current, 'doc_pages': len(sources), 'page_cap': 200,
+                    'prepared': {'corpus': str(output / 'corpus'), 'resumed_from': str(previous),
+                        'excluded': excluded,
+                        'unresolved': json.loads((previous / 'unresolved_candidates.json').read_text()) if (previous / 'unresolved_candidates.json').exists() else []}}
+                runtime.prepare = resume_prepared
+                if not args.recheck_eligibility:
+                    runtime.resume_dir = previous
+    graph = build_graph(runtime)
+    (output / 'graph.mmd').write_text(graph.get_graph().draw_mermaid(), encoding='utf-8')
+    state = {'request': args.request}
+    for event in graph.stream(state, config={'recursion_limit': 5 * config['max_candidates'] + 10}, stream_mode='updates'):
+        for node, update in event.items():
+            state.update(update)
+            save_json(output / 'state.json', state)
+            print(f'완료: {node}', flush=True)
+    save_json(output / 'state.json', state)
+    if state.get('report_error'):
+        raise RuntimeError('분석 기록은 저장되었지만 PDF 생성 실패: ' + state['report_error'])
+    print(f"평가 {len(state['records'])}개 / 추천 {len(state['passed_records'])}개 / 조건부 {len(state.get('conditional_records', []))}개 / 자료 {state['doc_pages']}쪽")
+    print(state['report']['pdf_path'])
 
 
-def prepare_state(candidates) -> State:
-    validate_candidates(candidates)
-    return {"domain": "Physical AI", "candidates": deepcopy(candidates), "candidate_index": 0, "history": []}
-
-
-def empty_analysis():
-    return {"summary": "", "sources": [], "uncertainties": [], "is_example": False}
-
-
-def select_candidate(state: State) -> dict:
-    """후보가 바뀌면 이전 회사의 분석과 판단을 빈 값으로 초기화합니다."""
-    return {
-        "company": deepcopy(state["candidates"][state["candidate_index"]]),
-        "company_info": empty_analysis(),
-        "technology": empty_analysis(),
-        "market_competition": empty_analysis(),
-        "investment": {"decision": "hold", "reason": "", "score": None, "sources": [], "is_example": False},
-    }
-
-
-def next_candidate(state: State) -> dict:
-    index = state["candidate_index"] + 1
-    return {"candidate_index": index, **select_candidate({**state, "candidate_index": index})}
-
-
-def has_example(value) -> bool:
-    """최종 안내와 보고서에는 누적 기록의 예제 표시까지 반영합니다."""
-    if isinstance(value, dict):
-        return value.get("is_example") is True or any(has_example(item) for item in value.values())
-    if isinstance(value, list):
-        return any(has_example(item) for item in value)
-    return False
-
-
-def run_agent(agent_name, run, state: State) -> dict:
-    """자기 결과만 받으며, 입력 복사본을 주어 다른 담당자의 결과를 보호합니다."""
-    # 단독 실행용 완성 예제에 후행 결과가 있어도 선행 입력만 예제 표시에 반영합니다.
-    inputs = {
-        "company": ["company"],
-        "technology": ["company", "company_info"],
-        "market_competition": ["company", "company_info", "technology"],
-        "investment": ["company", "company_info", "technology", "market_competition"],
-        "report": ["history"],
-    }
-    try:
-        validate_state(state)
-        for key in inputs[agent_name]:
-            if key not in state:
-                raise ValueError(f"입력에 {key}가 필요합니다.")
-        result = deepcopy(run(deepcopy(state)))
-        validate_agent_result(agent_name, result)
-        key = AGENT_KEYS[agent_name]
-        example_keys = inputs[agent_name]
-        if agent_name == "report":
-            example_keys = ["company", "company_info", "technology", "market_competition", "investment", "history"]
-        if any(has_example(state.get(field)) for field in example_keys):
-            result[key]["is_example"] = True
-        return result
-    except Exception as error:
-        raise ValueError(f"{agent_name} agent 오류: {error}") from error
-
-
-def company_node(state: State) -> dict:
-    return run_agent("company", company.run, state)
-
-
-def technology_node(state: State) -> dict:
-    return run_agent("technology", technology.run, state)
-
-
-def market_competition_node(state: State) -> dict:
-    return run_agent("market_competition", market_competition.run, state)
-
-
-def investment_node(state: State) -> dict:
-    result = run_agent("investment", investment.run, state)
-    # 다음 회사로 넘어가도 이미 검토한 회사의 결과는 남깁니다.
-    record = {
-        "company": deepcopy(state["company"]),
-        "company_info": deepcopy(state["company_info"]),
-        "technology": deepcopy(state["technology"]),
-        "market_competition": deepcopy(state["market_competition"]),
-        "investment": deepcopy(result["investment"]),
-    }
-    return {**result, "history": [*deepcopy(state.get("history", [])), record]}
-
-
-def report_node(state: State) -> dict:
-    return run_agent("report", report.run, state)
-
-
-def after_investment(state: State) -> str:
-    if state["investment"]["decision"] == "hold" and state["candidate_index"] + 1 < len(state["candidates"]):
-        return "next_candidate"
-    return "report"
-
-
-def build_graph():
-    graph = StateGraph(State)
-    graph.add_node("select_candidate", select_candidate)
-    graph.add_node("company", company_node)
-    graph.add_node("technology", technology_node)
-    graph.add_node("market_competition", market_competition_node)
-    graph.add_node("investment", investment_node)
-    graph.add_node("next_candidate", next_candidate)
-    graph.add_node("report", report_node)
-
-    graph.add_edge(START, "select_candidate")
-    graph.add_edge("select_candidate", "company")
-    graph.add_edge("company", "technology")
-    graph.add_edge("technology", "market_competition")
-    graph.add_edge("market_competition", "investment")
-    graph.add_conditional_edges("investment", after_investment, {"next_candidate": "next_candidate", "report": "report"})
-    graph.add_edge("next_candidate", "company")
-    graph.add_edge("report", END)
-    return graph.compile()
-
-
-def save_json(path, value):
-    Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
-
-
-def main(argv=None) -> int:
-    # 환경 파일은 이 실행 입구에서만 읽습니다. import와 테스트는 읽지 않습니다.
-    from dotenv import load_dotenv
-    load_dotenv(ROOT / ".env", override=False)
-
-    parser = argparse.ArgumentParser(description="Physical AI 기업 분석 연결 연습")
-    parser.add_argument("--agent", choices=list(AGENT_KEYS), help="담당 파일 하나만 실행")
-    parser.add_argument("--state", type=Path, help="단독 실행 입력 JSON (기본: data/test_state.json)")
-    parser.add_argument("--companies", type=Path, help="전체 실행 후보 JSON (기본: data/companies.json)")
-    parser.add_argument("--output", type=Path, default=ROOT / "outputs", help="결과를 저장할 폴더")
-    args = parser.parse_args(argv)
-    try:
-        if args.state is not None and args.agent is None:
-            raise ValueError("--state는 --agent와 함께 사용하세요.")
-        if args.companies is not None and args.agent is not None:
-            raise ValueError("--companies는 전체 실행 전용입니다. --agent와 함께 사용할 수 없습니다.")
-        args.output.mkdir(parents=True, exist_ok=True)
-        if args.agent:
-            state_path = args.state or ROOT / "data" / "test_state.json"
-            state = json.loads(state_path.read_text(encoding="utf-8"))
-            modules = {"company": company, "technology": technology, "market_competition": market_competition, "investment": investment, "report": report}
-            result = run_agent(args.agent, modules[args.agent].run, state)
-            json_path = args.output / f"{args.agent}.json"
-            save_json(json_path, result)
-            print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
-        else:
-            state = prepare_state(load_candidates(args.companies or ROOT / "data" / "companies.json"))
-            result = build_graph().invoke(state, {"recursion_limit": len(state["candidates"]) * 6 + 5})
-            json_path = args.output / "state.json"
-            save_json(json_path, result)
-        print(f"JSON 저장: {json_path.resolve()}")
-        if "report" in result:
-            from export_outputs import export_report
-            paths = export_report(result["report"], args.output)
-            for name, path in paths.items():
-                print(f"{name} 저장: {Path(path).resolve()}")
-        if has_example(result):
-            print(EXAMPLE_NOTICE)
-        return 0
-    except Exception as error:
-        print(f"오류: {error}", file=sys.stderr)
-        return 1
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+if __name__ == '__main__':
+    main()

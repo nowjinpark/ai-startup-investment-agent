@@ -1,22 +1,40 @@
+# Python
+.python-version
 .venv/
 venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .ipynb_checkpoints/
+
+# 환경 변수
 .env
 .env.*
 !.env.example
+
+# OS·편집기
 .DS_Store
+.vscode/
+
+# 실행 결과·캐시·원문
 .cache/
+output/
+data/raw/*
+!data/raw/.gitkeep
+
+# 공유 준비 자료는 별도 ZIP으로 전달
+data/prepared/
+data/prepared-backups/
+data/.prepared-*/
+
+# 이전 실행 폴더·로컬 인증 및 저장 파일
+outputs/
+tmp/
 *.log
 *.pem
 *.key
-data/raw/
-data/processed/
-outputs/
-tmp/
 *.faiss
 *.pkl
 *.sqlite*
 *.db
+data/processed/

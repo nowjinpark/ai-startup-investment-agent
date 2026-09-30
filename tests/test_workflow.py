@@ -1,143 +1,218 @@
-"""연결만 시험합니다. 5개 run을 모두 대체하여 실제 API를 호출하지 않습니다."""
-from contextlib import ExitStack
-from copy import deepcopy
 import json
-import unittest
-from unittest.mock import patch
+import threading
+from copy import deepcopy
+from types import SimpleNamespace
 
-import main
-from shared import AGENT_KEYS
+import pytest
+
+from test_investment import records
+from workflow import build_graph
+import workflow
 
 
-def analysis(summary, is_example=False):
-    return {"summary": summary, "sources": [], "uncertainties": [], "is_example": is_example}
+def _case(template, number, score):
+    candidate, tech, market = deepcopy(template)
+    cid, name = f"company-{number}", f"테스트기업{number}"
+    for record in (candidate, tech, market):
+        record["company_id"] = cid
+        for source in record["sources"]:
+            source["company_id"] = cid
+            source["text"] = source["text"].replace("테스트기업", name)
+    candidate["name"] = name
+    for item in candidate["eligibility"].values():
+        item["evidence"][0]["quote"] = item["evidence"][0]["quote"].replace("테스트기업", name)
+
+    def change(analysis, criterion_id, quote, **values):
+        finding = next(f for f in analysis["findings"] if f["criterion_id"] == criterion_id)
+        finding.update(values)
+        finding["reason"] = quote
+        finding["evidence"][0]["quote"] = quote
+        analysis["sources"][0]["text"] += "\n" + quote
+
+    conditional = isinstance(score, tuple)
+    if conditional:
+        score, _ = score
+        candidate["eligibility"]["unlisted"] = {
+            "status": "unknown", "reason": "비상장 여부를 추가 확인해야 합니다.", "evidence": []}
+    change(tech, 2, "고객 환경에서 무료 PoC를 진행했습니다.", category_value="poc")
+    change(market, 3, "고객과 무료 PoC 및 도입 협의를 진행했습니다.", category_value="contact")
+    if score is None:
+        tech["findings"][0]["status"] = "unknown"
+    elif score == 11:
+        change(tech, 2, "현재 연구실 데모 단계입니다.", category_value="lab")
+    elif score in {13, 18}:
+        change(tech, 2, "고객 현장 시험에서 작업 시간이 20% 단축됐습니다.", category_value="proven")
+    if score == 18:
+        change(tech, 10, "대표는 현재 참여하며 2025년 1월 제품 출시와 2026년 3월 상용 납품을 완료했습니다.", category_value="achievements_2plus")
+        change(market, 3, "고객과 유료 공급 계약을 체결했습니다.", category_value="paid")
+        change(market, 6, "서로 다른 고객사 A와 B 두 곳에서 현장 검증을 완료했습니다.", numeric_value=2)
+        change(market, 7, "물류 기업이 로봇을 월 구독하며 로봇 1대당 월 10만 원으로 가격을 산정합니다.", items=["payer", "product", "price_unit", "price_basis"])
+        change(market, 8, "제조 검사와 물류 운반 두 사용 목적에 실제 적용했습니다.", numeric_value=2)
+    return candidate, tech, market
 
 
-class WorkflowTests(unittest.TestCase):
-    def setUp(self):
-        self.state = json.loads((main.ROOT / "data" / "test_state.json").read_text(encoding="utf-8"))
-        self.candidates = deepcopy(self.state["candidates"])
-        for candidate in self.candidates:
-            candidate["is_example"] = False
-        self.calls = []
-        self.inputs = []
-        self.decisions = {}
-        self.overrides = {}
-        self.stack = ExitStack()
-        self.addCleanup(self.stack.close)
-        # 본문이 실제 AI 구현으로 바뀌어도 이 테스트에서는 전혀 실행하지 않습니다.
-        for name in AGENT_KEYS:
-            module = getattr(main, name)
-            self.stack.enter_context(patch.object(module, "run", side_effect=self.stub(name)))
+def _harness(monkeypatch, tmp_path, template, scores, failing=None, barrier=None):
+    cases = [_case(template, index + 1, score) for index, score in enumerate(scores)]
+    by_id = {case[0]["company_id"]: case for case in cases}
+    calls, completed, reports, judgments = [], set(), [], []
+    lock = threading.Lock()
+    runtime = SimpleNamespace(output_dir=tmp_path, corpus=SimpleNamespace(history=[]), demo=True,
+                              ask=lambda *args, **kwargs: None)
 
-    def stub(self, name):
-        def run(state):
-            company_id = state.get("company", {}).get("id")
-            self.calls.append((name, company_id))
-            self.inputs.append((name, deepcopy(state)))
-            if name in self.overrides:
-                return self.overrides[name](state)
-            if name == "investment":
-                return {"investment": {"decision": self.decisions.get(company_id, "hold"), "reason": "시험 판단", "score": None, "sources": [], "is_example": False}}
-            if name == "report":
-                return {"report": {"summary": "시험 보고서", "markdown": "# SUMMARY\n시험\n# REFERENCE", "is_example": False}}
-            return {AGENT_KEYS[name]: analysis(f"{company_id} {name}")}
+    def discovery_run(_runtime, request):
+        calls.append(("discovery", request))
+        return {"candidate_list": [deepcopy(case[0]) for case in cases], "doc_pages": len(cases) * 3,
+                "page_cap": 200, "prepared": {}}
+
+    def analysis_run(role):
+        def run(_runtime, candidate, round_id):
+            cid = candidate["company_id"]
+            with lock:
+                calls.append((role, cid, round_id))
+            if barrier:
+                barrier.wait(timeout=5)
+            if failing == (cid, role):
+                raise ValueError("테스트용 분석 실패")
+            result = deepcopy(by_id[cid][1 if role == "technology" else 2])
+            result.update(round_id=round_id, summary=f"{cid}: {role}, 회차 {round_id}")
+            with lock:
+                completed.add((cid, role, round_id))
+            return result
         return run
 
-    def invoke(self, candidates=None):
-        candidates = self.candidates if candidates is None else candidates
-        return main.build_graph().invoke(main.prepare_state(candidates), {"recursion_limit": 6 * len(candidates) + 5})
+    real_evaluate = workflow.investment.evaluate
 
-    def test_five_agents_in_order_and_stop_on_invest(self):
-        first_id = self.candidates[0]["id"]
-        self.decisions[first_id] = "invest"
-        result = self.invoke()
-        self.assertEqual([name for name, _ in self.calls], list(AGENT_KEYS))
-        self.assertEqual(len(result["history"]), 1)
-        self.assertEqual(result["investment"]["decision"], "invest")
-        self.assertFalse(result["report"]["is_example"])
+    def judge(candidate, technology, market, round_id):
+        judgments.append((candidate["company_id"], round_id, technology["status"], market["status"]))
+        if barrier:
+            assert (candidate["company_id"], "technology", round_id) in completed
+            assert (candidate["company_id"], "market", round_id) in completed
+        return real_evaluate(candidate, technology, market, round_id)
 
-    def test_hold_moves_to_next_company_then_invest_stops(self):
-        third = {**self.candidates[1], "id": "third", "name": "세 번째"}
-        self.decisions[self.candidates[1]["id"]] = "invest"
-        result = self.invoke([*self.candidates, third])
-        expected = ["company", "technology", "market_competition", "investment"] * 2 + ["report"]
-        self.assertEqual([name for name, _ in self.calls], expected)
-        self.assertEqual([record["company"]["id"] for record in result["history"]], [item["id"] for item in self.candidates])
-        self.assertEqual(result["candidate_index"], 1)
+    def create_report(evaluated, output_dir, metadata, writer=None):
+        reports.append({"records": deepcopy(evaluated), "metadata": deepcopy(metadata)})
+        return {"pdf_path": str(output_dir / "test.pdf"), "markdown_path": str(output_dir / "test.md"), "page_count": 5}
 
-    def test_all_hold_ends_with_one_report(self):
-        result = self.invoke()
-        self.assertEqual(len(result["history"]), 2)
-        self.assertEqual([name for name, _ in self.calls].count("report"), 1)
-        self.assertTrue(all(record["investment"]["decision"] == "hold" for record in result["history"]))
-        self.assertTrue(all(record["investment"]["score"] is None for record in result["history"]))
-
-    def test_new_company_does_not_receive_previous_analysis(self):
-        result = self.invoke()
-        second_input = [state for name, state in self.inputs if name == "company"][1]
-        for key in ["company_info", "technology", "market_competition"]:
-            self.assertEqual(second_input[key], main.empty_analysis())
-        self.assertEqual(second_input["investment"]["reason"], "")
-        self.assertIsNone(second_input["investment"]["score"])
-        self.assertEqual(len(second_input["history"]), 1)
-        self.assertIn(self.candidates[0]["id"], result["history"][0]["technology"]["summary"])
-        self.assertIn(self.candidates[1]["id"], result["history"][1]["technology"]["summary"])
-
-    def test_agent_cannot_mutate_other_results(self):
-        def mutate_input(state):
-            state["company_info"]["summary"] = "덮어쓰기 시도"
-            state["company"]["name"] = "변경 시도"
-            state["history"].clear()
-            return {"technology": analysis("기술 결과")}
-        self.overrides["technology"] = mutate_input
-        result = self.invoke()
-        self.assertEqual(len(result["history"]), 2)
-        self.assertEqual(result["history"][0]["company"]["name"], self.candidates[0]["name"])
-        self.assertNotIn("덮어쓰기", result["history"][0]["company_info"]["summary"])
-
-    def test_invalid_return_stops_at_named_agent(self):
-        self.overrides["technology"] = lambda state: {"company_info": analysis("다른 담당자의 키")}
-        with self.assertRaisesRegex(ValueError, "technology agent"):
-            self.invoke()
-        self.assertEqual([name for name, _ in self.calls], ["company", "technology"])
-
-    def test_example_marker_propagates_from_first_company_to_report(self):
-        self.candidates[0]["is_example"] = True
-        result = self.invoke()
-        for key in ["company_info", "technology", "market_competition", "investment"]:
-            self.assertTrue(result["history"][0][key]["is_example"])
-            self.assertFalse(result["history"][1][key]["is_example"])
-        self.assertTrue(result["report"]["is_example"])
-
-    def test_single_agent_ignores_downstream_example_markers(self):
-        state = deepcopy(self.state)
-        state["company"]["is_example"] = False
-        state["candidates"][0]["is_example"] = False
-        state["company_info"]["is_example"] = False
-        result = main.run_agent("technology", main.technology.run, state)
-        self.assertFalse(result["technology"]["is_example"])
-        result = main.run_agent("company", main.company.run, state)
-        self.assertFalse(result["company_info"]["is_example"])
-        state["company_info"]["is_example"] = True
-        result = main.run_agent("technology", main.technology.run, state)
-        self.assertTrue(result["technology"]["is_example"])
-
-    def test_report_keeps_history_example_marker(self):
-        state = deepcopy(self.state)
-        state["company"]["is_example"] = False
-        state["candidates"][0]["is_example"] = False
-        for key in ["company_info", "technology", "market_competition", "investment"]:
-            state[key]["is_example"] = False
-        result = main.run_agent("report", main.report.run, state)
-        self.assertTrue(result["report"]["is_example"])
-
-    def test_prepare_state_rejects_empty_and_duplicate_candidates(self):
-        with self.assertRaises(ValueError):
-            main.prepare_state([])
-        with self.assertRaisesRegex(ValueError, "중복"):
-            main.prepare_state([self.candidates[0], self.candidates[0]])
+    monkeypatch.setattr(workflow.discovery, "run", discovery_run)
+    monkeypatch.setattr(workflow.technology, "run", analysis_run("technology"))
+    monkeypatch.setattr(workflow.market_competition, "run", analysis_run("market"))
+    monkeypatch.setattr(workflow.investment, "evaluate", judge)
+    monkeypatch.setattr(workflow.report, "create_report", create_report)
+    state = build_graph(runtime).invoke({"request": "국내 Physical AI"}, config={"recursion_limit": 110})
+    return state, calls, reports, judgments
 
 
-if __name__ == "__main__":
-    unittest.main()
+def test_stops_at_five_passed_without_evaluating_sixth_best(monkeypatch, tmp_path, records):
+    state, calls, reports, judgments = _harness(monkeypatch, tmp_path, records, [12, 13, 12, 12, 12, 18])
+    assert state["stop_reason"] == "five_candidates"
+    assert len(state["records"]) == len(state["passed_records"]) == 5
+    assert len(judgments) == 5
+    assert [r["total_score"] for r in state["ranked_passed"]] == [13, 12, 12, 12, 12]
+    assert all(call[1] != "company-6" for call in calls if call[0] != "discovery")
+    assert [call[0] for call in calls].count("discovery") == 1
+    assert len(reports) == 1
+    assert reports[0]["metadata"]["candidate_count"] == 6
+    assert reports[0]["metadata"]["evaluated_count"] == 5
+
+
+def test_exhausts_twenty_candidates_with_all_hold(monkeypatch, tmp_path, records):
+    state, calls, reports, judgments = _harness(monkeypatch, tmp_path, records, [11, None] * 10)
+    assert state["stop_reason"] == "candidates_exhausted"
+    assert len(state["records"]) == 20
+    assert not state["passed_records"]
+    assert all(record["decision"] == "hold" and record["reasons"] for record in state["records"])
+    assert [round_id for _, round_id, *_ in judgments] == list(range(1, 21))
+    assert [record["company_id"] for record in state["records"]] == [f"company-{i}" for i in range(1, 21)]
+    assert len(reports) == 1
+    assert reports[0]["metadata"]["evaluated_count"] == 20
+
+
+def test_hold_continues_to_next_candidate_and_resets_round(monkeypatch, tmp_path, records):
+    state, calls, reports, judgments = _harness(monkeypatch, tmp_path, records, [12, 11, None, 13])
+    assert [result["decision"] for result in state["records"]] == ["pass", "hold", "hold", "pass"]
+    assert state["stop_reason"] == "candidates_exhausted"
+    assert len(state["passed_records"]) == 2
+    assert [item["round_id"] for item in state["records"]] == [1, 2, 3, 4]
+    for index, record in enumerate(state["records"], 1):
+        assert f"company-{index}" in record["technology_summary"]
+        assert f"회차 {index}" in record["market_summary"]
+    assert len([call for call in calls if call[0] == "technology"]) == 4
+    assert len([call for call in calls if call[0] == "market"]) == 4
+
+
+def test_analyses_run_in_parallel_and_join_before_judgment(monkeypatch, tmp_path, records):
+    barrier = threading.Barrier(2)
+    state, calls, reports, judgments = _harness(monkeypatch, tmp_path, records, [12], barrier=barrier)
+    assert not barrier.broken
+    assert judgments == [("company-1", 1, "completed", "completed")]
+    assert state["records"][0]["decision"] == "pass"
+
+
+def test_failed_analysis_is_saved_and_next_candidate_continues(monkeypatch, tmp_path, records):
+    state, calls, reports, judgments = _harness(monkeypatch, tmp_path, records, [12, 13], failing=("company-1", "technology"))
+    assert [record["decision"] for record in state["records"]] == ["hold", "pass"]
+    assert state["records"][0]["total_score"] is None
+    failed = json.loads((tmp_path / "analyses/company-1-technology.json").read_text(encoding="utf-8"))
+    market = json.loads((tmp_path / "analyses/company-1-market.json").read_text(encoding="utf-8"))
+    assert failed["status"] == "failed"
+    assert failed["error"] == "ValueError"
+    assert failed["company_id"] == "company-1" and failed["round_id"] == 1
+    assert market["status"] == "completed" and market["sources"]
+    assert "국내 물류 로봇 시장" in market["sources"][0]["text"]
+    assert judgments[0] == ("company-1", 1, "failed", "completed")
+    assert judgments[1] == ("company-2", 2, "completed", "completed")
+
+
+def test_empty_candidates_generates_report_without_analysis(monkeypatch, tmp_path, records):
+    state, calls, reports, judgments = _harness(monkeypatch, tmp_path, records, [])
+    assert state["stop_reason"] == "no_candidates"
+    assert state["records"] == []
+    assert judgments == []
+    assert calls == [("discovery", "국내 Physical AI")]
+    assert len(reports) == 1 and reports[0]["records"] == []
+    assert reports[0]["metadata"]["candidate_count"] == 0
+    assert reports[0]["metadata"]["evaluated_count"] == 0
+    assert state["report_error"] is None
+
+
+def test_passed_and_conditional_candidates_share_five_candidate_limit(monkeypatch, tmp_path, records):
+    scores = [(12, "conditional"), 13, (12, "conditional"), 12, (13, "conditional"), 18]
+    state, calls, reports, judgments = _harness(monkeypatch, tmp_path, records, scores)
+    assert state["stop_reason"] == "five_candidates"
+    assert len(judgments) == len(state["candidate_records"]) == 5
+    assert len(state["passed_records"]) == 2
+    assert len(state["conditional_records"]) == 3
+    assert all(r["decision"] == "pass" for r in state["ranked_passed"])
+    assert {r["decision"] for r in state["ranked_candidates"]} == {"pass", "conditional"}
+    assert [r["total_score"] for r in state["ranked_candidates"]] == [13, 13, 12, 12, 12]
+    assert all(call[1] != "company-6" for call in calls if call[0] != "discovery")
+    assert len(reports) == 1
+
+
+def test_demo_fixture_explicit_version_and_boundary_scores():
+    from common import ROOT, rubric
+
+    fixtures = json.loads((ROOT / "data/demo_inputs.json").read_text(encoding="utf-8"))
+    actual = []
+    for index, item in enumerate(fixtures, 1):
+        for role in ("technology", "market"):
+            assert item[role]["rubric_version"] == rubric()["version"]
+            item[role]["round_id"] = index
+            expected = {rule["id"] for rule in rubric()["criteria"] if rule["owner"] == role}
+            assert {f["criterion_id"] for f in item[role]["findings"]} == expected
+        result = workflow.investment.evaluate(item["candidate"], item["technology"], item["market"], index)
+        actual.append((result["total_score"], result["decision"]))
+    assert actual == [(11, "hold"), (12, "pass"), (13, "pass"), (14, "pass"),
+                      (15, "pass"), (16, "pass"), (18, "pass")]
+
+
+def test_demo_rejects_old_rubric_instead_of_silently_relabeling(monkeypatch, tmp_path):
+    import demo
+
+    fixtures = json.loads((demo.ROOT / "data/demo_inputs.json").read_text(encoding="utf-8"))
+    fixtures[0]["technology"]["rubric_version"] = "2.0"
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data/demo_inputs.json").write_text(json.dumps(fixtures), encoding="utf-8")
+    monkeypatch.setattr(demo, "ROOT", tmp_path)
+    with pytest.raises(ValueError, match="평가표 버전"):
+        demo.DemoRuntime({"max_candidates": 7}, tmp_path / "output")

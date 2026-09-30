@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-30",
+  "passed": 278,
+  "skipped": 1,
+  "subtests_passed": 4,
+  "warnings": 3,
+  "dependency_check": "No broken requirements found",
+  "final": {
+    "candidate_count": 15,
+    "evaluated_count": 9,
+    "stop_reason": "five_candidates",
+    "page_count": 164,
+    "confirmed_count": 0,
+    "conditional_count": 5
+  },
+  "report": {
+    "pages": 5,
+    "body_font_size": 9.5
+  },
+  "retrieval": {
+    "questions": 15,
+    "k": 4,
+    "hit_rate": 1.0,
+    "mrr": 0.9555555555555556,
+    "human_reviewed": false
+  },
+  "demo": {
+    "candidate_count": 7,
+    "evaluated_count": 6,
+    "stop_reason": "five_candidates",
+    "page_count": 21,
+    "demo": true,
+    "rubric_version": "3.0",
+    "score_scale": 18,
+    "criterion_count": 6,
+    "pass_score": 12,
+    "execution_mode": "demo",
+    "confirmed_count": 5,
+    "conditional_count": 0
+  },
+  "demo_all_hold": {
+    "candidate_count": 7,
+    "evaluated_count": 7,
+    "stop_reason": "candidates_exhausted",
+    "page_count": 21,
+    "demo": true,
+    "rubric_version": "3.0",
+    "score_scale": 18,
+    "criterion_count": 6,
+    "pass_score": 12,
+    "execution_mode": "demo",
+    "confirmed_count": 0,
+    "conditional_count": 0
+  },
+  "source_review": {
+    "reviewer": "Codex",
+    "human_reviewed": false,
+    "new_paid_api_calls": 0
+  },
+  "new_structured_audit_live_verified": false
+}
