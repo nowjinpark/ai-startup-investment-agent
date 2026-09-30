@@ -1,5 +1,3 @@
-"""원문 근거를 검증하고 평가표에 따라 투자 후보를 판정합니다."""
-
 import json
 import math
 import re
