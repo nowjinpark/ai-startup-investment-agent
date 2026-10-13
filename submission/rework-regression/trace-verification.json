@@ -1,0 +1,212 @@
+{
+  "trace_id": "63ec0014-70b0-48f2-9428-5ea47027514b",
+  "planned_tasks": 10,
+  "local_result_count": 10,
+  "status": "fallback",
+  "traces": [
+    {
+      "run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+      "url": "https://smith.langchain.com/o/bf72d5b6-8fb0-4606-a88b-9acdd0ce8f19/projects/p/013499dc-bd15-4128-8696-462d39dfbf0a/r/bdd61f77-8ff1-4815-9e98-5aba22aeaed5?poll=true",
+      "root_finished": true,
+      "root_error": false,
+      "node_counts": {
+        "finish": 1,
+        "RunnableCallable": 3,
+        "RunnableLambda": 57,
+        "RunnableSequence": 38,
+        "RunnableParallel<parsed,parsing_error>": 19,
+        "RunnableAssign<parsed,parsing_error>": 19,
+        "RunnableWithFallbacks": 19,
+        "ChatOpenAI": 19,
+        "RunnableParallel<raw>": 19,
+        "ChatPromptTemplate": 19,
+        "judge_node": 3,
+        "synthesizer": 3,
+        "VectorStoreRetriever": 24,
+        "research_worker": 12,
+        "dispatch": 3,
+        "rework": 2,
+        "planner": 1,
+        "PhysicalAI_Orchestrator": 1
+      },
+      "nodes": [
+        {
+          "name": "finish",
+          "id": "a4a07173-60ec-4633-911b-07177ff7f384",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:40:08.964964",
+          "end_time": "2026-10-13T02:40:08.965420",
+          "error": false
+        },
+        {
+          "name": "judge_node",
+          "id": "0f16b469-6d24-44ae-901e-815b4f58c8bb",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:59.825286",
+          "end_time": "2026-10-13T02:40:08.962945",
+          "error": false
+        },
+        {
+          "name": "synthesizer",
+          "id": "075b2997-c059-4a9c-a1be-af34bcfb78ee",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:38.136753",
+          "end_time": "2026-10-13T02:39:59.822978",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "4cc09631-e10e-45e9-9305-b7589a8581df",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:31.466409",
+          "end_time": "2026-10-13T02:39:37.166263",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "f51d0f66-1c08-4ea0-9a59-dceffb640d14",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:31.464781",
+          "end_time": "2026-10-13T02:39:38.135557",
+          "error": false
+        },
+        {
+          "name": "rework",
+          "id": "db511daa-1afd-4a82-a2dc-4da4c20d8b6b",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:31.459276",
+          "end_time": "2026-10-13T02:39:31.461377",
+          "error": false
+        },
+        {
+          "name": "judge_node",
+          "id": "8e85cfec-beb6-45b7-a356-bd8380367d1c",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:24.190928",
+          "end_time": "2026-10-13T02:39:31.455077",
+          "error": false
+        },
+        {
+          "name": "synthesizer",
+          "id": "d7ab2b34-566a-40b9-9827-d7a515b0513e",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:08.243028",
+          "end_time": "2026-10-13T02:39:24.187445",
+          "error": false
+        },
+        {
+          "name": "rework",
+          "id": "d775f9d5-495e-4303-af99-80d8e446f647",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:08.240483",
+          "end_time": "2026-10-13T02:39:08.241323",
+          "error": false
+        },
+        {
+          "name": "judge_node",
+          "id": "46d2d8da-750c-4588-b13b-ab1f90faad52",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:39:01.683201",
+          "end_time": "2026-10-13T02:39:08.238229",
+          "error": false
+        },
+        {
+          "name": "synthesizer",
+          "id": "87a578ed-8cba-4403-9eef-bbb6dadb32c2",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:44.510963",
+          "end_time": "2026-10-13T02:39:01.679864",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "ff31d576-7751-40f1-8c91-c1624b2d1d28",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:37.371386",
+          "end_time": "2026-10-13T02:38:44.506914",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "23df4147-46ac-46b2-bd9b-3cee45982b95",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:31.857516",
+          "end_time": "2026-10-13T02:38:37.620925",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "79ff6ae6-ac9e-443a-9aba-81b1b7e0f5b3",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:31.654004",
+          "end_time": "2026-10-13T02:38:37.371221",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "67a3ef4b-2ebf-41e7-bb3f-f41b5154e6e8",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:31.137072",
+          "end_time": "2026-10-13T02:38:37.605449",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "36482e6f-f6f5-4766-b698-6d76f6bdb72f",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:26.449045",
+          "end_time": "2026-10-13T02:38:31.857398",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "32ecaaad-e918-45ff-9ecc-418e3b45e845",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:26.358929",
+          "end_time": "2026-10-13T02:38:31.136861",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "65920f38-116e-4aec-b265-2940e3a2c7d8",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:26.353823",
+          "end_time": "2026-10-13T02:38:31.653648",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "a89156b9-14f3-449e-a1b2-2c662c57303d",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:18.042177",
+          "end_time": "2026-10-13T02:38:26.358690",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "f32b4a4e-5f8b-4dbd-af4c-ad8709955966",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:18.041782",
+          "end_time": "2026-10-13T02:38:26.448793",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "1d1ae671-f804-4b08-96df-af7e1dff0182",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:18.041567",
+          "end_time": "2026-10-13T02:38:26.352940",
+          "error": false
+        },
+        {
+          "name": "planner",
+          "id": "09af853c-d591-4171-ab06-5be41b56b54e",
+          "parent_run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+          "start_time": "2026-10-13T02:38:07.757635",
+          "end_time": "2026-10-13T02:38:18.039656",
+          "error": false
+        }
+      ]
+    }
+  ]
+}

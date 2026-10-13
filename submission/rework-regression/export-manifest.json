@@ -1,0 +1,22 @@
+{
+  "source_run": "agent-final-v3",
+  "note": "실행 파일을 내용 변경 없이 복사했습니다. 원 실행 경로는 당시 기록이며 재실행 경로가 아닙니다.",
+  "sha256": {
+    "state.json": "e300eb976da6145ec907b0667c23fe0224daa61351c9d5eb60080b51a567a38b",
+    "report.md": "3a5607e05a9cf2f4af3b5de6debaf2897ccd52892e8e4f49eca5e301a8fce791",
+    "execution-summary.json": "cdfe91dd02a8dc28c77e6830ef31b97fe6dc6c7e1af2b8647c02fec3386d1580",
+    "execution-segments.json": "8269cd69d4224b5986b53963b6ab199b0bfe995c37e42027a9500969ef9eab41",
+    "run-config.json": "4153ea588b28a6126256fac5c4108f746f4f81516babd6c02e0fd96a4b62c275",
+    "trace.json": "7eee5753bc643c570ff630f10878088ee067c04168812940810be5e015b818a6",
+    "trace-verification.json": "0b480cdf8b0e82043cc888a3d9442f76c096d9d94d2db65833af26e7059dab96",
+    "report-versions.json": "48cea4788460e29a6bed025635590a9d68776043fa740639410e2ddbedb0b6d4",
+    "events.jsonl": "2208220b4c3de54446a97441905fd871091aa8340a2b03c2bb60f206a6ebd0fd",
+    "llm_usage.json": "9c7e5d32681dc7c0b5a07701664d71892ce0f0fb23fc552ac09ab7fc7c97840a",
+    "cost.json": "010b741bbff020cd8e2caedb58517e40e2873326034992fe33723bfbc9f3628e",
+    "retrieval.json": "cd0c2ee3303d59ca295ec9d526c54c7fcef5c775ca9c8eb7ce7bbebd88f7d69e",
+    "graph.mmd": "861a937c0d972447a4878d2c2b8ddd6444be94b8c70fe5488f61329aa603635c",
+    "raw/evaluation-0.json": "5de8c9306853074bdd4f7e56e7c7d60b7ab190b03302f996d304dbe9234d40c9",
+    "raw/evaluation-1.json": "51396c1f80b8ec9259c3e82ab5874d66848052cceccf40a01c86fe58e0d02aee",
+    "raw/evaluation-2.json": "8aac233169b0cec825460646dc6fe423161fbc8e855b607f2c4985cb957e88ff"
+  }
+}

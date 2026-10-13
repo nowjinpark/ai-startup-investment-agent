@@ -1,0 +1,96 @@
+{
+  "trace_id": "48f0f444-b67b-421d-8de0-94d1302b8730",
+  "planned_tasks": 1,
+  "local_result_count": 1,
+  "status": "approved",
+  "traces": [
+    {
+      "run_id": "e49944c7-d605-439a-97c6-d2b6cd65bb9e",
+      "url": "https://smith.langchain.com/o/bf72d5b6-8fb0-4606-a88b-9acdd0ce8f19/projects/p/013499dc-bd15-4128-8696-462d39dfbf0a/r/e49944c7-d605-439a-97c6-d2b6cd65bb9e?poll=true",
+      "root_finished": true,
+      "root_error": false,
+      "node_counts": {
+        "dispatch": 1,
+        "RunnableLambda": 3,
+        "RunnableSequence": 2,
+        "RunnableParallel<parsed,parsing_error>": 1,
+        "RunnableAssign<parsed,parsing_error>": 1,
+        "RunnableWithFallbacks": 1,
+        "ChatOpenAI": 1,
+        "RunnableParallel<raw>": 1,
+        "ChatPromptTemplate": 1,
+        "planner": 1,
+        "PhysicalAI_Orchestrator": 1
+      },
+      "max_concurrent_workers": 0,
+      "nodes": [
+        {
+          "name": "planner",
+          "id": "653b7069-2222-465a-9c14-ff4a13ef1012",
+          "parent_run_id": "e49944c7-d605-439a-97c6-d2b6cd65bb9e",
+          "start_time": "2026-10-13T03:43:01.571093",
+          "end_time": "2026-10-13T03:43:04.357269",
+          "error": false
+        }
+      ]
+    },
+    {
+      "run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+      "url": "https://smith.langchain.com/o/bf72d5b6-8fb0-4606-a88b-9acdd0ce8f19/projects/p/013499dc-bd15-4128-8696-462d39dfbf0a/r/3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40?poll=true",
+      "root_finished": true,
+      "root_error": false,
+      "node_counts": {
+        "finish": 1,
+        "RunnableCallable": 1,
+        "RunnableLambda": 12,
+        "RunnableSequence": 8,
+        "RunnableParallel<parsed,parsing_error>": 4,
+        "RunnableAssign<parsed,parsing_error>": 4,
+        "RunnableWithFallbacks": 4,
+        "ChatOpenAI": 4,
+        "RunnableParallel<raw>": 4,
+        "ChatPromptTemplate": 4,
+        "judge_node": 1,
+        "synthesizer": 1,
+        "VectorStoreRetriever": 3,
+        "research_worker": 1,
+        "PhysicalAI_Orchestrator": 1
+      },
+      "max_concurrent_workers": 1,
+      "nodes": [
+        {
+          "name": "finish",
+          "id": "c048bc84-18d1-4605-b943-014831b257cc",
+          "parent_run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+          "start_time": "2026-10-13T03:43:57.393970",
+          "end_time": "2026-10-13T03:43:57.394725",
+          "error": false
+        },
+        {
+          "name": "judge_node",
+          "id": "b783a4af-52f5-46d0-927b-103bf0fdc2a8",
+          "parent_run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+          "start_time": "2026-10-13T03:43:52.893714",
+          "end_time": "2026-10-13T03:43:57.391881",
+          "error": false
+        },
+        {
+          "name": "synthesizer",
+          "id": "e6a18dc2-d3f9-442d-a743-f491ad91906e",
+          "parent_run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+          "start_time": "2026-10-13T03:43:51.502435",
+          "end_time": "2026-10-13T03:43:52.891805",
+          "error": false
+        },
+        {
+          "name": "research_worker",
+          "id": "a02fbe63-d63e-4360-b5dd-683cfb87ab1c",
+          "parent_run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+          "start_time": "2026-10-13T03:43:39.130232",
+          "end_time": "2026-10-13T03:43:51.499879",
+          "error": false
+        }
+      ]
+    }
+  ]
+}

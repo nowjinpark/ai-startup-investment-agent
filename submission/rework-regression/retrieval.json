@@ -1,0 +1,410 @@
+[
+  {
+    "question": "로보아르테 기술 성숙도",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-c40162da0adabda6:c1",
+      "S-3e4ab9c201e987a6:c1",
+      "S-c40162da0adabda6:c2",
+      "S-4fc75cc1b8140571:c1"
+    ],
+    "source_ids": [
+      "S-c40162da0adabda6",
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6",
+      "S-4fc75cc1b8140571"
+    ]
+  },
+  {
+    "question": "로보아르테 글로벌 시장성",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-c40162da0adabda6:c1",
+      "S-3e4ab9c201e987a6:c1",
+      "S-c40162da0adabda6:c3",
+      "S-c40162da0adabda6:c2"
+    ],
+    "source_ids": [
+      "S-c40162da0adabda6",
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6",
+      "S-c40162da0adabda6"
+    ]
+  },
+  {
+    "question": "로보콘 기술 성숙도",
+    "company_id": "co-bc6f6312fdc9",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-db5eecfdd79e9e0c:c3",
+      "S-a5f49e2677761e6c:c1",
+      "S-c634d53722c54665:c1",
+      "S-db5eecfdd79e9e0c:c1"
+    ],
+    "source_ids": [
+      "S-db5eecfdd79e9e0c",
+      "S-a5f49e2677761e6c",
+      "S-c634d53722c54665",
+      "S-db5eecfdd79e9e0c"
+    ]
+  },
+  {
+    "question": "로보아르테 도메인 적용성",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-c40162da0adabda6:c1",
+      "S-c40162da0adabda6:c3",
+      "S-3e4ab9c201e987a6:c1",
+      "S-c40162da0adabda6:c2"
+    ],
+    "source_ids": [
+      "S-c40162da0adabda6",
+      "S-c40162da0adabda6",
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6"
+    ]
+  },
+  {
+    "question": "로보아르테 이해관계자",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-3e4ab9c201e987a6:c1",
+      "S-c40162da0adabda6:c3",
+      "S-c40162da0adabda6:c2",
+      "S-c40162da0adabda6:c1"
+    ],
+    "source_ids": [
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6",
+      "S-c40162da0adabda6",
+      "S-c40162da0adabda6"
+    ]
+  },
+  {
+    "question": "로보콘 시장성",
+    "company_id": "co-bc6f6312fdc9",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-db5eecfdd79e9e0c:c3",
+      "S-febce9f491793884:c1",
+      "S-db5eecfdd79e9e0c:c2",
+      "S-c634d53722c54665:c1"
+    ],
+    "source_ids": [
+      "S-db5eecfdd79e9e0c",
+      "S-febce9f491793884",
+      "S-db5eecfdd79e9e0c",
+      "S-c634d53722c54665"
+    ]
+  },
+  {
+    "question": "로보콘 이해관계자",
+    "company_id": "co-bc6f6312fdc9",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-febce9f491793884:c1",
+      "S-7e61fa1e09430bc7:c1",
+      "S-c634d53722c54665:c2",
+      "S-c634d53722c54665:c3"
+    ],
+    "source_ids": [
+      "S-febce9f491793884",
+      "S-7e61fa1e09430bc7",
+      "S-c634d53722c54665",
+      "S-c634d53722c54665"
+    ]
+  },
+  {
+    "question": "리옵스 기술 성숙도",
+    "company_id": "co-9d07ca84baf6",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-2997e7192260a48c:c1",
+      "S-7af8ffde39fe53fc:c1",
+      "S-f0d5615160266bd0:c1",
+      "S-55e69e88f9950031:c1"
+    ],
+    "source_ids": [
+      "S-2997e7192260a48c",
+      "S-7af8ffde39fe53fc",
+      "S-f0d5615160266bd0",
+      "S-55e69e88f9950031"
+    ]
+  },
+  {
+    "question": "리옵스 시장성",
+    "company_id": "co-9d07ca84baf6",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-2997e7192260a48c:c1",
+      "S-7af8ffde39fe53fc:c1",
+      "S-f0d5615160266bd0:c1",
+      "S-55e69e88f9950031:c1"
+    ],
+    "source_ids": [
+      "S-2997e7192260a48c",
+      "S-7af8ffde39fe53fc",
+      "S-f0d5615160266bd0",
+      "S-55e69e88f9950031"
+    ]
+  },
+  {
+    "question": "로보콘 도메인 적용성",
+    "company_id": "co-bc6f6312fdc9",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-c634d53722c54665:c2",
+      "S-c634d53722c54665:c1",
+      "S-febce9f491793884:c1",
+      "S-7e61fa1e09430bc7:c1"
+    ],
+    "source_ids": [
+      "S-c634d53722c54665",
+      "S-c634d53722c54665",
+      "S-febce9f491793884",
+      "S-7e61fa1e09430bc7"
+    ]
+  },
+  {
+    "question": "리옵스 도메인 적용성",
+    "company_id": "co-9d07ca84baf6",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-7af8ffde39fe53fc:c1",
+      "S-2997e7192260a48c:c1",
+      "S-f0d5615160266bd0:c1",
+      "S-55e69e88f9950031:c1"
+    ],
+    "source_ids": [
+      "S-7af8ffde39fe53fc",
+      "S-2997e7192260a48c",
+      "S-f0d5615160266bd0",
+      "S-55e69e88f9950031"
+    ]
+  },
+  {
+    "question": "리옵스 이해관계자",
+    "company_id": "co-9d07ca84baf6",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-2997e7192260a48c:c1",
+      "S-f0d5615160266bd0:c1",
+      "S-7af8ffde39fe53fc:c1",
+      "S-55e69e88f9950031:c1"
+    ],
+    "source_ids": [
+      "S-2997e7192260a48c",
+      "S-f0d5615160266bd0",
+      "S-7af8ffde39fe53fc",
+      "S-55e69e88f9950031"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 기술 성숙도",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c2",
+      "S-2606e2e5b79683e2:c1",
+      "S-2606e2e5b79683e2:c2"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-2606e2e5b79683e2",
+      "S-2606e2e5b79683e2"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 도메인 적용성",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c2",
+      "S-2606e2e5b79683e2:c1",
+      "S-2606e2e5b79683e2:c3"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-2606e2e5b79683e2",
+      "S-2606e2e5b79683e2"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 시장성",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c2",
+      "S-830455754fee728f:c1",
+      "S-830455754fee728f:c2"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-830455754fee728f",
+      "S-830455754fee728f"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 이해관계자",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c1",
+      "S-830455754fee728f:c2",
+      "S-e91a36a856825291:c2"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-830455754fee728f",
+      "S-e91a36a856825291"
+    ]
+  },
+  {
+    "question": "엔닷라이트 기술 성숙도",
+    "company_id": "co-c533e3536ce3",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-f58e2b59d52e03fd:c2",
+      "S-eff36abe805cf9e1:c1",
+      "S-6a82aa0732082fdd:c2",
+      "S-6a82aa0732082fdd:c1"
+    ],
+    "source_ids": [
+      "S-f58e2b59d52e03fd",
+      "S-eff36abe805cf9e1",
+      "S-6a82aa0732082fdd",
+      "S-6a82aa0732082fdd"
+    ]
+  },
+  {
+    "question": "엔닷라이트 도메인 적용성",
+    "company_id": "co-c533e3536ce3",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-d4dbe9890deeee4f:c1",
+      "S-f58e2b59d52e03fd:c1",
+      "S-f58e2b59d52e03fd:c3",
+      "S-3d9907cf2ea30aea:c3"
+    ],
+    "source_ids": [
+      "S-d4dbe9890deeee4f",
+      "S-f58e2b59d52e03fd",
+      "S-f58e2b59d52e03fd",
+      "S-3d9907cf2ea30aea"
+    ]
+  },
+  {
+    "question": "엔닷라이트 시장성",
+    "company_id": "co-c533e3536ce3",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-6a82aa0732082fdd:c1",
+      "S-d4dbe9890deeee4f:c1",
+      "S-f58e2b59d52e03fd:c3",
+      "S-f58e2b59d52e03fd:c4"
+    ],
+    "source_ids": [
+      "S-6a82aa0732082fdd",
+      "S-d4dbe9890deeee4f",
+      "S-f58e2b59d52e03fd",
+      "S-f58e2b59d52e03fd"
+    ]
+  },
+  {
+    "question": "엔닷라이트 이해관계자",
+    "company_id": "co-c533e3536ce3",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-d4dbe9890deeee4f:c1",
+      "S-eff36abe805cf9e1:c2",
+      "S-6a82aa0732082fdd:c1",
+      "S-f58e2b59d52e03fd:c1"
+    ],
+    "source_ids": [
+      "S-d4dbe9890deeee4f",
+      "S-eff36abe805cf9e1",
+      "S-6a82aa0732082fdd",
+      "S-f58e2b59d52e03fd"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 기술 성숙도",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c2",
+      "S-2606e2e5b79683e2:c1",
+      "S-2606e2e5b79683e2:c2"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-2606e2e5b79683e2",
+      "S-2606e2e5b79683e2"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 시장성",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c2",
+      "S-830455754fee728f:c1",
+      "S-830455754fee728f:c2"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-830455754fee728f",
+      "S-830455754fee728f"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 도메인 적용성",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c2",
+      "S-2606e2e5b79683e2:c1",
+      "S-2606e2e5b79683e2:c3"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-2606e2e5b79683e2",
+      "S-2606e2e5b79683e2"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 이해관계자",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c1",
+      "S-830455754fee728f:c2",
+      "S-e91a36a856825291:c2"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-830455754fee728f",
+      "S-e91a36a856825291"
+    ]
+  }
+]

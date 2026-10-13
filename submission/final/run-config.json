@@ -1,0 +1,36 @@
+{
+  "trace_id": "0df7454d-cefe-4dd6-b6f6-3cbf29cc5e3e",
+  "request": "기존 RAG의 조건부 검토 후보를 기술 성숙도, 시장성, 이해관계자, 도메인 적용성으로 다시 검토해 주세요. 기업별 강점·리스크·추가 확인사항을 근거와 함께 정리하고, 자료로 입증하지 못한 우열이나 투자 확정 추천은 하지 마세요. 작업은 기업과 관점의 독립성에 맞춰 나누거나 묶어 주세요.",
+  "companies": [
+    "로보아르테",
+    "로보콘",
+    "리옵스",
+    "비욘드허니컴",
+    "엔닷라이트"
+  ],
+  "data_hashes": {
+    "corpus/sources.json": "0a1e4c5c44751032e1a801987ce53f322b3001545f6bfefe4e8c24454ee076a5",
+    "candidates.json": "ba1872f0962b149eab8087ab5a37864e6f2de1fa21b83e61796099b747c48e9a"
+  },
+  "max_cost_usd": 3.0,
+  "max_revisions": 2,
+  "pattern": "Orchestrator-Workers",
+  "implementation_hashes": {
+    "app.py": "35c73d2f58d0fa53c24655c880b894f136262ac372338dd276f52e7a371890bb",
+    "common.py": "f4f5bb1cdd59db23b701631cec028b03f9c23fa9ab6800f54555082e88b9405e",
+    "rag.py": "88804a431b2abf84a484432cd1da360cafc27896e495934e4ba31ed60d82005d",
+    "requirements.txt": "ea933e50fff4d00c8a0e6ceace19ed4787e31df84af4479be3550c9cc95dccd0",
+    "config/settings.json": "763bcc18b36b5705fc1ba4796538126a32f40ea6346062c871882423269e038e",
+    "orchestration/__init__.py": "789aa7245918360c2dab732326fa6e9aa4c007a9ef5e82467b52a1880bdcf80d",
+    "orchestration/graph.py": "af1c776b910f66ec0da1913c3f1fc7db8c72f867e9422c97d28ffc289adf91b5",
+    "orchestration/service.py": "78e5a1a4b94974bad76cc7ebe326a683124a02e098b87633c2c744effd779417",
+    "orchestration/state.py": "87f78d6a88157e9d8191ec354010760244221919e47e2ce3844963c884aeed4a",
+    "prompts/orchestration/evaluate.txt": "730815798439a4381031e32032c1967bee6fd8bb0120492171b6a448f0f20fd5",
+    "prompts/orchestration/grounding.txt": "2fc5b673118718790c78fe04cb8fb23e09396f0815c96c40d14fa11f852b6b08",
+    "prompts/orchestration/plan.txt": "f2e5be22417f70bdf42068b788a1d8381064440361692c973f7588f94d67758c",
+    "prompts/orchestration/research.txt": "f3fd4222647649314872f32338255ac694c1a01186ad7ea2d20e6f013e985966",
+    "prompts/orchestration/synthesize.txt": "eaad7fec2c67ce09f1fce3dfe9dfea16ce06b5b4567bd8af37fc7421695b482e"
+  },
+  "corpus_pages": 164,
+  "source_run": "final-submission-20260930"
+}

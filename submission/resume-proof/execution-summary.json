@@ -1,0 +1,16 @@
+{
+  "trace_id": "48f0f444-b67b-421d-8de0-94d1302b8730",
+  "run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+  "status": "approved",
+  "elapsed_seconds": 23.456,
+  "segment_seconds": 19.377,
+  "company_count": 1,
+  "task_count": 1,
+  "revision": 0,
+  "step_count": 4,
+  "corpus_pages": 164,
+  "result_count": 1,
+  "llm_calls": 5,
+  "estimated_cost_usd": 0.048427,
+  "resumed": true
+}

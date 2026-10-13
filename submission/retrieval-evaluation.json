@@ -1,0 +1,173 @@
+{
+  "k": 4,
+  "questions": 15,
+  "hit_rate": 1.0,
+  "mrr_at_k": 0.9555555555555556,
+  "details": [
+    {
+      "question": "엔닷라이트가 생성하는 로봇 학습용 3D 데이터에는 어떤 물리 정보가 포함되나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-eff36abe805cf9e1",
+        "S-6a82aa0732082fdd",
+        "S-3d9907cf2ea30aea",
+        "S-f58e2b59d52e03fd"
+      ]
+    },
+    {
+      "question": "엔닷라이트는 3D 시뮬레이션 데이터를 공급하기 위해 엔비디아의 어떤 플랫폼과 연동하나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-eff36abe805cf9e1",
+        "S-6a82aa0732082fdd",
+        "S-f58e2b59d52e03fd",
+        "S-3d9907cf2ea30aea"
+      ]
+    },
+    {
+      "question": "엔닷라이트 창업자 박진영과 김선태는 이전에 어느 회사에서 어떤 3D·AI 개발 경험을 쌓았나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-6a82aa0732082fdd",
+        "S-3d9907cf2ea30aea",
+        "S-f58e2b59d52e03fd",
+        "S-eff36abe805cf9e1"
+      ]
+    },
+    {
+      "question": "엔닷라이트가 피지컬 AI 프로젝트에 학습 데이터를 공급한다고 밝힌 국내 대기업 두 곳은 어디인가요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-eff36abe805cf9e1",
+        "S-f58e2b59d52e03fd",
+        "S-6a82aa0732082fdd",
+        "S-f58e2b59d52e03fd"
+      ]
+    },
+    {
+      "question": "로보아르테는 자사 회사소개에서 조리 로봇의 실효성을 어떤 방식으로 검증했다고 설명하나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-3e4ab9c201e987a6",
+        "S-c40162da0adabda6",
+        "S-c40162da0adabda6",
+        "S-4fc75cc1b8140571"
+      ]
+    },
+    {
+      "question": "2024년 6월 보도에서 로보아르테의 조리 로봇 판매처로 제시된 고객사는 어디인가요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-c40162da0adabda6",
+        "S-3e4ab9c201e987a6",
+        "S-c40162da0adabda6",
+        "S-4fc75cc1b8140571"
+      ]
+    },
+    {
+      "question": "비욘드허니컴 공식 뉴스 목록에는 2024년 11월 어느 외식 브랜드와 조리 로봇 공급 계약을 맺었다는 항목이 있나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-830455754fee728f",
+        "S-830455754fee728f",
+        "S-cd61c4e65640d138",
+        "S-2606e2e5b79683e2"
+      ]
+    },
+    {
+      "question": "2024년 11월 로지스올의 플로틱 로봇 실증 보도에서 오더피킹 10건의 작업 인원·로봇 수와 작업 시간은 어떻게 달라졌나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-4b22deb70cca9dcf",
+        "S-4b22deb70cca9dcf",
+        "S-4b22deb70cca9dcf",
+        "S-eb1190d5f6684335"
+      ]
+    },
+    {
+      "question": "IFR의 World Robotics 2026 공개 자료에서 한국의 2025년 산업용 로봇 신규 설치 대수와 전년 대비 증감률은 얼마인가요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-28613722a6d41b0c",
+        "S-28613722a6d41b0c",
+        "S-f893a98887913f2e",
+        "S-5f46b16fc92becec"
+      ]
+    },
+    {
+      "question": "삼일PwC의 산업 현장 보고서는 2060년까지 한국의 생산연령인구가 몇 퍼센트 감소할 것으로 소개하나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-7c95904560611c54",
+        "S-f893a98887913f2e",
+        "S-5f46b16fc92becec",
+        "S-7f883e9a75a4ab43"
+      ]
+    },
+    {
+      "question": "IFR의 2024년 서비스로봇 판매 통계는 산업 전체 추정치인가요, 표본인가요?",
+      "hit": 1,
+      "reciprocal_rank": 0.3333333333333333,
+      "retrieved_source_ids": [
+        "S-f893a98887913f2e",
+        "S-f893a98887913f2e",
+        "S-7f883e9a75a4ab43",
+        "S-7f883e9a75a4ab43"
+      ]
+    },
+    {
+      "question": "Flippy는 음식점에서 어떤 조리 공정을 자동화하나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-c16d5887638a0fd9",
+        "S-c16d5887638a0fd9",
+        "S-e992356c1eb219b0",
+        "S-c16d5887638a0fd9"
+      ]
+    },
+    {
+      "question": "Isaac Sim은 로봇 개발자가 어떤 종류의 데이터를 생성하도록 지원하나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-bd94dcca828b0bce",
+        "S-bd94dcca828b0bce",
+        "S-bd94dcca828b0bce",
+        "S-bff47648b1f9455b"
+      ]
+    },
+    {
+      "question": "Schnell X-TIE는 어떤 재료의 작업을 자동화하나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-202c6dfa263ed8d0",
+        "S-09acce98e5b18bc0",
+        "S-de27f0bd75a102d2",
+        "S-de27f0bd75a102d2"
+      ]
+    },
+    {
+      "question": "Mech-Vision으로 구성할 수 있는 로봇 자동화 작업에는 무엇이 있나요?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_source_ids": [
+        "S-73d113c400d0b229",
+        "S-a46f4f80b7576ea7",
+        "S-a46f4f80b7576ea7",
+        "S-73d113c400d0b229"
+      ]
+    }
+  ]
+}

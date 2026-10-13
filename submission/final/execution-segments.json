@@ -1,0 +1,26 @@
+[
+  {
+    "trace_id": "0df7454d-cefe-4dd6-b6f6-3cbf29cc5e3e",
+    "run_id": "ec9b7fbd-120b-412f-9443-76f8ad39c332",
+    "status": "approved",
+    "elapsed_seconds": 53.701,
+    "segment_seconds": 53.701,
+    "company_count": 5,
+    "task_count": 10,
+    "revision": 0,
+    "step_count": 4,
+    "corpus_pages": 164,
+    "result_count": 10,
+    "llm_calls": 26,
+    "estimated_cost_usd": 0.286734,
+    "resumed": false,
+    "trace": {
+      "trace_id": "0df7454d-cefe-4dd6-b6f6-3cbf29cc5e3e",
+      "run_id": "ec9b7fbd-120b-412f-9443-76f8ad39c332",
+      "project": "skala-physical-ai-orchestration",
+      "enabled": true,
+      "verified": true,
+      "url": "https://smith.langchain.com/o/bf72d5b6-8fb0-4606-a88b-9acdd0ce8f19/projects/p/013499dc-bd15-4128-8696-462d39dfbf0a/r/ec9b7fbd-120b-412f-9443-76f8ad39c332?poll=true"
+    }
+  }
+]

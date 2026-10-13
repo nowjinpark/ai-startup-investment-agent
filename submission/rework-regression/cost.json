@@ -1,0 +1,7 @@
+{
+  "limit_usd": 3.0,
+  "estimated_spent_usd": 0.364838,
+  "reserved_usd": 0.0,
+  "carried_cost_from": null,
+  "basis": "gpt-4.1-mini input $0.40/output $1.60; gpt-4.1 input $2/output $8 per million tokens; Tavily basic $0.008 per request; free credits and input cache discounts ignored"
+}

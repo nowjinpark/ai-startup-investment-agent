@@ -1,0 +1,31 @@
+{
+  "source_run": "agent-final-v7",
+  "note": "실행 파일을 내용 변경 없이 복사했습니다. 원 실행 경로는 당시 기록이며 재실행 경로가 아닙니다.",
+  "sha256": {
+    "state.json": "e08a196291db593eef10ad0a6ff8082b9731bd3d5ea7dc8ecb7caa757724947c",
+    "report.md": "95cd9e70ea9783867b5c62036a2860d1dda11f3c7ba95f8b9d7e8712652609e0",
+    "execution-summary.json": "4b443bdecf3af1629effbc06cb6bb3c6381c5576ba93c718150ddb245b3d138f",
+    "execution-segments.json": "99a8b56f9bbe2b85af6c919882053dda2b0400dbaf49f31da177044ddbb20917",
+    "run-config.json": "8334f98595dd8d5ac95dade8e8387c9dac5f436b91d774b26a2d0471b38b5879",
+    "trace.json": "cb21697982a2cc92572ac773a67f97b273105c07fd3f30b0a5ff50e416defc3a",
+    "trace-verification.json": "a555bb76d6a8072e9e487e0637d8bd43475367aa8bd6424200995753c93c3bc7",
+    "report-versions.json": "fcfb5c392b06794cbd8c739265f45934888b3929859588bd3a4178f5cf8f66f3",
+    "events.jsonl": "58379ec3c05d9f645211179edcf573ff31fd4d7b8ccc281bb181a3ef0317b149",
+    "llm_usage.json": "775601d1a0f17c1a6d2473af9feb666db87ed6b3fbdda9b4801132e5908e0b85",
+    "cost.json": "b464afb3b8b8d2b1f258b0cee282f1f075d4cd9bf9477e678e2585d6fade8771",
+    "retrieval.json": "bce585b6da28ab541d2056b356db95c13d5af9fd7e12beab1aea8cf977bd1939",
+    "graph.mmd": "861a937c0d972447a4878d2c2b8ddd6444be94b8c70fe5488f61329aa603635c",
+    "raw/evaluation-0.json": "42dc0243637e84cb51abca572df48578792dd72d55226b7b8f075c0a075eafc0",
+    "raw/07df49c55d5fa55a/revision-0.json": "2576f17e4b4208bc1c9333a54664a4a2e73ef2f674cd093b4e65fa9d7ba91c70",
+    "raw/2f9898a55fe8fe0f/revision-0.json": "bd119b65dfb539f40035875b24ae86c0c72cd075e47040d7497cbacf2c67c70e",
+    "raw/47516cb0ec33f0d4/revision-0.json": "f635bcc0be8cd6c55ad79199fda0a17099851b9f599b7d4ada81add4865de31c",
+    "raw/542ec4df5fc7b2da/revision-0.json": "19aa40788722fc0950f081ce2b4551dc9b899dc7902262b3ed8e0addaa6b2ab2",
+    "raw/6e81b26a46a35651/revision-0.json": "cd240992497c516dd43ce655a6f422dbd62bbfd9e97875a7182f8dcf1140133e",
+    "raw/8bfdd14ef4030054/revision-0.json": "bf8b952810102eba866f5850e3ca9ebeb137082d8117fbd2e51ca4cccab17a40",
+    "raw/972e685969aa477f/revision-0.json": "1612ac631d7867d2315f48146a9722971072258af9f061dddb502f801a02546d",
+    "raw/978250bd35db83ef/revision-0.json": "0fb6f72ac35386c47e99ccd885f4492bd9cccfc5afd7ec2bc2e1d6167c88d823",
+    "raw/a846fff4a5a27b7a/revision-0.json": "2cb03badb24bdceaa118861df3230d9bf8756a00ddeb871bb83f045d6f703bc0",
+    "raw/e046998c6bbdc76c/revision-0.json": "bb9c30f31ed1d9b95d16c43929fadf9985314d11ccc0824b0c477858496f05f6",
+    "raw/report-0.json": "ce6ef39812559f54602fe79386ff744d5d906384e4514dbd17dfca607edc6c69"
+  }
+}

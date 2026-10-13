@@ -1,0 +1,50 @@
+[
+  {
+    "trace_id": "48f0f444-b67b-421d-8de0-94d1302b8730",
+    "run_id": "e49944c7-d605-439a-97c6-d2b6cd65bb9e",
+    "status": "paused",
+    "elapsed_seconds": 4.079,
+    "segment_seconds": 4.079,
+    "company_count": 1,
+    "task_count": 1,
+    "revision": 0,
+    "step_count": 1,
+    "corpus_pages": 164,
+    "result_count": 0,
+    "llm_calls": 1,
+    "estimated_cost_usd": 0.000868,
+    "resumed": false,
+    "trace": {
+      "trace_id": "48f0f444-b67b-421d-8de0-94d1302b8730",
+      "run_id": "e49944c7-d605-439a-97c6-d2b6cd65bb9e",
+      "project": "skala-physical-ai-orchestration",
+      "enabled": true,
+      "verified": true,
+      "url": "https://smith.langchain.com/o/bf72d5b6-8fb0-4606-a88b-9acdd0ce8f19/projects/p/013499dc-bd15-4128-8696-462d39dfbf0a/r/e49944c7-d605-439a-97c6-d2b6cd65bb9e?poll=true"
+    }
+  },
+  {
+    "trace_id": "48f0f444-b67b-421d-8de0-94d1302b8730",
+    "run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+    "status": "approved",
+    "elapsed_seconds": 23.456,
+    "segment_seconds": 19.377,
+    "company_count": 1,
+    "task_count": 1,
+    "revision": 0,
+    "step_count": 4,
+    "corpus_pages": 164,
+    "result_count": 1,
+    "llm_calls": 5,
+    "estimated_cost_usd": 0.048427,
+    "resumed": true,
+    "trace": {
+      "trace_id": "48f0f444-b67b-421d-8de0-94d1302b8730",
+      "run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+      "project": "skala-physical-ai-orchestration",
+      "enabled": true,
+      "verified": true,
+      "url": "https://smith.langchain.com/o/bf72d5b6-8fb0-4606-a88b-9acdd0ce8f19/projects/p/013499dc-bd15-4128-8696-462d39dfbf0a/r/3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40?poll=true"
+    }
+  }
+]

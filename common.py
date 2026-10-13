@@ -221,7 +221,7 @@ class Runtime:
         prompt = ChatPromptTemplate.from_messages([('system', '{instructions}'), ('human', '{payload}')])
         chain = prompt | llm.with_structured_output(schema, method='json_schema', strict=True, include_raw=True)
         units = {}
-        if schema.__name__ in {'CandidateHints', 'EligibilityResult', 'TechnologyOutput', 'MarketOutput', 'AnalysisAudit'}:
+        if schema.__name__ in {'CandidateHints', 'EligibilityResult', 'TechnologyOutput', 'MarketOutput', 'AnalysisAudit', 'Research'}:
             prepared, units = evidence_segments(payload)
             rules += ('\n출력 evidence의 quote에는 원문을 다시 쓰지 말고 제공한 segments의 id 한 개를 넣습니다. '
                       '예: {"source_id":"S-123", "quote":"S-123:U2"}. 이 ID는 코드가 정확한 원문으로 바꿉니다. '

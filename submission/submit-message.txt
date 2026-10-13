@@ -1,0 +1,10 @@
+[AGENT] 울산 1반 과제 제출
+김민정 · 김희윤 · 박종찬 · 박진원 · 이현우
+
+GitHub: https://github.com/nowjinpark/ai-startup-investment-agent/tree/agent-orchestration
+
+기존 Physical AI 스타트업 투자 평가를 Orchestrator-Workers 방식으로 확장했습니다.
+동적 작업 분배, 원문 검수, 보고서 품질 평가, 재처리와 중단 후 재개를 구현했습니다.
+평가기준별 구현·실행 증거는 저장소의 docs/agent-rubric.md에 정리했습니다.
+
+첨부: 평가 보고서 PDF, 실제 LangSmith tracing PNG, 재현 자료를 포함한 팀 ZIP

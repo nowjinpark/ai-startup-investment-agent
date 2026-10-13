@@ -1,0 +1,29 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	planner(planner)
+	research_worker(research_worker)
+	synthesizer(synthesizer)
+	judge_node(judge_node)
+	rework(rework)
+	finish(finish)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> planner;
+	judge_node -. &nbsp;approve&nbsp; .-> finish;
+	judge_node -. &nbsp;research&nbsp; .-> rework;
+	planner -.-> finish;
+	planner -.-> research_worker;
+	planner -.-> synthesizer;
+	research_worker --> synthesizer;
+	rework -.-> finish;
+	rework -.-> research_worker;
+	rework -.-> synthesizer;
+	synthesizer --> judge_node;
+	finish --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

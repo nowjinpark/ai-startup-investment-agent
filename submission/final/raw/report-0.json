@@ -1,0 +1,427 @@
+{
+  "selections": [
+    {
+      "company_id": "co-46aa697b3022",
+      "view": "technology",
+      "finding_ids": [
+        "task-01:0"
+      ],
+      "condition_codes": [
+        "independent",
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-46aa697b3022",
+      "view": "market",
+      "finding_ids": [
+        "task-02:0"
+      ],
+      "condition_codes": [
+        "paid",
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-46aa697b3022",
+      "view": "stakeholders",
+      "finding_ids": [
+        "task-02:1"
+      ],
+      "condition_codes": [
+        "team"
+      ]
+    },
+    {
+      "company_id": "co-46aa697b3022",
+      "view": "application",
+      "finding_ids": [
+        "task-01:2"
+      ],
+      "condition_codes": [
+        "paid",
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-bc6f6312fdc9",
+      "view": "technology",
+      "finding_ids": [
+        "task-03:0",
+        "task-04:2"
+      ],
+      "condition_codes": [
+        "independent",
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-bc6f6312fdc9",
+      "view": "market",
+      "finding_ids": [
+        "task-03:2"
+      ],
+      "condition_codes": [
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-bc6f6312fdc9",
+      "view": "stakeholders",
+      "finding_ids": [
+        "task-04:3"
+      ],
+      "condition_codes": [
+        "team"
+      ]
+    },
+    {
+      "company_id": "co-bc6f6312fdc9",
+      "view": "application",
+      "finding_ids": [
+        "task-04:1"
+      ],
+      "condition_codes": [
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-9d07ca84baf6",
+      "view": "technology",
+      "finding_ids": [
+        "task-05:0",
+        "task-05:2"
+      ],
+      "condition_codes": [
+        "independent",
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-9d07ca84baf6",
+      "view": "market",
+      "finding_ids": [
+        "task-06:1",
+        "task-06:3"
+      ],
+      "condition_codes": [
+        "paid",
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-9d07ca84baf6",
+      "view": "stakeholders",
+      "finding_ids": [
+        "task-06:2"
+      ],
+      "condition_codes": [
+        "team"
+      ]
+    },
+    {
+      "company_id": "co-9d07ca84baf6",
+      "view": "application",
+      "finding_ids": [
+        "task-05:3"
+      ],
+      "condition_codes": [
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-28e1788fa6b5",
+      "view": "technology",
+      "finding_ids": [
+        "task-07:0"
+      ],
+      "condition_codes": [
+        "independent"
+      ]
+    },
+    {
+      "company_id": "co-28e1788fa6b5",
+      "view": "market",
+      "finding_ids": [
+        "task-08:5"
+      ],
+      "condition_codes": [
+        "paid"
+      ]
+    },
+    {
+      "company_id": "co-28e1788fa6b5",
+      "view": "stakeholders",
+      "finding_ids": [
+        "task-08:1"
+      ],
+      "condition_codes": [
+        "team"
+      ]
+    },
+    {
+      "company_id": "co-28e1788fa6b5",
+      "view": "application",
+      "finding_ids": [
+        "task-07:1"
+      ],
+      "condition_codes": [
+        "paid"
+      ]
+    },
+    {
+      "company_id": "co-c533e3536ce3",
+      "view": "technology",
+      "finding_ids": [
+        "task-09:0"
+      ],
+      "condition_codes": [
+        "independent"
+      ]
+    },
+    {
+      "company_id": "co-c533e3536ce3",
+      "view": "market",
+      "finding_ids": [
+        "task-09:2"
+      ],
+      "condition_codes": [
+        "scope"
+      ]
+    },
+    {
+      "company_id": "co-c533e3536ce3",
+      "view": "stakeholders",
+      "finding_ids": [
+        "task-10:2"
+      ],
+      "condition_codes": [
+        "team"
+      ]
+    },
+    {
+      "company_id": "co-c533e3536ce3",
+      "view": "application",
+      "finding_ids": [
+        "task-10:0"
+      ],
+      "condition_codes": [
+        "independent"
+      ]
+    }
+  ],
+  "model_response": {
+    "selections": [
+      {
+        "company_id": "co-46aa697b3022",
+        "view": "technology",
+        "finding_ids": [
+          "task-01:0"
+        ],
+        "condition_codes": [
+          "independent",
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-46aa697b3022",
+        "view": "market",
+        "finding_ids": [
+          "task-02:0"
+        ],
+        "condition_codes": [
+          "paid",
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-46aa697b3022",
+        "view": "stakeholders",
+        "finding_ids": [
+          "task-02:1"
+        ],
+        "condition_codes": [
+          "team"
+        ]
+      },
+      {
+        "company_id": "co-46aa697b3022",
+        "view": "application",
+        "finding_ids": [
+          "task-01:2"
+        ],
+        "condition_codes": [
+          "paid",
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-bc6f6312fdc9",
+        "view": "technology",
+        "finding_ids": [
+          "task-03:0",
+          "task-04:2"
+        ],
+        "condition_codes": [
+          "independent",
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-bc6f6312fdc9",
+        "view": "market",
+        "finding_ids": [
+          "task-03:2"
+        ],
+        "condition_codes": [
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-bc6f6312fdc9",
+        "view": "stakeholders",
+        "finding_ids": [
+          "task-04:3"
+        ],
+        "condition_codes": [
+          "team"
+        ]
+      },
+      {
+        "company_id": "co-bc6f6312fdc9",
+        "view": "application",
+        "finding_ids": [
+          "task-04:1"
+        ],
+        "condition_codes": [
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-9d07ca84baf6",
+        "view": "technology",
+        "finding_ids": [
+          "task-05:0",
+          "task-05:2"
+        ],
+        "condition_codes": [
+          "independent",
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-9d07ca84baf6",
+        "view": "market",
+        "finding_ids": [
+          "task-06:1",
+          "task-06:3"
+        ],
+        "condition_codes": [
+          "paid",
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-9d07ca84baf6",
+        "view": "stakeholders",
+        "finding_ids": [
+          "task-06:2"
+        ],
+        "condition_codes": [
+          "team"
+        ]
+      },
+      {
+        "company_id": "co-9d07ca84baf6",
+        "view": "application",
+        "finding_ids": [
+          "task-05:3"
+        ],
+        "condition_codes": [
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-28e1788fa6b5",
+        "view": "technology",
+        "finding_ids": [
+          "task-07:0"
+        ],
+        "condition_codes": [
+          "independent"
+        ]
+      },
+      {
+        "company_id": "co-28e1788fa6b5",
+        "view": "market",
+        "finding_ids": [
+          "task-08:5"
+        ],
+        "condition_codes": [
+          "paid"
+        ]
+      },
+      {
+        "company_id": "co-28e1788fa6b5",
+        "view": "stakeholders",
+        "finding_ids": [
+          "task-08:1"
+        ],
+        "condition_codes": [
+          "team"
+        ]
+      },
+      {
+        "company_id": "co-28e1788fa6b5",
+        "view": "application",
+        "finding_ids": [
+          "task-07:1"
+        ],
+        "condition_codes": [
+          "paid"
+        ]
+      },
+      {
+        "company_id": "co-c533e3536ce3",
+        "view": "technology",
+        "finding_ids": [
+          "task-09:0"
+        ],
+        "condition_codes": [
+          "independent"
+        ]
+      },
+      {
+        "company_id": "co-c533e3536ce3",
+        "view": "market",
+        "finding_ids": [
+          "task-09:2"
+        ],
+        "condition_codes": [
+          "scope"
+        ]
+      },
+      {
+        "company_id": "co-c533e3536ce3",
+        "view": "stakeholders",
+        "finding_ids": [
+          "task-10:2"
+        ],
+        "condition_codes": [
+          "team"
+        ]
+      },
+      {
+        "company_id": "co-c533e3536ce3",
+        "view": "application",
+        "finding_ids": [
+          "task-10:0"
+        ],
+        "condition_codes": [
+          "independent"
+        ]
+      }
+    ]
+  },
+  "selection_repairs": []
+}

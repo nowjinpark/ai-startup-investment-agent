@@ -1,0 +1,359 @@
+[
+  {
+    "question": "로보아르테 튀김 요리 자동화 협동로봇 기술 성숙도",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-c40162da0adabda6:c1",
+      "S-4fc75cc1b8140571:c1",
+      "S-3e4ab9c201e987a6:c1",
+      "S-c40162da0adabda6:c2"
+    ],
+    "source_ids": [
+      "S-c40162da0adabda6",
+      "S-4fc75cc1b8140571",
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6"
+    ]
+  },
+  {
+    "question": "로보아르테 글로벌 브랜드 솔루션 판매 실적",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-c40162da0adabda6:c1",
+      "S-3e4ab9c201e987a6:c1",
+      "S-c40162da0adabda6:c3",
+      "S-4fc75cc1b8140571:c1"
+    ],
+    "source_ids": [
+      "S-c40162da0adabda6",
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6",
+      "S-4fc75cc1b8140571"
+    ]
+  },
+  {
+    "question": "로보콘 건설 자동화 로봇 기술 개발 현황",
+    "company_id": "co-bc6f6312fdc9",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-c634d53722c54665:c1",
+      "S-db5eecfdd79e9e0c:c1",
+      "S-db5eecfdd79e9e0c:c2",
+      "S-7e61fa1e09430bc7:c1"
+    ],
+    "source_ids": [
+      "S-c634d53722c54665",
+      "S-db5eecfdd79e9e0c",
+      "S-db5eecfdd79e9e0c",
+      "S-7e61fa1e09430bc7"
+    ]
+  },
+  {
+    "question": "로보아르테 협동로봇 주방 자동화 적용 사례",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-c40162da0adabda6:c1",
+      "S-3e4ab9c201e987a6:c1",
+      "S-c40162da0adabda6:c2",
+      "S-4fc75cc1b8140571:c1"
+    ],
+    "source_ids": [
+      "S-c40162da0adabda6",
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6",
+      "S-4fc75cc1b8140571"
+    ]
+  },
+  {
+    "question": "로보아르테 자체 치킨 브랜드 운영 현황",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-c40162da0adabda6:c2",
+      "S-c40162da0adabda6:c1",
+      "S-4fc75cc1b8140571:c1",
+      "S-3e4ab9c201e987a6:c1"
+    ],
+    "source_ids": [
+      "S-c40162da0adabda6",
+      "S-c40162da0adabda6",
+      "S-4fc75cc1b8140571",
+      "S-3e4ab9c201e987a6"
+    ]
+  },
+  {
+    "question": "로보콘 건설 자동화 시장 동향 및 수요",
+    "company_id": "co-bc6f6312fdc9",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-c634d53722c54665:c1",
+      "S-db5eecfdd79e9e0c:c2",
+      "S-7e61fa1e09430bc7:c1",
+      "S-febce9f491793884:c2"
+    ],
+    "source_ids": [
+      "S-c634d53722c54665",
+      "S-db5eecfdd79e9e0c",
+      "S-7e61fa1e09430bc7",
+      "S-febce9f491793884"
+    ]
+  },
+  {
+    "question": "로보아르테 이해관계자 구성 및 협력 관계",
+    "company_id": "co-46aa697b3022",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-3e4ab9c201e987a6:c1",
+      "S-c40162da0adabda6:c3",
+      "S-c40162da0adabda6:c1",
+      "S-c40162da0adabda6:c2"
+    ],
+    "source_ids": [
+      "S-3e4ab9c201e987a6",
+      "S-c40162da0adabda6",
+      "S-c40162da0adabda6",
+      "S-c40162da0adabda6"
+    ]
+  },
+  {
+    "question": "로보콘 주요 파트너 및 고객사",
+    "company_id": "co-bc6f6312fdc9",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-febce9f491793884:c1",
+      "S-c634d53722c54665:c2",
+      "S-c634d53722c54665:c1",
+      "S-7e61fa1e09430bc7:c1"
+    ],
+    "source_ids": [
+      "S-febce9f491793884",
+      "S-c634d53722c54665",
+      "S-c634d53722c54665",
+      "S-7e61fa1e09430bc7"
+    ]
+  },
+  {
+    "question": "로보콘 건설 자동화 적용 사례 및 한계",
+    "company_id": "co-bc6f6312fdc9",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-db5eecfdd79e9e0c:c2",
+      "S-db5eecfdd79e9e0c:c1",
+      "S-c634d53722c54665:c1",
+      "S-a5f49e2677761e6c:c2"
+    ],
+    "source_ids": [
+      "S-db5eecfdd79e9e0c",
+      "S-db5eecfdd79e9e0c",
+      "S-c634d53722c54665",
+      "S-a5f49e2677761e6c"
+    ]
+  },
+  {
+    "question": "리옵스 공간 지능 에이전트 기술 개발 현황",
+    "company_id": "co-9d07ca84baf6",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-2997e7192260a48c:c1",
+      "S-7af8ffde39fe53fc:c1",
+      "S-55e69e88f9950031:c1",
+      "S-f0d5615160266bd0:c1"
+    ],
+    "source_ids": [
+      "S-2997e7192260a48c",
+      "S-7af8ffde39fe53fc",
+      "S-55e69e88f9950031",
+      "S-f0d5615160266bd0"
+    ]
+  },
+  {
+    "question": "리옵스 로봇 적용 사례 및 도메인",
+    "company_id": "co-9d07ca84baf6",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-7af8ffde39fe53fc:c1",
+      "S-2997e7192260a48c:c1",
+      "S-55e69e88f9950031:c1",
+      "S-f893a98887913f2e:c3"
+    ],
+    "source_ids": [
+      "S-7af8ffde39fe53fc",
+      "S-2997e7192260a48c",
+      "S-55e69e88f9950031",
+      "S-f893a98887913f2e"
+    ]
+  },
+  {
+    "question": "리옵스 시장 진입 현황 및 경쟁 상황",
+    "company_id": "co-9d07ca84baf6",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-2997e7192260a48c:c1",
+      "S-f0d5615160266bd0:c1",
+      "S-7af8ffde39fe53fc:c1",
+      "S-55e69e88f9950031:c1"
+    ],
+    "source_ids": [
+      "S-2997e7192260a48c",
+      "S-f0d5615160266bd0",
+      "S-7af8ffde39fe53fc",
+      "S-55e69e88f9950031"
+    ]
+  },
+  {
+    "question": "리옵스 주요 이해관계자 및 협력 관계",
+    "company_id": "co-9d07ca84baf6",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-2997e7192260a48c:c1",
+      "S-f0d5615160266bd0:c1",
+      "S-7af8ffde39fe53fc:c1",
+      "S-55e69e88f9950031:c1"
+    ],
+    "source_ids": [
+      "S-2997e7192260a48c",
+      "S-f0d5615160266bd0",
+      "S-7af8ffde39fe53fc",
+      "S-55e69e88f9950031"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 AI 분자 센서 조리로봇 기술 개발 현황",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-830455754fee728f:c2",
+      "S-e91a36a856825291:c2",
+      "S-2606e2e5b79683e2:c1"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-830455754fee728f",
+      "S-e91a36a856825291",
+      "S-2606e2e5b79683e2"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 조리로봇 적용 사례 및 성과",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-830455754fee728f:c2",
+      "S-e91a36a856825291:c2",
+      "S-830455754fee728f:c3",
+      "S-cd61c4e65640d138:c1"
+    ],
+    "source_ids": [
+      "S-830455754fee728f",
+      "S-e91a36a856825291",
+      "S-830455754fee728f",
+      "S-cd61c4e65640d138"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 시장 진입 및 고객 현황",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-e91a36a856825291:c2",
+      "S-830455754fee728f:c2",
+      "S-2606e2e5b79683e2:c1"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-e91a36a856825291",
+      "S-830455754fee728f",
+      "S-2606e2e5b79683e2"
+    ]
+  },
+  {
+    "question": "비욘드허니컴 주요 이해관계자 및 협력 관계",
+    "company_id": "co-28e1788fa6b5",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-cd61c4e65640d138:c2",
+      "S-830455754fee728f:c2",
+      "S-e91a36a856825291:c1",
+      "S-2606e2e5b79683e2:c1"
+    ],
+    "source_ids": [
+      "S-cd61c4e65640d138",
+      "S-830455754fee728f",
+      "S-e91a36a856825291",
+      "S-2606e2e5b79683e2"
+    ]
+  },
+  {
+    "question": "엔닷라이트 3D 엔진 Sim Ready 데이터 기술 개발 현황",
+    "company_id": "co-c533e3536ce3",
+    "doc_type": "technology",
+    "chunk_ids": [
+      "S-eff36abe805cf9e1:c1",
+      "S-f58e2b59d52e03fd:c2",
+      "S-6a82aa0732082fdd:c2",
+      "S-3d9907cf2ea30aea:c2"
+    ],
+    "source_ids": [
+      "S-eff36abe805cf9e1",
+      "S-f58e2b59d52e03fd",
+      "S-6a82aa0732082fdd",
+      "S-3d9907cf2ea30aea"
+    ]
+  },
+  {
+    "question": "엔닷라이트 시뮬레이션 적용 사례 및 활용 분야",
+    "company_id": "co-c533e3536ce3",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-6a82aa0732082fdd:c2",
+      "S-eff36abe805cf9e1:c1",
+      "S-f58e2b59d52e03fd:c3",
+      "S-f58e2b59d52e03fd:c2"
+    ],
+    "source_ids": [
+      "S-6a82aa0732082fdd",
+      "S-eff36abe805cf9e1",
+      "S-f58e2b59d52e03fd",
+      "S-f58e2b59d52e03fd"
+    ]
+  },
+  {
+    "question": "엔닷라이트 시장 진입 현황 및 경쟁 상황",
+    "company_id": "co-c533e3536ce3",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-6a82aa0732082fdd:c1",
+      "S-d4dbe9890deeee4f:c1",
+      "S-3d9907cf2ea30aea:c3",
+      "S-f58e2b59d52e03fd:c3"
+    ],
+    "source_ids": [
+      "S-6a82aa0732082fdd",
+      "S-d4dbe9890deeee4f",
+      "S-3d9907cf2ea30aea",
+      "S-f58e2b59d52e03fd"
+    ]
+  },
+  {
+    "question": "엔닷라이트 주요 이해관계자 및 협력 관계",
+    "company_id": "co-c533e3536ce3",
+    "doc_type": "market",
+    "chunk_ids": [
+      "S-eff36abe805cf9e1:c2",
+      "S-6a82aa0732082fdd:c1",
+      "S-f58e2b59d52e03fd:c2",
+      "S-d4dbe9890deeee4f:c1"
+    ],
+    "source_ids": [
+      "S-eff36abe805cf9e1",
+      "S-6a82aa0732082fdd",
+      "S-f58e2b59d52e03fd",
+      "S-d4dbe9890deeee4f"
+    ]
+  }
+]

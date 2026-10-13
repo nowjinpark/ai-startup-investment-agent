@@ -1,0 +1,344 @@
+[
+  {
+    "stage": "Plan",
+    "seconds": 9.8,
+    "usage": {
+      "input_tokens": 1176,
+      "output_tokens": 1518,
+      "total_tokens": 2694,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 1024
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 5.11,
+    "usage": {
+      "input_tokens": 5173,
+      "output_tokens": 762,
+      "total_tokens": 5935,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 4.978,
+    "usage": {
+      "input_tokens": 6208,
+      "output_tokens": 665,
+      "total_tokens": 6873,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 5.129,
+    "usage": {
+      "input_tokens": 4424,
+      "output_tokens": 800,
+      "total_tokens": 5224,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 4.449,
+    "usage": {
+      "input_tokens": 4406,
+      "output_tokens": 644,
+      "total_tokens": 5050,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 5.014,
+    "usage": {
+      "input_tokens": 4957,
+      "output_tokens": 722,
+      "total_tokens": 5679,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 5.124,
+    "usage": {
+      "input_tokens": 4401,
+      "output_tokens": 749,
+      "total_tokens": 5150,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 5.559,
+    "usage": {
+      "input_tokens": 5251,
+      "output_tokens": 895,
+      "total_tokens": 6146,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 6.286,
+    "usage": {
+      "input_tokens": 5671,
+      "output_tokens": 994,
+      "total_tokens": 6665,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 5.638,
+    "usage": {
+      "input_tokens": 7454,
+      "output_tokens": 877,
+      "total_tokens": 8331,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 5.942,
+    "usage": {
+      "input_tokens": 5707,
+      "output_tokens": 870,
+      "total_tokens": 6577,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Report",
+    "seconds": 17.152,
+    "usage": {
+      "input_tokens": 19238,
+      "output_tokens": 3002,
+      "total_tokens": 22240,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Evaluation",
+    "seconds": 6.537,
+    "usage": {
+      "input_tokens": 43068,
+      "output_tokens": 901,
+      "total_tokens": 43969,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1"
+  },
+  {
+    "stage": "Report",
+    "seconds": 15.934,
+    "usage": {
+      "input_tokens": 19387,
+      "output_tokens": 2654,
+      "total_tokens": 22041,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Evaluation",
+    "seconds": 7.246,
+    "usage": {
+      "input_tokens": 43163,
+      "output_tokens": 912,
+      "total_tokens": 44075,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1"
+  },
+  {
+    "stage": "Research",
+    "seconds": 5.688,
+    "usage": {
+      "input_tokens": 5368,
+      "output_tokens": 916,
+      "total_tokens": 6284,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Research",
+    "seconds": 6.652,
+    "usage": {
+      "input_tokens": 5788,
+      "output_tokens": 1088,
+      "total_tokens": 6876,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Report",
+    "seconds": 21.68,
+    "usage": {
+      "input_tokens": 19517,
+      "output_tokens": 3949,
+      "total_tokens": 23466,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "stage": "Evaluation",
+    "seconds": 9.122,
+    "usage": {
+      "input_tokens": 43859,
+      "output_tokens": 842,
+      "total_tokens": 44701,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1"
+  }
+]

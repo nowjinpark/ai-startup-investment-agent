@@ -1,0 +1,16 @@
+{
+  "trace_id": "63ec0014-70b0-48f2-9428-5ea47027514b",
+  "run_id": "bdd61f77-8ff1-4815-9e98-5aba22aeaed5",
+  "status": "fallback",
+  "elapsed_seconds": 122.757,
+  "segment_seconds": 122.757,
+  "company_count": 5,
+  "task_count": 10,
+  "revision": 2,
+  "step_count": 10,
+  "corpus_pages": 164,
+  "result_count": 10,
+  "llm_calls": 19,
+  "estimated_cost_usd": 0.364838,
+  "resumed": false
+}
