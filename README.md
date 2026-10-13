@@ -159,7 +159,7 @@ submission/                    제출 보고서·그래프·추적 증거
   final/                       최종 승인 실행·기업 분석
   resume-proof/                계획 후 중단·재개 증거
   rework-regression/           v3 실패·재처리 기록
-  tracing-*.png                실제 LangSmith 캡처 (확보 현황은 trace-guide)
+  tracing-1.png ~ tracing-5.png 실제 LangSmith 캡처 5장
   trace-guide.md               실행별 수치·캡처 안내
 main.py / workflow.py           이전 RAG 실행 방식
 README.md
@@ -168,6 +168,8 @@ README.md
 이전 `examples/final/`과 [기존 README](docs/README-rag-original.md)는 과거 RAG 결과입니다. 이번 과제의 최종 결과는 `submission/final/`입니다. `rework-regression/`은 최종 보고서로 사용하지 않는 실패 검증 기록입니다.
 
 ## Usage
+
+팀 제출 ZIP 이름은 `Agent_울산_1반_김민정+김희윤+박종찬+박진원+이현우.zip`입니다. 평가 PDF·GitHub 링크·실제 LangSmith 화면·코드와 준비 자료를 함께 담습니다.
 
 Python 3.11을 사용합니다. 제출 ZIP을 풀었다면 `source/` 폴더에서 아래 명령을 실행합니다. 이 폴더에는 164쪽 준비 자료인 `data/prepared/`가 포함됩니다. GitHub 코드만 받았다면 같은 준비 자료를 별도로 넣어야 합니다. 아래 명령은 실제 실행한 CLI 기준입니다. 전체 설치 버전은 [환경 고정 목록](submission/environment-lock.txt)에 보관했습니다.
 

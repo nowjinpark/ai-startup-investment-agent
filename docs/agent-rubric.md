@@ -78,7 +78,7 @@
 | 동적 계획 | `state.json`의 계획·이유·관점·질의·완료 조건, `events.jsonl`의 실제 분기 |
 | 평가·개선 전후 | `report-versions.json`의 실제 작성·평가 출력과 `raw/`의 검수·선택 기록 |
 | 운영 | `llm_usage.json`의 호출·토큰, 실행 요약의 시간, `cost.json`의 추정 비용. 실제 청구액과 구분 |
-| LangSmith | 실행별 `trace.json`·`trace-verification.json`, 각 캡처의 확보 상태는 추적 안내에 명시 |
+| LangSmith | 실행별 `trace.json`·`trace-verification.json`과 실제 캡처 5장, 화면별 확인 내용은 추적 안내에 명시 |
 | 과제 결과 | [평가 보고서](../submission/Agent_evaluation_report.pdf), [기업별 분석](../submission/final/report.md) |
 | 공개 코드 | [agent-orchestration 브랜치](https://github.com/nowjinpark/ai-startup-investment-agent/tree/agent-orchestration) |
 

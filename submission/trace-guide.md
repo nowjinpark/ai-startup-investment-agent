@@ -31,6 +31,14 @@
 
 최종 실행은 첫 보고서에서 승인됐으므로, 이 실행이 보고서 평가 후 `rewrite`나 `research`를 거쳤다고 설명하지 않습니다. 해당 경로의 실제 증거는 아래 v3 기록으로 구분합니다.
 
+![v7의 조사 계획과 Worker Waterfall](tracing-1.png)
+
+오른쪽에 `pending_task_ids [10]`과 `task-01`의 질문·완료 조건·검색어가, 왼쪽에 Planner와 Worker의 Waterfall이 보입니다. 최대 동시 실행 3개는 화면의 인상으로 센 값이 아니라 [추적 검증](final/trace-verification.json)의 실제 시작·종료 시간으로 확인했습니다.
+
+![v7 최종 품질 평가의 승인](tracing-2.png)
+
+`route=approve`, `action=approve`와 근거성(`groundedness`)·중립성(`neutrality`)의 `passed=true`가 보입니다. 편향·충실성은 이 화면 아래에 있으므로 [평가 원본](final/raw/evaluation-0.json)에서 네 항목을 모두 확인합니다.
+
 ## 별도 프로세스의 중단·재개
 
 한 기업의 네 관점을 하나의 작업으로 묶어 달라는 입력에서 1개 계획을 만들었습니다. `--pause-after-plan`으로 첫 프로세스를 끝낸 뒤 새 프로세스에서 `resume`을 실행했습니다.
@@ -43,17 +51,21 @@
 
 누적 호출은 **5회**, 로컬 구간 시간은 **4.079 + 19.377 = 23.456초**, 추정 비용은 **$0.048427**입니다. 두 프로세스 사이의 대기 시간은 제외했습니다. 실제 추적에서 첫 구간의 최대 동시 Worker는 0개, 재개 구간은 1개입니다.
 
-## 화면 증거의 확보 현황
+![동일한 실행 식별자로 계획 후 중단하고 재개한 두 구간](tracing-5.png)
 
-| 파일 | 연결할 실행·화면 | 현재 상태 |
+왼쪽 첫 구간에는 Planner(2.79초), 두 번째 구간에는 Research Worker(12.37초)와 작성 흐름이 보입니다. 오른쪽의 `status=approved`와 `trace_id=48f0f444-b67b-421d-8de0-94d1302b8730`을 [두 실행 구간](resume-proof/execution-segments.json)과 대조했습니다. 화면의 개별 노드 시간은 위의 로컬 누적 실행 시간과 집계 범위가 다릅니다.
+
+## 화면별 확인 내용
+
+| 파일 | 연결된 실행·화면 | 확인한 내용 |
 |---|---|---|
-| `tracing-1.png` | 최종 v7 계획과 병렬 Worker 흐름 | 실제 API 추적 확인 완료, 화면 캡처는 아직 미확보 |
-| `tracing-2.png` | 최종 v7의 네 품질 기준 승인 | 실제 API 판정 확인 완료, 화면 캡처는 아직 미확보 |
-| `tracing-3.png` | v3 첫 평가의 rewrite | 실제 LangSmith 캡처 확보·확인 |
-| `tracing-4.png` | v3 재조사 후 fallback | 실제 LangSmith 캡처 확보·확인 |
-| `tracing-5.png` | v7 한 기업의 재개 흐름 | 두 구간 API 추적 확인 완료, 화면 캡처는 아직 미확보 |
+| `tracing-1.png` | 최종 v7 계획과 병렬 Worker 흐름 | 10개 예정 작업·개별 계획·Worker Waterfall |
+| `tracing-2.png` | 최종 v7 품질 승인 | approve 경로·근거성/중립성 통과, 나머지 항목은 JSON 연결 |
+| `tracing-3.png` | v3 첫 평가의 rewrite | 실제 재작성 분기와 품질 미달 |
+| `tracing-4.png` | v3 재조사 후 fallback | 두 Worker 재조사 뒤 수정 한도 종료 |
+| `tracing-5.png` | v7 한 기업의 재개 흐름 | 같은 trace_id의 두 구간과 재개 후 approved |
 
-미확보 화면을 그림으로 만들어 실제 캡처처럼 제시하지 않습니다. 확보된 캡처와 조회 결과의 run ID를 대조합니다. 화면에서 긴 설명이 잘린 경우 평가 JSON을 함께 읽습니다.
+다섯 장 모두 실제 LangSmith 화면을 캡처하고 조회 결과의 실행 식별자와 대조했습니다. 화면에서 긴 설명이나 아래쪽 항목이 잘린 경우 연결된 평가 JSON을 함께 읽습니다.
 
 ## v3에서 실제로 일어난 일
 
