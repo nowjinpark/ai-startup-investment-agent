@@ -108,7 +108,7 @@ v3에서는 보고서 평가가 이런 구분을 문제 삼아 재작성과 두 
 | 실패 회귀 검증 | v3에서 rewrite → 비욘드허니컴 두 작업 research → 수정 한도 fallback. [실패 기록 안내](../submission/rework-regression/README.md) |
 | 검색 재실행 | [15문항 결과](../submission/retrieval-evaluation.json): Hit Rate@4 1.0, MRR@4 0.9555556(표시 0.956). 기존 질문·같은 코퍼스의 재현 확인 |
 | 환경 | [환경 기록](../submission/environment.json)과 [전체 설치 버전](../submission/environment-lock.txt): Python 3.11.15, macOS arm64, LangGraph 1.0.9, SQLite checkpoint 2.0.11 등 |
-| 단위·통합 검사 | [363 passed, 1 skipped, 4 subtests passed](../submission/test-results.txt), 5.59초. 네트워크 원문 수집 1개는 명시 옵션이 없어 생략, SWIG deprecation 경고 3개 |
+| 단위·통합 검사 | [366 passed, 1 skipped, 7 subtests passed](../submission/test-results.txt), 6.35초. 네트워크 원문 수집 1개는 명시 옵션이 없어 생략, SWIG deprecation 경고 3개 |
 | 구조도 | [architecture.png](../submission/architecture.png) 생성·시각 확인. 코드 설명 그림이며 실제 실행 추적과 구분 |
 
 호출 모델은 `gpt-4.1-mini`와 `gpt-4.1` 별칭입니다. 호출별 단계·모델·토큰은 `llm_usage.json`에 저장했습니다. 응답의 날짜별 모델 스냅샷을 별도로 확보했다고 주장하지 않습니다. temperature 0이어도 새 호출의 계획·표현·시간은 달라질 수 있으므로, 보존된 실행 확인과 같은 결과를 다시 계산한다는 보장은 구분합니다.
@@ -117,4 +117,8 @@ v3에서는 보고서 평가가 이런 구분을 문제 삼아 재작성과 두 
 
 승인 판정만으로 내용의 충실도나 사실성이 완전히 보장되지는 않습니다. 시장성은 실제 고객·수요·판매·사업 조건에 답하는지, 이해관계자는 구체적인 사람·조직과 역할이 있는지, 요약은 기업별 확인 결과를 전달하는지도 함께 검토합니다. 기업 자료의 홍보 편향과 노후화, 최신 자격·유료 계약·독립 성능의 미확인 상태는 최종 결과에도 남깁니다.
 
-과제 평가 보고서는 목적·선택 이유·구조·State·동적 실행 증거·품질 전후 비교·측정 결과·한계를 간결하게 구성합니다. **7쪽의 [과제 평가 PDF](../submission/Agent_evaluation_report.pdf)**와 상세 [기업 분석](../submission/final/report.md)을 나누고, [공식 100점 항목 대응](agent-rubric.md)은 구현·검증 근거로 제시합니다. 실제 점수는 교수님이 평가하며 만점을 보장하지 않습니다.
+과제 평가 보고서는 목적·선택 이유·구조·State·동적 실행 증거·품질 전후 비교·측정 결과·한계를 간결하게 구성합니다. **8쪽의 [과제 평가 PDF](../submission/Agent_evaluation_report.pdf)**와 상세 [기업 분석](../submission/reviewed/report.md)을 나누고, [공식 100점 항목 대응](agent-rubric.md)은 구현·검증 근거로 제시합니다. 실제 점수는 교수님이 평가하며 만점을 보장하지 않습니다.
+
+## 제출 전 보완 분석
+
+기존 다섯 기업의 자동 조사와 구조는 유지하고, 별도 공개 자료 검토를 [최종 분석](../submission/reviewed/report.md)에 반영했습니다. 회사별 시장·경쟁·팀과 검증조건을 구체화했으며, 공시의 반대 근거를 반영해 로보콘의 투자 후보 편입을 보류했습니다. 기업별 선정 조건과 팀 기여는 해당 문서에 연결합니다. 이 보완은 v10 실행 뒤 수행했으므로 원 실행의 승인이나 사용량에 합산하지 않습니다.

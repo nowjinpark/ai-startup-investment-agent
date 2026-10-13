@@ -1,12 +1,14 @@
 """실제 실행 결과로 10쪽 이내 제출 PDF를 만듭니다.
 
 사용법: python reporting/agent_submission.py --run-dir outputs/실행 --output outputs/평가보고서.pdf
-본문은 state.json의 report를 보존하고, 실행 부록만 REFERENCE 앞에 넣습니다.
+기본 본문은 state.json의 report입니다. --review-dir로 사후 검토본을 지정하면
+원 실행과 검토본의 해시를 확인하고, 자동 평가의 적용 범위를 구분해 출력합니다.
 분량을 맞추려고 내용을 삭제하거나 글자를 자동으로 줄이지 않습니다.
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import os
@@ -344,7 +346,27 @@ def _appendix(state: dict, usage, trace, events: list[dict], execution, styles) 
     return story
 
 
-def build_report(run_dir, destination, *, repo_root=None) -> Path:
+def read_review(review_dir, state):
+    """사후 검토본을 다른 실행의 자동 승인 기록과 섞지 않도록 확인합니다."""
+    review_dir = Path(review_dir)
+    manifest = _read_json(review_dir / "review-manifest.json")
+    if not isinstance(manifest, dict):
+        raise ValueError("검토본의 review-manifest.json이 필요합니다")
+    report = (review_dir / "report.md").read_text(encoding="utf-8")
+    expected = {
+        "base_trace_id": state.get("trace_id"),
+        "base_report_sha256": hashlib.sha256(state["report"].encode("utf-8")).hexdigest(),
+        "report_sha256": hashlib.sha256(report.encode("utf-8")).hexdigest(),
+    }
+    for key, value in expected.items():
+        if manifest.get(key) != value:
+            raise ValueError(f"검토본과 원 실행의 식별 정보가 다릅니다: {key}")
+    if manifest.get("automated_judge_applies_to") != "base_run_only":
+        raise ValueError("자동 평가는 원 실행에만 적용된다고 표시해야 합니다")
+    return report
+
+
+def build_report(run_dir, destination, *, repo_root=None, review_dir=None) -> Path:
     """실행 폴더를 읽어 PDF를 만들고 경로를 반환합니다. 입력 파일은 변경하지 않습니다.
 
     실패 시 기존 destination을 보존합니다. 10쪽을 넘으면 내용을 줄이지 않고
@@ -357,7 +379,8 @@ def build_report(run_dir, destination, *, repo_root=None) -> Path:
         raise ValueError("state.json의 report 문자열이 필요합니다")
     if destination.suffix.lower() != ".pdf":
         raise ValueError("출력 파일 확장자는 .pdf여야 합니다")
-    body, references = _split_report(state["report"])
+    report = read_review(review_dir, state) if review_dir is not None else state["report"]
+    body, references = _split_report(report)
     usage = _read_json(run_dir / "llm_usage.json", {})
     trace = _read_json(run_dir / "trace.json", {})
     execution = _read_json(run_dir / "execution-summary.json", {})
@@ -365,6 +388,12 @@ def build_report(run_dir, destination, *, repo_root=None) -> Path:
     _register_fonts(root)
     styles = _styles()
     story = _markdown(body, styles)
+    if review_dir is not None:
+        story.append(_paragraph(
+            "다음 실행 수치와 자동 품질 판정은 보존된 v10 원 실행에 해당합니다. "
+            "앞의 제출 전 보완 분석·자격 확인·기여도 설명을 이 실행의 Judge가 평가했다는 뜻은 아닙니다. "
+            "원 실행은 submission/final/, 보완 본문과 근거는 submission/reviewed/에 보관합니다. "
+            "보완 PDF는 기존 생성 명령에 --review-dir submission/reviewed를 추가해 재생성합니다.", styles))
     story.extend(_appendix(state, usage, trace, events, execution, styles))
     story.extend(_markdown(references, styles))
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -405,8 +434,9 @@ def main():
     parser = argparse.ArgumentParser(description="실제 실행 기록으로 10쪽 이내 평가 PDF 생성")
     parser.add_argument("--run-dir", required=True)
     parser.add_argument("--output", required=True)
+    parser.add_argument("--review-dir", help="원 실행을 보존한 제출 전 검토본 폴더")
     args = parser.parse_args()
-    print(build_report(args.run_dir, args.output))
+    print(build_report(args.run_dir, args.output, review_dir=args.review_dir))
 
 
 if __name__ == "__main__":

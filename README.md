@@ -12,7 +12,7 @@
 
 투자 검토자가 다섯 기업의 기술·사업 근거, 적용 가능성, 위험과 미확인 사항을 한 보고서에서 비교하도록 돕습니다. 공개 문서가 뒷받침하지 않는 매출·고객 수·투자 성과는 추정해서 채우지 않습니다. 자료가 오래됐거나 자격 확인이 남으면 그 한계를 표시합니다.
 
-기본 분석 대상은 **로보아르테·로보콘·리옵스·비욘드허니컴·엔닷라이트**입니다. 기존 대상 조건은 국내 비상장 Seed~Series C 기업이며, 상장·Exit 완료 기업은 제외합니다. 현재도 이 조건을 충족하는지는 추가 확인합니다. 기존 과제의 검토 후보를 이어 조사하며, 국내 모든 기업 중 가장 우수한 다섯 기업이라고 주장하지 않습니다.
+기본 분석 대상은 **로보아르테·로보콘·리옵스·비욘드허니컴·엔닷라이트**입니다. 기존 대상 조건은 국내 비상장 Seed~Series C 기업이며, 상장·Exit 완료 기업은 제외합니다. 제출 전 공시·공식 자료를 추가 대조해 **5개 분석·4개 조건부 검토·로보콘 1개 편입 보류**로 정리했습니다. 로보콘은 삼성물산의 지배력·사업결합 공시가 있어 기술 비교에만 남겼습니다. 나머지도 현재 자격이 확정됐다는 뜻은 아닙니다. [선정 근거와 날짜](submission/reviewed/eligibility.md)를 구분했으며 국내 모든 기업 중 최상위 다섯 기업이라고 주장하지 않습니다.
 
 ### Pattern 선정 이유
 
@@ -154,13 +154,14 @@ submission/                    제출 보고서·그래프·추적 증거
   final/                       최종 승인 실행·기업 분석
   resume-proof/                계획 후 중단·재개 증거
   rework-regression/           v3 실패·재처리 기록
+  reviewed/                   제출 전 보완 분석·선정 근거·기여도·원 실행 연결
   tracing-1.png ~ tracing-5.png 실제 LangSmith 캡처 5장
   trace-guide.md               실행별 수치·캡처 안내
 main.py / workflow.py           이전 RAG 실행 방식
 README.md
 ```
 
-이전 `examples/final/`과 [기존 README](docs/README-rag-original.md)는 과거 RAG 결과입니다. 이번 과제의 최종 결과는 `submission/final/`입니다. `rework-regression/`은 최종 보고서로 사용하지 않는 실패 검증 기록입니다.
+이전 `examples/final/`과 [기존 README](docs/README-rag-original.md)는 과거 RAG 결과입니다. 자동 실행 원본은 `submission/final/`, 제출 전 보완한 기업 분석은 [submission/reviewed/report.md](submission/reviewed/report.md)입니다. 평가 PDF는 보완 분석과 원 실행 증거를 구분해 담습니다. `rework-regression/`은 최종 보고서로 사용하지 않는 실패 검증 기록입니다.
 
 ## Usage
 
@@ -207,6 +208,16 @@ cp .env.example .env
 
 최신 상태는 `state.json`, 계획·분기 이유는 `events.jsonl`, 요약은 `execution-summary.json`, 추적 연결은 `trace.json`, 투자 분석 본문은 `report.md`에 저장합니다. 보존한 최종 실행은 `submission/final/`, 재개는 `submission/resume-proof/`에서 확인합니다. 새 실행은 별도 출력 폴더를 사용합니다.
 
+최종 제출 PDF는 저장 실행과 제출 전 검토본으로 다시 만들 수 있습니다. 이 명령은 LLM을 호출하지 않으며 원 실행 기록을 바꾸지 않습니다.
+
+```bash
+./.venv/bin/python reporting/agent_submission.py \
+  --run-dir submission/final --review-dir submission/reviewed \
+  --output submission/Agent_evaluation_report.pdf
+```
+
+`review-manifest.json`은 보완 본문과 원 실행의 해시·식별자를 연결합니다. 원 실행의 Judge 승인을 나중에 추가한 분석의 자동 승인으로 해석하지 않습니다.
+
 ## 실행 결과와 평가
 
 | 실제 실행 | 최종 v10 | 중단·재개 검증 |
@@ -231,8 +242,8 @@ cp .env.example .env
 | 재작성·한도 종료 | v3의 rewrite → research → fallback, [실패 회귀 기록](submission/rework-regression/README.md) |
 | 중단 후 재개 | 계획 유지·비용 복원·동일 trace_id의 [두 실행 구간](submission/resume-proof/execution-segments.json) |
 | 검색 | 기존 15문항의 Hit Rate@4 **1.0**, MRR@4 **0.956**, [실측](submission/retrieval-evaluation.json) |
-| 코드 검사 | **363 passed, 1 skipped, 4 subtests passed**, 5.59초, [기록](submission/test-results.txt) |
-| 과제 보고서 | [평가 PDF](submission/Agent_evaluation_report.pdf) **7쪽**, 기업 분석과 추적 증빙은 별도 연결 |
+| 코드 검사 | **366 passed, 1 skipped, 7 subtests passed**, 6.35초, [기록](submission/test-results.txt) |
+| 과제 보고서 | [평가 PDF](submission/Agent_evaluation_report.pdf) **8쪽**, [보완 분석](submission/reviewed/report.md)과 원 실행 증거의 적용 범위 구분 |
 
 생략한 1개 검사는 `RUN_NETWORK_TESTS=1`을 요구하는 원문 재수집 검사입니다. 이번에는 보존한 164쪽을 사용했습니다. 경고 3개는 FAISS SWIG 타입의 deprecation 경고입니다. 단위·통합 검사와 실제 API 실행은 별도 증거로 구분합니다.
 
@@ -248,19 +259,27 @@ cp .env.example .env
 
 최종 승인에도 원문 자체의 오류·홍보 편향·정보 노후화와 LLM 평가의 한계는 남습니다. 최신 기업 자격, 유료 계약, 독립 성능, 시장 규모·매출은 추가 확인 대상입니다.
 
+## 제출 전 내용 보완
+
+기존 네 관점과 모든 원문 인용을 유지하면서 회사별 시장 범위·경쟁 대안·팀 경력의 관련성·사업 위험·판단 조건을 보완했습니다. 공시를 대조해 로보콘의 투자 후보 편입을 보류했고, 다른 기업의 라운드와 과거 비상장 확인일도 구분했습니다. [보완 보고서](submission/reviewed/report.md), [선정 검토](submission/reviewed/eligibility.md), [최종 검수](submission/final-content-review.md)에 근거를 남겼습니다.
+
+시장의 배경 통계와 기업의 직접 세부시장을 분리했습니다. 입력값을 확보하지 못한 시장 금액·예상 수익·팀원별 신규 구현 실적은 만들지 않았습니다. 이 보완은 v10 실행 뒤의 자료 검토이며 원 실행의 State·자동 판정·추적 화면은 그대로 보존했습니다.
+
 ## Contributors
 
-동일한 다섯 팀원이 이어서 진행합니다. 아래는 기존 RAG에서 정한 개인 역할입니다. 이번 확장의 새 완료 작업을 임의로 배정하지 않았습니다.
+울산 1반 김민정·김희윤·박종찬·박진원·이현우가 기존 RAG 주제를 이어 확장했다. 기존 개인 담당, 재사용한 팀 산출물, 이번에 기록으로 확인한 검토 활동을 구분했다.
 
-| 팀원 | 기존 개인 역할 |
-|---|---|
-| 박종찬 | 스타트업 탐색·기업 자격·자료 준비 |
-| 김민정 | 기술 분석·기술 근거 확인 |
-| 김희윤 | 시장·경쟁 분석·고객과 사업 근거 확인 |
-| 이현우 | 투자 판단·평가표·점수 계산 |
-| 박진원 | 보고서 생성·통합 실행·보고서 검토 |
+| 팀원 | 기존 RAG 담당·확인된 활동 | 이번 과제와 연결되는 내용 |
+|---|---|---|
+| 박종찬 | 스타트업 탐색·기업 정보·자격·자료 준비 담당 | 기존 팀의 후보 15개와 원문 164쪽을 새 조사 계획의 입력으로 사용했다. |
+| 김민정 | 기술 분석·기술 근거 담당 | 기존 기술 분석 범위를 기술 성숙도 관점으로 이어 사용하며, 새 Worker가 원문을 다시 조사·검수한다. |
+| 김희윤 | 시장·경쟁 분석·고객과 사업 근거 담당 | 기존 시장·고객·사업 분석 범위를 시장성 관점으로 이어 사용했다. |
+| 이현우 | 투자 판단·평가표 담당. 임베딩 후보 비교 의견을 공유했다. | BGE-M3 선택을 유지했다. 기존 기업 투자 점수와 이번 보고서의 네 품질 기준은 목적이 달라 구분했다. |
+| 박진원 | 보고서 생성·통합 결과 확인·보고서 검토 담당 | 이번 요건과 수업 적용 범위를 제시하고, 제출 문구·보고서·캡처의 겹침·불필요한 화면을 확인해 수정과 최종 검토를 요청했다. |
 
-이번 그래프·원문 검수·평가 루프·문서 작성·실행 검증에는 Codex를 활용했습니다. 팀원별 새 검토·수정·실행 내역은 실제 확인된 작업만 추가합니다. PM·PL 같은 관리 직함을 개인 구현 역할 대신 적지 않습니다.
+기존 팀이 찾은 자료원과 시장 분석 코드 제안은 RAG 개발에 반영됐다. 이번 그래프 확장·원문 검수·실행 검증·문서 및 캡처 정리에는 Codex를 활용했다. 위의 기존 담당과 재사용 범위를 이번 신규 코드의 개인별 작성·검수 완료 실적으로 환산하지 않았다. 개인명이 확인되지 않은 팀 제안은 공동 기여로 남겼다.
+
+[역할·기여 근거와 실제 재사용 범위](submission/reviewed/contributions.md)에 대응을 정리했습니다.
 
 ## References
 

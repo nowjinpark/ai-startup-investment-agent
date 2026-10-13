@@ -1,4 +1,5 @@
 """PDF 제출 형식, 원문 보존, 분량 상한을 실제 PDF로 검증합니다."""
+import hashlib
 import json
 from pathlib import Path
 import tempfile
@@ -117,6 +118,51 @@ class AgentPDFTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "SUMMARY"):
             build_report(self.folder, self.folder / "report.pdf")
         self.assertFalse((self.folder / "report.pdf").exists())
+
+    def review_fixture(self, state):
+        folder = self.folder / "reviewed"
+        folder.mkdir()
+        report = state["report"].replace("## REFERENCE", "## 제출 전 검토\n\n새로 확인한 검토 내용입니다.\n\n## REFERENCE")
+        (folder / "report.md").write_text(report, encoding="utf-8")
+        manifest = {
+            "base_trace_id": state["trace_id"],
+            "base_report_sha256": hashlib.sha256(state["report"].encode()).hexdigest(),
+            "report_sha256": hashlib.sha256(report.encode()).hexdigest(),
+            "automated_judge_applies_to": "base_run_only",
+        }
+        (folder / "review-manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+        return folder, manifest
+
+    def test_reviewed_pdf_preserves_run_and_separates_automatic_approval(self):
+        state = fixture_state()
+        self.write_state(state)
+        review, _ = self.review_fixture(state)
+        output = build_report(self.folder, self.folder / "reviewed.pdf", review_dir=review)
+        text = "".join("".join(page.extract_text().split()) for page in PdfReader(output).pages)
+        self.assertIn("새로확인한검토내용", text)
+        self.assertIn("Judge가평가했다는뜻은아닙니다", text)
+        self.assertEqual(json.loads((self.folder / "state.json").read_text()), state)
+
+    def test_review_from_other_run_or_changed_text_is_rejected(self):
+        state = fixture_state()
+        self.write_state(state)
+        review, manifest = self.review_fixture(state)
+        for key in ("base_trace_id", "base_report_sha256", "report_sha256"):
+            with self.subTest(key=key):
+                changed = {**manifest, key: "wrong"}
+                (review / "review-manifest.json").write_text(json.dumps(changed), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, key):
+                    build_report(self.folder, self.folder / "reviewed.pdf", review_dir=review)
+        self.assertFalse((self.folder / "reviewed.pdf").exists())
+
+    def test_review_cannot_claim_original_judge_evaluated_changed_content(self):
+        state = fixture_state()
+        self.write_state(state)
+        review, manifest = self.review_fixture(state)
+        manifest["automated_judge_applies_to"] = "reviewed_report"
+        (review / "review-manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "자동 평가"):
+            build_report(self.folder, self.folder / "reviewed.pdf", review_dir=review)
 
 
 if __name__ == "__main__":

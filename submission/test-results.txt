@@ -1,9 +1,9 @@
-......................s............................................. [ 18%]
-........................................................................ [ 38%]
-........................................................................ [ 58%]
-........................................................................ [ 78%]
-........................................................................ [ 97%]
-........                                                                 [100%]
+.........................s....................................... [ 17%]
+........................................................................ [ 37%]
+........................................................................ [ 56%]
+........................................................................ [ 76%]
+........................................................................ [ 96%]
+..............                                                           [100%]
 =============================== warnings summary ===============================
 tests/test_rag.py::test_same_company_basic_material_is_shared_by_both_roles
   <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
@@ -15,4 +15,4 @@ tests/test_rag.py::test_same_company_basic_material_is_shared_by_both_roles
   <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-363 passed, 1 skipped, 3 warnings, 4 subtests passed in 5.59s
+366 passed, 1 skipped, 3 warnings, 7 subtests passed in 6.35s

@@ -12,7 +12,7 @@
 | 품질 평가 노드 | 15 | Evaluator와 Gate | 근거성·중립성·편향·충실성 판정, 피드백과 개선 전후 | 최종 네 기준 승인, v3 재작성·선택 재조사·한도 종료를 별도로 확인 |
 | 코드 구조 및 모듈 분리 | 5 | app.py, orchestration/, prompts/, agents/·rag.py | 실행·상태·역할·지시문·검색·보고서 책임 구분 | 실행·상태·역할·지시문·검색·출력 책임을 파일별로 대조 |
 | 실행 결과 재현성 | 10 | README Usage·Tech Stack, 실행 기록 | 환경·모델·자료·입력·명령·재개, 실제 LangSmith 이미지 | 설치 버전·자료/코드 해시·실제 호출·별도 프로세스 재개 보존 |
-| Output - 보고서 | 10 | [평가 PDF](../submission/Agent_evaluation_report.pdf)·[기업 분석](../submission/final/report.md) | 네 관점, 장단점·출처·미확인, 동적 실행·평가, 최대 10장 | 7쪽 평가 PDF와 기업별 결과를 분리해 보존 |
+| Output - 보고서 | 10 | [평가 PDF](../submission/Agent_evaluation_report.pdf)·[기업 분석](../submission/reviewed/report.md) | 네 관점, 장단점·출처·미확인, 동적 실행·평가, 최대 10장 | 8쪽 PDF에 보완 분석·선정 판단·기여도와 원 실행 증거를 구분 |
 | 합계 | 100 | | | 실제 채점은 평가자가 수행 |
 
 ## README 샘플 대조
@@ -66,7 +66,7 @@
 - **재개:** [실행 구간](../submission/resume-proof/execution-segments.json)에 같은 trace_id의 계획 후 중단과 다른 프로세스의 승인 결과를 보관했습니다. 대기 시간을 제외한 구간 시간·누적 비용을 구분합니다.
 - **검색:** [15문항 결과](../submission/retrieval-evaluation.json)의 Hit Rate@4 1.0, MRR@4 0.9555556(표시 0.956). 기존 질문·같은 코퍼스의 재현 결과이며 독립적인 품질 평가로 확대하지 않습니다.
 - **환경:** [환경 정보](../submission/environment.json), [전체 설치 버전](../submission/environment-lock.txt), 실행별 `run-config.json`의 자료·구현 해시를 보관했습니다.
-- **테스트:** [363 passed, 1 skipped, 4 subtests passed](../submission/test-results.txt), 5.59초. 생략은 선택형 네트워크 수집 검사, 경고 3개는 FAISS SWIG deprecation입니다.
+- **테스트:** [366 passed, 1 skipped, 7 subtests passed](../submission/test-results.txt), 6.35초. 생략은 선택형 네트워크 수집 검사, 경고 3개는 FAISS SWIG deprecation입니다.
 - **구조와 추적:** [코드 구조도](../submission/architecture.png)와 [실제 LangSmith 캡처·run ID 안내](../submission/trace-guide.md)를 구분했습니다.
 - **v3 실패 회귀 검증:** [별도 안내](../submission/rework-regression/README.md)에 rewrite → research → fallback과 실제 보고서 세 판·평가 세 건을 보관했습니다. 오류가 있는 과거 결과이며 최종 성공이나 투자 판단의 근거로 쓰지 않습니다.
 
@@ -79,11 +79,13 @@
 | 평가·개선 전후 | `report-versions.json`의 실제 작성·평가 출력과 `raw/`의 검수·선택 기록 |
 | 운영 | `llm_usage.json`의 호출·토큰, 실행 요약의 시간, `cost.json`의 추정 비용. 실제 청구액과 구분 |
 | LangSmith | 실행별 `trace.json`·`trace-verification.json`과 실제 캡처 5장, 화면별 확인 내용은 추적 안내에 명시 |
-| 과제 결과 | [평가 보고서](../submission/Agent_evaluation_report.pdf), [기업별 분석](../submission/final/report.md) |
+| 과제 결과 | [평가 보고서](../submission/Agent_evaluation_report.pdf), [기업별 분석](../submission/reviewed/report.md) |
 | 공개 코드 | [agent-orchestration 브랜치](https://github.com/nowjinpark/ai-startup-investment-agent/tree/agent-orchestration) |
 
 ## 해석할 때 주의할 범위
 
 테스트 통과, LLM 품질 승인, 교수님의 과제 점수, 실제 투자 적합성은 서로 다른 판단입니다. 이번 대응표는 **100점 배점 전체의 구현·증빙 위치**를 제시하며 자체 만점 판정이 아닙니다. 특히 최종 분석에도 원문 자체의 오류·홍보 편향·노후화와 최신 기업 자격·유료 계약·독립 성능의 미확인 사항이 남습니다.
 
-개인 역할은 기존 다섯 팀원의 실제 분담을 이어 표시하고, 새 구현·문서·실행 검증에 Codex를 사용했다고 명시했습니다. 확인하지 않은 새 개인 기여를 만들어 넣지 않았습니다. 저장소와 제출 파일의 준비는 수업 채널에 실제로 제출했다는 뜻이 아닙니다.
+개인별 기존 담당과 이번 제출물의 재사용 범위, 이현우의 임베딩 후보 의견과 박진원의 이번 요건·문구·캡처 검토를 [기여 근거](../submission/reviewed/contributions.md)에 연결했습니다. 새 구현·문서·실행 검증의 Codex 지원을 밝혔고 확인하지 않은 개인 수행 내역은 만들지 않았습니다. 저장소와 제출 파일의 준비는 수업 채널에 실제로 제출했다는 뜻이 아닙니다.
+
+제출 전 보완에서는 원 실행의 20개 관점과 15개 인용 ID를 유지하고 시장·경쟁·팀·구체 판단을 추가했습니다. 공식 공시 대조 결과 4개 조건부 검토와 로보콘 편입 보류로 구분했습니다. [검토본 식별 기록](../submission/reviewed/review-manifest.json)은 v10 자동 승인과 사후 보완의 범위를 구분합니다.

@@ -60,6 +60,27 @@ def main():
     assert 1 <= len(pdf.pages) <= 10
     assert 'SUMMARY' in pdf.pages[0].extract_text()
     assert 'REFERENCE' in ''.join(page.extract_text() for page in pdf.pages)
+    reviewed = ROOT / 'submission/reviewed'
+    if reviewed.exists():
+        import sys
+        sys.path.insert(0, str(ROOT))
+        from reporting.agent_submission import read_review
+        report = read_review(reviewed, state)
+        review_body, _, review_refs = report.partition('## REFERENCE')
+        citation_pattern = r'\[((?:S-|R-)[a-z0-9]+)\]'
+        assert set(re.findall(citation_pattern, review_body)) == set(re.findall(citation_pattern, review_refs))
+        assert set(re.findall(pattern, body)) <= set(re.findall(pattern, review_body)), '기존 원문 근거가 빠졌습니다.'
+        manifest = read(reviewed / 'review-manifest.json')
+        for name, digest in manifest['files'].items():
+            assert hashlib.sha256((reviewed / name).read_bytes()).hexdigest() == digest, name
+        for company in state['companies']:
+            company_name = company['name'] if isinstance(company, dict) else company
+            section = report.split('## ' + company_name + '\n', 1)[1].split('\n## ', 1)[0]
+            for label in ('기술 성숙도', '시장성', '이해관계자', '도메인 적용성', '검토 판단'):
+                assert label in section, (company_name, label)
+        pdf_text = ''.join(''.join(page.extract_text().split()) for page in pdf.pages)
+        assert 'Judge가평가했다는뜻은아닙니다' in pdf_text
+        assert '기여' in pdf_text and '기업선정' in pdf_text
     for number in range(1, 6):
         with Image.open(ROOT / f'submission/tracing-{number}.png') as picture:
             picture.verify()

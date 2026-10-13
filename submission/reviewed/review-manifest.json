@@ -1,0 +1,20 @@
+{
+  "reviewed_at": "2026-10-13",
+  "base_run": "agent-final-v10",
+  "base_trace_id": "4818e5f7-bbd4-4cc5-8221-cd11691ddcb3",
+  "base_report_sha256": "107be422393815b27bd627c9500aa8373686c0697278125669848f5f47885c8c",
+  "report_sha256": "acc3bf4e597ebfdb9299e80ede3c3f2ae211b82fb3b14cd2420c20d1bde4574f",
+  "automated_judge_applies_to": "base_run_only",
+  "review_method": "저장 실행과 기존 자료·추가 공개 1차 자료를 대조한 제출 전 보완",
+  "files": {
+    "README.md": "bd360969c7599b2f3248699dc49e93f7e3925a65e0313873f288ee7fd1dccb2c",
+    "additional-sources.json": "b96ed1f36b6d9a0dcc5c9373e008f359d9e8dd14abf4c368c14383abd8607715",
+    "contributions.md": "523ab86b1f7f340df338df8950e0a9f99f5840418ba125cab979a03db1f694db",
+    "coverage-map.json": "496a0ef760c0e40fd2d0e245729fe018c275c5956130f4208182de656521b6a5",
+    "eligibility-summary.md": "ee0e2e2c20ac91ddc0574109e55c149abc661212505bbfc6a2d07f1dc74c6006",
+    "eligibility.md": "f39740a935c5d670da213ea47f2b9dbaf28c85db91ff067b7a8a8394a9ba1523",
+    "market-context.md": "0103c4d248fba6daa31d6a954130dfa6349968a787ad0175738a6db4d81ef231",
+    "report.md": "acc3bf4e597ebfdb9299e80ede3c3f2ae211b82fb3b14cd2420c20d1bde4574f",
+    "source-inventory.json": "e5b138092db9b219c0ca906032d68eb094451e88e69e1f1cd1faa62dc31b20c6"
+  }
+}

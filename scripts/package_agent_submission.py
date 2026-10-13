@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -89,12 +90,20 @@ def main():
     parser.add_argument('--resume', type=Path, required=True)
     parser.add_argument('--regression', type=Path, required=True)
     parser.add_argument('--zip', type=Path, required=True)
+    parser.add_argument('--review-dir', type=Path,
+                        help='사후 검토본을 사용해 최종 PDF를 재생성합니다.')
     args = parser.parse_args()
     export_run(args.final, ROOT / 'submission/final', include_raw=True)
     export_run(args.resume, ROOT / 'submission/resume-proof', include_raw=True)
     export_run(args.regression, ROOT / 'submission/rework-regression')
-    (ROOT / 'submission/Agent_evaluation_report.pdf').write_bytes(
-        (args.final / 'evaluation-report.pdf').read_bytes())
+    if args.review_dir:
+        sys.path.insert(0, str(ROOT))
+        from reporting.agent_submission import build_report
+        build_report(args.final, ROOT / 'submission/Agent_evaluation_report.pdf',
+                     review_dir=args.review_dir)
+    else:
+        (ROOT / 'submission/Agent_evaluation_report.pdf').write_bytes(
+            (args.final / 'evaluation-report.pdf').read_bytes())
     package(args.zip)
 
 
