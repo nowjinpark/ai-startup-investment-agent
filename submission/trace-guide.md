@@ -8,7 +8,7 @@
 | 중단·재개 v10 | [resume-proof/](resume-proof/) | 한 기업의 계획 뒤 종료하고 새 프로세스에서 이어 실행한 증거 |
 | 실패 회귀 v3 | [rework-regression/](rework-regression/README.md) | 재작성·선택 재조사·한도 종료를 보존한 과거 실패 기록 |
 
-`architecture.png`는 코드를 설명하는 구조도입니다. 실제 실행은 LangSmith 조회 결과와 로컬 기록을 연결해 확인합니다. LangSmith의 초록 체크는 호출 종료 표시이며 보고서의 품질 승인은 `evaluation`과 `status`로 따로 확인합니다. 조회 링크는 권한이 있는 계정에서 열 수 있습니다.
+`architecture.png`는 코드를 설명하는 구조도입니다. 실제 실행은 LangSmith 조회 결과와 로컬 기록을 연결해 확인합니다. 호출의 완료 여부와 보고서의 품질 승인은 구분하며, 품질 승인은 `evaluation`과 `status`로 확인합니다. 조회 링크는 권한이 있는 계정에서 열 수 있습니다.
 
 ## 최종 v10 실행
 
@@ -31,13 +31,13 @@
 
 최종 실행은 첫 보고서에서 승인됐으므로, 이 실행이 보고서 평가 후 `rewrite`나 `research`를 거쳤다고 설명하지 않습니다. 해당 경로의 실제 증거는 아래 v3 기록으로 구분합니다.
 
-![v10의 조사 계획과 Worker Waterfall](tracing-1.png)
+![v10의 조사 계획과 실행 노드 목록](tracing-1.png)
 
-오른쪽에 `pending_task_ids [10 items]`와 `task-01`의 질문·완료 조건·검색어가, 왼쪽에 Planner(10.87초)와 Worker의 Waterfall이 보입니다. 최대 동시 실행 3개는 화면의 인상으로 센 값이 아니라 [추적 검증](final/trace-verification.json)의 실제 시작·종료 시간으로 확인했습니다.
+오른쪽 JSON에 `task-01`의 관점(`technology`, `application`)·질문·검색어·선정 이유·완료 조건이 보입니다. 왼쪽에는 Planner(10.87초)와 Worker 10개, 작성·평가·종료 노드가 보입니다. 전체 10개 계획은 [State 원본](final/state.json)에 보존했습니다. 최대 동시 실행 3개는 [추적 검증](final/trace-verification.json)의 실제 시작·종료 시간으로 확인했습니다.
 
 ![v10 최종 품질 평가의 승인](tracing-2.png)
 
-왼쪽에 Synthesizer(5.07초)·Judge(5.21초) 흐름이, 오른쪽에 `route=approve`, `action=approve`와 근거성(`groundedness`)·중립성(`neutrality`)의 `passed=true`가 보입니다. 편향·충실성은 이 화면 아래에 있으므로 [평가 원본](final/raw/evaluation-0.json)에서 네 항목을 모두 확인합니다.
+왼쪽에 Planner·Worker 10개·Synthesizer(5.07초)·Judge(5.21초)·종료 노드가 보입니다. 오른쪽 JSON에는 충실성(`coverage`)의 `passed=true`, `action=approve`, `route=approve`, 승인 이유와 빈 오류 목록이 보입니다. 근거성·중립성·편향은 스크롤 위쪽에 있으므로 [평가 원본](final/raw/evaluation-0.json)에서 네 항목을 모두 확인합니다.
 
 ## 별도 프로세스의 중단·재개
 
@@ -59,13 +59,13 @@
 
 | 파일 | 연결된 실행·화면 | 확인한 내용 |
 |---|---|---|
-| `tracing-1.png` | 최종 v10 계획과 병렬 Worker 흐름 | 10개 예정 작업·개별 계획·Worker Waterfall |
-| `tracing-2.png` | 최종 v10 품질 승인 | approve 경로·근거성/중립성 통과, 나머지 항목은 JSON 연결 |
-| `tracing-3.png` | v3 첫 평가의 rewrite | 실제 재작성 분기와 품질 미달 |
-| `tracing-4.png` | v3 재조사 후 fallback | 두 Worker 재조사 뒤 수정 한도 종료 |
+| `tracing-1.png` | 최종 v10 계획과 조사 흐름 | 개별 작업의 관점·질의·완료 조건과 Worker 10개 실행 목록 |
+| `tracing-2.png` | 최종 v10 품질 승인 | 충실성 통과·approve 경로·승인 이유, 나머지 기준은 평가 JSON 연결 |
+| `tracing-3.png` | v3 첫 평가의 rewrite | action/route의 재작성 판정과 수정 피드백 |
+| `tracing-4.png` | v3 재조사 후 fallback | 두 Worker 재조사 뒤 action=rewrite·route=fallback으로 한도 종료 |
 | `tracing-5.png` | v10 한 기업의 중단·재개 | 같은 trace_id의 두 구간과 재개 후 approved |
 
-다섯 장 모두 실제 LangSmith 화면을 캡처하고 조회 결과의 실행 식별자와 대조했습니다. 화면에서 긴 설명이나 아래쪽 항목이 잘린 경우 연결된 평가 JSON을 함께 읽습니다.
+다섯 장 모두 실제 LangSmith 페이지의 JSON 출력 화면을 캡처하고 조회 결과의 실행 식별자와 대조했습니다. 브라우저 탭·주소창과 커서가 없는 화면으로 보존했습니다. 왼쪽은 실행 노드 목록이며 병렬 실행을 시간축으로 보여 주는 Waterfall 화면은 아닙니다. 스크롤 밖의 항목은 연결된 원본 JSON을 함께 읽습니다.
 
 ## v3에서 실제로 일어난 일
 
@@ -90,15 +90,15 @@ LangSmith에서 실제 작성·평가 노드의 출력을 조회한 `report-vers
 
 ![v3 첫 평가에서 재작성을 선택한 실제 LangSmith 화면](tracing-3.png)
 
-`route=rewrite`, `groundedness=false`, `neutrality=false`를 확인할 수 있습니다. 작성과 평가를 분리하고 평가 결과가 실제 분기에 사용된 증거입니다. 긴 판정 이유는 화면에서 잘리므로 로컬 평가 JSON과 함께 읽습니다.
+오른쪽 JSON에서 `action=rewrite`, `route=rewrite`와 회사 발표·독립 검증을 구분하라는 수정 피드백을 확인할 수 있습니다. 왼쪽에는 첫 Judge(6.55초) 뒤 재작성과 다음 평가로 이어지는 노드가 보입니다. 근거성·중립성의 `passed=false`는 스크롤 위쪽에 있으므로 [첫 평가 원본](rework-regression/raw/evaluation-0.json)에서 확인합니다.
 
 ### 재조사 후 한도 종료
 
 ![v3 재조사 후 fallback을 선택한 실제 LangSmith 화면](tracing-4.png)
 
-왼쪽에는 두 Worker의 재조사 뒤 작성·평가·종료 흐름이, 오른쪽에는 `route=fallback`과 `groundedness=false`가 보입니다. 평가의 `action=rewrite`와 Gate의 `route=fallback`이 다른 것은 오류가 아니라 수정 한도를 적용한 결과입니다.
+왼쪽에는 두 Worker(6.67초·5.70초)의 재조사 뒤 Synthesizer(21.69초)·Judge(9.14초)·종료 노드가 보입니다. 오른쪽 JSON의 `action=rewrite`와 `route=fallback`은 평가자가 재작성을 제안했지만 Gate가 수정 한도에 따라 종료했음을 보여 줍니다. 근거성의 `passed=false`는 스크롤 위쪽에 있으므로 [마지막 평가 원본](rework-regression/raw/evaluation-2.json)에서 확인합니다.
 
-LangSmith 노드의 초록 체크는 호출이 예외 없이 끝났다는 뜻입니다. **보고서 품질 통과 여부는 State의 평가와 `status`를 확인**해야 합니다. 이 실행의 루트 호출 오류가 없어도 결과는 품질 미달에 따른 fallback입니다.
+**보고서 품질 통과 여부는 State의 평가와 `status`를 확인**해야 합니다. 이 실행의 루트 호출 오류가 없어도 결과는 품질 미달에 따른 fallback입니다.
 
 ## 최종 구현의 근거 검수
 
