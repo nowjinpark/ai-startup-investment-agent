@@ -32,6 +32,10 @@ VIEW_HINTS = {
 }
 COMMERCIAL_FACT = re.compile(r'판매|수출|납품|과금|지불|구매|공급\s*계약|계약\s*(?:체결|방식)|실제\s*프로젝트.*적용')
 SUPPLY_CONTEXT = re.compile(r'고객(?:사)?|거래처|납품처|프로젝트(?:에|의|에서)|(?:회사|기업|전자|자동차|제철|중공업|호텔|병원|공장)에')
+ORGANIZATION_SPINOFF = re.compile(
+    r'(?:모기업|모회사|계열사|자회사|사업부)(?:에서|로부터|로\s*시작해|로\s*출발해)\s*'
+    r'(?:\d{4}년(?:\s*\d{1,2}월)?(?:에)?\s*)?'
+    r'분사(?:했|하였|한\s*(?:기업|회사)|해\s*(?:설립|독립))')
 
 
 def _commercial_fact(text):
@@ -119,7 +123,8 @@ class LiveService:
         companies = state.get('companies') or list(self.candidates.values())
         payload = {'request': state['request'], 'companies': [
             {key: c.get(key, '') for key in ('company_id', 'name', 'overview')}
-            for c in companies], 'views': VIEW_LABELS}
+            for c in companies], 'views': VIEW_LABELS,
+            'planning_feedback': state.get('planning_feedback', '')}
         response = self.runtime.ask(Plan, _prompt('plan'), payload,
                                     model='gpt-4.1-mini', max_tokens=4096)
         return Plan.model_validate(response).model_dump()
@@ -369,6 +374,9 @@ class LiveService:
     @staticmethod
     def _view_hint(finding, view):
         if view == 'market' and _commercial_fact(finding['text']):
+            return True
+        # 이미 검수된 조직의 과거 분사 관계입니다. 현재 지분·소유 관계를 추론하지 않습니다.
+        if view == 'stakeholders' and ORGANIZATION_SPINOFF.search(finding['text']):
             return True
         pattern = VIEW_HINTS.get(view)
         return pattern is None or bool(pattern.search(finding['text']))

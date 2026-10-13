@@ -12,7 +12,7 @@
 | 품질 평가 노드 | 15 | Evaluator와 Gate | 근거성·중립성·편향·충실성 판정, 피드백과 개선 전후 | 최종 네 기준 승인, v3 재작성·선택 재조사·한도 종료를 별도로 확인 |
 | 코드 구조 및 모듈 분리 | 5 | app.py, orchestration/, prompts/, agents/·rag.py | 실행·상태·역할·지시문·검색·보고서 책임 구분 | 실행·상태·역할·지시문·검색·출력 책임을 파일별로 대조 |
 | 실행 결과 재현성 | 10 | README Usage·Tech Stack, 실행 기록 | 환경·모델·자료·입력·명령·재개, 실제 LangSmith 이미지 | 설치 버전·자료/코드 해시·실제 호출·별도 프로세스 재개 보존 |
-| Output - 보고서 | 10 | [평가 PDF](../submission/Agent_evaluation_report.pdf)·[기업 분석](../submission/final/report.md) | 네 관점, 장단점·출처·미확인, 동적 실행·평가, 최대 10장 | 6쪽 평가 PDF와 기업별 결과를 분리해 보존 |
+| Output - 보고서 | 10 | [평가 PDF](../submission/Agent_evaluation_report.pdf)·[기업 분석](../submission/final/report.md) | 네 관점, 장단점·출처·미확인, 동적 실행·평가, 최대 10장 | 7쪽 평가 PDF와 기업별 결과를 분리해 보존 |
 | 합계 | 100 | | | 실제 채점은 평가자가 수행 |
 
 ## README 샘플 대조
@@ -44,7 +44,7 @@
 | 관측성 위치 | trace_id/node_status/last_error·외부 로그 | 실패 작업의 입력과 회차 추적 | events의 노드·결정·이유·상관 ID 검사, LangSmith 대조 |
 | 지속성 비용 | 원문 파일, 출처 ID·요약 | 원문 보존과 State 크기 | 원문 전체를 State에 넣지 않는 검사 통과, 원문·검수 출력 별도 보존 |
 | 상관 | trace_id/task_id/revision | 기업·작업·회차 정합성 | 다른 기업 결과 거절 검사와 선택 재조사 회차 확인 |
-| 재개·복구 | checkpoint·완료 결과·기존 비용 | 프로세스 중단 후 재개·중복 방지 | SQLite 재개 검사 및 실제 계획 후 중단·새 프로세스 승인 |
+| 재개·복구 | checkpoint·완료 결과·비용·오류 기록·호출 번호 | 프로세스 중단 후 재개·중복 방지 | 오류 기록·호출 번호 복원 검사 및 실제 계획 후 중단·새 프로세스 승인 |
 | 동시 처리 | merge_results reducer | 도착 순서 독립, 최신 회차, 충돌 거절 | 순서·반복 병합·동일 회차 충돌 검사 통과, 실제 trace 시간의 최대 동시 실행 3개 |
 | 종료 보장 | max_revisions·step_count·fallback | 한도·오류·품질 미달 종료 | v3 수정 한도 fallback 및 Worker 실패·계획 오류·비용 한도 검사 |
 
@@ -66,7 +66,7 @@
 - **재개:** [실행 구간](../submission/resume-proof/execution-segments.json)에 같은 trace_id의 계획 후 중단과 다른 프로세스의 승인 결과를 보관했습니다. 대기 시간을 제외한 구간 시간·누적 비용을 구분합니다.
 - **검색:** [15문항 결과](../submission/retrieval-evaluation.json)의 Hit Rate@4 1.0, MRR@4 0.9555556(표시 0.956). 기존 질문·같은 코퍼스의 재현 결과이며 독립적인 품질 평가로 확대하지 않습니다.
 - **환경:** [환경 정보](../submission/environment.json), [전체 설치 버전](../submission/environment-lock.txt), 실행별 `run-config.json`의 자료·구현 해시를 보관했습니다.
-- **테스트:** [347 passed, 1 skipped, 4 subtests passed](../submission/test-results.txt), 6.05초. 생략은 선택형 네트워크 수집 검사, 경고 3개는 FAISS SWIG deprecation입니다.
+- **테스트:** [363 passed, 1 skipped, 4 subtests passed](../submission/test-results.txt), 5.59초. 생략은 선택형 네트워크 수집 검사, 경고 3개는 FAISS SWIG deprecation입니다.
 - **구조와 추적:** [코드 구조도](../submission/architecture.png)와 [실제 LangSmith 캡처·run ID 안내](../submission/trace-guide.md)를 구분했습니다.
 - **v3 실패 회귀 검증:** [별도 안내](../submission/rework-regression/README.md)에 rewrite → research → fallback과 실제 보고서 세 판·평가 세 건을 보관했습니다. 오류가 있는 과거 결과이며 최종 성공이나 투자 판단의 근거로 쓰지 않습니다.
 

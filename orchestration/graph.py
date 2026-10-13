@@ -52,8 +52,11 @@ def validate_plan(plan, companies):
         if any(not task[field].strip() for field in ('question', 'reason', 'done_condition')):
             raise ValueError('조사 목적·이유·완료 기준이 필요합니다.')
         coverage[task['company_id']].update(task['views'])
-    if any(views != set(VIEWS) for views in coverage.values()):
-        raise ValueError('모든 기업의 네 관점이 계획에 포함되어야 합니다.')
+    missing = {company['company_id']: [view for view in VIEWS if view not in coverage[company['company_id']]]
+               for company in companies if coverage[company['company_id']] != set(VIEWS)}
+    if missing:
+        raise ValueError('기업별 필수 관점 누락 (company_id: missing_views): '
+                         + json.dumps(missing, ensure_ascii=False))
     return parsed
 
 
@@ -86,15 +89,19 @@ def build_graph(service, event_log, checkpointer=None, interrupt_after=None):
                 'node_status': {**state.get('node_status', {}), node: 'done'}, **values}
 
     def planner(state):
+        planning_state = dict(state)
         try:
             for attempt in (1, 2):
                 try:
-                    plan = validate_plan(service.plan(state), state['companies'])
+                    plan = validate_plan(service.plan(planning_state), state['companies'])
                     break
-                except ValueError:
+                except ValueError as error:
                     if attempt == 2:
                         raise
-                    event_log.write(state, 'planner', 'retry', '계획 형식·범위 검증에 실패해 한 번 다시 계획합니다.')
+                    # 재시도 입력에만 검증 이유를 전달합니다. 작업 내용은 다시 모델이 정합니다.
+                    planning_state = {**state, 'planning_feedback': str(error)}
+                    event_log.write(state, 'planner', 'retry', '계획 형식·범위 검증에 실패해 한 번 다시 계획합니다.',
+                                    validation_feedback=planning_state['planning_feedback'])
             event_log.write(state, 'planner', 'fan_out', plan['reason'],
                             task_count=len(plan['tasks']), tasks=plan['tasks'])
             return update(state, 'planner', plan=plan['tasks'], plan_reason=plan['reason'],
@@ -177,7 +184,7 @@ def build_graph(service, event_log, checkpointer=None, interrupt_after=None):
         failed = ({key for key, result in state['results'].items() if result['status'] != 'ok'}
                   | (valid_ids - set(state['results'])))
         pending = (requested | failed) if state['route'] == 'research' else set()
-        # 평가자가 작업 ID를 주지 않았으면 기존 계획 중 전체를 다시 조사합니다.
+        # 유효한 지정 작업과 실패·누락 작업이 모두 없을 때만 기존 계획 전체를 다시 조사합니다.
         if state['route'] == 'research' and not pending:
             pending = valid_ids
         event_log.write(state, 'rework', state['route'], state['feedback'], pending_task_ids=sorted(pending))

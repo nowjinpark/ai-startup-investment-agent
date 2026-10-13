@@ -6,24 +6,24 @@
       "technology",
       "application"
     ],
-    "question": "로보아르테의 튀김 요리 자동화 협동로봇 솔루션의 기술 성숙도와 도메인 적용성은 어떠한가요?",
+    "question": "로보아르테의 협동로봇 솔루션 기술 성숙도와 튀김 요리 자동화 도메인 적용성은 어떠한가요?",
     "queries": [
-      "로보아르테 튀김 요리 자동화 협동로봇 기술 성숙도",
-      "로보아르테 협동로봇 주방 자동화 적용 사례"
+      "로보아르테 협동로봇 기술 성숙도",
+      "로보아르테 튀김 요리 자동화 적용 사례 및 효과"
     ],
-    "reason": "로보아르테는 조리 자동화에 특화된 협동로봇과 주방 환경 최적화에 집중하므로 기술 성숙도와 도메인 적용성 조사가 중요합니다.",
-    "done_condition": "로보아르테의 기술 구현 수준과 실제 주방 적용 사례 및 한계점이 확인되면 완료"
+    "reason": "로보아르테는 협동로봇과 주방 환경 최적화 기술을 보유하며, 튀김 요리 자동화라는 특정 도메인에 집중하므로 기술과 적용성 관점이 밀접해 함께 조사합니다.",
+    "done_condition": "기술 구현 수준과 실제 주방 적용 사례 및 효과가 문서에서 확인되어야 합니다."
   },
   "revision": 0,
   "feedback": "",
   "queries": [
     {
-      "query": "로보아르테 튀김 요리 자동화 협동로봇 기술 성숙도",
+      "query": "로보아르테 협동로봇 기술 성숙도",
       "doc_type": "technology",
       "k": 4
     },
     {
-      "query": "로보아르테 협동로봇 주방 자동화 적용 사례",
+      "query": "로보아르테 튀김 요리 자동화 적용 사례 및 효과",
       "doc_type": "market",
       "k": 4
     }
@@ -49,7 +49,7 @@
       "chunk_id": "S-c40162da0adabda6:c1"
     },
     {
-      "source_id": "S-4fc75cc1b8140571",
+      "source_id": "S-c40162da0adabda6",
       "company_id": "co-46aa697b3022",
       "doc_type": "market",
       "doc_types": [
@@ -58,14 +58,14 @@
       "title": "로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', 美 전략투자 유치 - 유니콘팩토리",
       "url": "https://www.unicornfactory.co.kr/article/2024060516275184648",
       "published_at": "2024-06-05T17:30:00+09:00",
-      "collected_at": "2026-09-30T03:40:16.397240+00:00",
+      "collected_at": "2026-09-30T03:40:16.404129+00:00",
       "original_page": null,
       "saved_page": 1,
-      "rendered_page": 1,
-      "text": "로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', \u0000 전략투자 유치 - 유니콘팩토리\nhttps://www.unicornfactory.co.kr/article/2024060516275184648\n본문영역 바로가기\n로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', \u0000 전략투자 유치\n최태범 기자 (https://www.unicornfactory.co.kr/reporter/bum_t)\n기사 입력 2024.06.05 17:30\n공감\n공유\n글자크기\n프린트\nURL이 복사되었습니다. 원하는 곳에 붙여넣기 해주세요.\n공유하기\n카카오톡\n카카오톡\n페이스북\n페이스북\n트위터\nX\nURL복사\nURL복사\n글자크기\n가\n가\n가\n가\n가\n레이어 닫기\n[이 기사에 나온 스타트업에 대한 보다 다양한 기업정보는 유니콘팩토리 빅데이터 플랫폼\n'데이터랩' (https://www.unicornfactory.co.kr/datalab)\n에서 볼 수 있습니다.]\n로봇 푸드테크 기업\n로보아르테 (https://www.unicornfactory.co.kr/datalab/startup/company/%EB%A1%9C%EB%B3%B4%EC\n%95%84%EB%A5%B4%ED%85%8C/110111-6863553)\n가 미국 식음료(F&B) 기업 페이서 엔터프라이즈(Paser Enterprise)로부터 전략적 투자를 유치했다고 5일 밝혔다.",
-      "file": "documents/4fc75cc1b81405714f7aeba7.pdf",
-      "content_hash": "4fc75cc1b81405714f7aeba7c1f6eab30572201704061405af84003c14834ec5",
-      "chunk_id": "S-4fc75cc1b8140571:c1"
+      "rendered_page": 2,
+      "text": "트워크도 촘촘하게 구축하고 있다\"며 \"이번 투자로 현지에서 사업 기반을 공고히 다지고 조리 로봇 라인업을 확장할 것\"\n이라고 했다.\n[머니투데이 스타트업 미디어 플랫폼\n'유니콘팩토리' (https://www.unicornfactory.co.kr)\n]\n'로보아르테' 기업 주요 기사\n기사 이미지 [유니밸리]네이버도 반한 '로봇치킨'…반죽·튀김 알아서 '척척'\n(https://www.unicornfactory.co.kr/article/2021041411330056317)\n기사 이미지 \"팔아도 남는게 없다\" 치킨 원가 논란, 로봇치킨 보급 기회될까\n(https://www.unicornfactory.co.kr/article/2022083109575266153)\n기사 이미지 롸버트치킨, 제너시스비비큐 대표 출신 백영호 CBDO 영입 (https://www.unicornfactory.co.kr/article/\n2022112109031341724)\n기사 더보기 (https://www.unicornfactory.co.kr/hashtag/%EB%A1%9C%EB%B3%B4%EC%95%84%EB%\nA5%B4%ED%85%8C)\n관련기사\n1300억 투자유치 도운 인천 '빅웨이브', 올해 육성할 15개사 선정 (https://www.unicornfactory.co.kr/article/2024\n060414241720153)",
+      "file": "documents/c40162da0adabda6e87472dd.pdf",
+      "content_hash": "c40162da0adabda6e87472ddf28a4107d6ecc749f85fc0b510b81529498b2043",
+      "chunk_id": "S-c40162da0adabda6:c2"
     },
     {
       "source_id": "S-3e4ab9c201e987a6",
@@ -87,7 +87,7 @@
       "chunk_id": "S-3e4ab9c201e987a6:c1"
     },
     {
-      "source_id": "S-c40162da0adabda6",
+      "source_id": "S-4fc75cc1b8140571",
       "company_id": "co-46aa697b3022",
       "doc_type": "market",
       "doc_types": [
@@ -96,14 +96,14 @@
       "title": "로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', 美 전략투자 유치 - 유니콘팩토리",
       "url": "https://www.unicornfactory.co.kr/article/2024060516275184648",
       "published_at": "2024-06-05T17:30:00+09:00",
-      "collected_at": "2026-09-30T03:40:16.404129+00:00",
+      "collected_at": "2026-09-30T03:40:16.397240+00:00",
       "original_page": null,
       "saved_page": 1,
-      "rendered_page": 2,
-      "text": "트워크도 촘촘하게 구축하고 있다\"며 \"이번 투자로 현지에서 사업 기반을 공고히 다지고 조리 로봇 라인업을 확장할 것\"\n이라고 했다.\n[머니투데이 스타트업 미디어 플랫폼\n'유니콘팩토리' (https://www.unicornfactory.co.kr)\n]\n'로보아르테' 기업 주요 기사\n기사 이미지 [유니밸리]네이버도 반한 '로봇치킨'…반죽·튀김 알아서 '척척'\n(https://www.unicornfactory.co.kr/article/2021041411330056317)\n기사 이미지 \"팔아도 남는게 없다\" 치킨 원가 논란, 로봇치킨 보급 기회될까\n(https://www.unicornfactory.co.kr/article/2022083109575266153)\n기사 이미지 롸버트치킨, 제너시스비비큐 대표 출신 백영호 CBDO 영입 (https://www.unicornfactory.co.kr/article/\n2022112109031341724)\n기사 더보기 (https://www.unicornfactory.co.kr/hashtag/%EB%A1%9C%EB%B3%B4%EC%95%84%EB%\nA5%B4%ED%85%8C)\n관련기사\n1300억 투자유치 도운 인천 '빅웨이브', 올해 육성할 15개사 선정 (https://www.unicornfactory.co.kr/article/2024\n060414241720153)",
-      "file": "documents/c40162da0adabda6e87472dd.pdf",
-      "content_hash": "c40162da0adabda6e87472ddf28a4107d6ecc749f85fc0b510b81529498b2043",
-      "chunk_id": "S-c40162da0adabda6:c2"
+      "rendered_page": 1,
+      "text": "로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', \u0000 전략투자 유치 - 유니콘팩토리\nhttps://www.unicornfactory.co.kr/article/2024060516275184648\n본문영역 바로가기\n로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', \u0000 전략투자 유치\n최태범 기자 (https://www.unicornfactory.co.kr/reporter/bum_t)\n기사 입력 2024.06.05 17:30\n공감\n공유\n글자크기\n프린트\nURL이 복사되었습니다. 원하는 곳에 붙여넣기 해주세요.\n공유하기\n카카오톡\n카카오톡\n페이스북\n페이스북\n트위터\nX\nURL복사\nURL복사\n글자크기\n가\n가\n가\n가\n가\n레이어 닫기\n[이 기사에 나온 스타트업에 대한 보다 다양한 기업정보는 유니콘팩토리 빅데이터 플랫폼\n'데이터랩' (https://www.unicornfactory.co.kr/datalab)\n에서 볼 수 있습니다.]\n로봇 푸드테크 기업\n로보아르테 (https://www.unicornfactory.co.kr/datalab/startup/company/%EB%A1%9C%EB%B3%B4%EC\n%95%84%EB%A5%B4%ED%85%8C/110111-6863553)\n가 미국 식음료(F&B) 기업 페이서 엔터프라이즈(Paser Enterprise)로부터 전략적 투자를 유치했다고 5일 밝혔다.",
+      "file": "documents/4fc75cc1b81405714f7aeba7.pdf",
+      "content_hash": "4fc75cc1b81405714f7aeba7c1f6eab30572201704061405af84003c14834ec5",
+      "chunk_id": "S-4fc75cc1b8140571:c1"
     }
   ],
   "sources": [
@@ -126,24 +126,6 @@
       "content_hash": "c40162da0adabda6e87472ddf28a4107d6ecc749f85fc0b510b81529498b2043"
     },
     {
-      "source_id": "S-4fc75cc1b8140571",
-      "company_id": "co-46aa697b3022",
-      "doc_type": "market",
-      "doc_types": [
-        "market"
-      ],
-      "title": "로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', 美 전략투자 유치 - 유니콘팩토리",
-      "url": "https://www.unicornfactory.co.kr/article/2024060516275184648",
-      "published_at": "2024-06-05T17:30:00+09:00",
-      "collected_at": "2026-09-30T03:40:16.397240+00:00",
-      "original_page": null,
-      "saved_page": 1,
-      "rendered_page": 1,
-      "text": "로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', \u0000 전략투자 유치 - 유니콘팩토리\nhttps://www.unicornfactory.co.kr/article/2024060516275184648\n본문영역 바로가기\n로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', \u0000 전략투자 유치\n최태범 기자 (https://www.unicornfactory.co.kr/reporter/bum_t)\n기사 입력 2024.06.05 17:30\n공감\n공유\n글자크기\n프린트\nURL이 복사되었습니다. 원하는 곳에 붙여넣기 해주세요.\n공유하기\n카카오톡\n카카오톡\n페이스북\n페이스북\n트위터\nX\nURL복사\nURL복사\n글자크기\n가\n가\n가\n가\n가\n레이어 닫기\n[이 기사에 나온 스타트업에 대한 보다 다양한 기업정보는 유니콘팩토리 빅데이터 플랫폼\n'데이터랩' (https://www.unicornfactory.co.kr/datalab)\n에서 볼 수 있습니다.]\n로봇 푸드테크 기업\n로보아르테 (https://www.unicornfactory.co.kr/datalab/startup/company/%EB%A1%9C%EB%B3%B4%EC\n%95%84%EB%A5%B4%ED%85%8C/110111-6863553)\n가 미국 식음료(F&B) 기업 페이서 엔터프라이즈(Paser Enterprise)로부터 전략적 투자를 유치했다고 5일 밝혔다.\n미국 텍사스 소재 페이서 엔터프라이즈는 지역 내에서 가장 큰 규모의 한식당을 운영하는 등 20년 이상 F&B 사업 경험\n을 갖추고 있다.",
-      "file": "documents/4fc75cc1b81405714f7aeba7.pdf",
-      "content_hash": "4fc75cc1b81405714f7aeba7c1f6eab30572201704061405af84003c14834ec5"
-    },
-    {
       "source_id": "S-3e4ab9c201e987a6",
       "company_id": "co-46aa697b3022",
       "doc_type": "company",
@@ -160,14 +142,32 @@
       "text": "회사소개\nhttps://roboarete.com/kr/company/intro.php\nIt’s Eatnovation\n로보아르테는 사람을 이해하는 조리 로봇 시스템 개발을 통해\n인류의 식문화와 F&B 비즈니스를 혁신하는 글로벌 푸드테크 기업입니다.\n로보아르테는 사람과 F&B를\n잘 아는 로봇 회사입니다\nROBO ARETE는 ‘ROBOT’을 뜻하는 로보(ROBO)와 그리스어로 ‘최상의’라는 뜻을 가진 아레테 (ARETE)가 합쳐져 로봇\n으로 최상의\n경험을 선사한다는 의미를 담고 있습니다. Robotic Kitchen을 기획하여 2020년부터 매일 조리 로봇 매장을 운영한 유\n일한 로봇 회사로\n로봇 시스템의 실효성을 직접 검증하였습니다. 로보틱스를 활용하여 조리과정을 끊임없이 혁신하고 있으며, 로봇과 사\n람이 협동하며\n요리하는 안전하고 효율적인 환경을 제공하여 국내외 조리 로봇 분야의 미래기술을 선도해 나가고 있습니다.\n로보아르테 가치체계\nVision\n조리 로봇을 통해\n인류의 식문화\n를 혁신합니다\nMission\n사람을 이해하는\n조리 로봇 시스템 개발을 통해\n조리과정을 혁신\n하고\n더 맛있는 음식과 서비스\n를 제공합니다\nValue\n로보아르테\n회사소개 영상",
       "file": "documents/3e4ab9c201e987a629d6153d.pdf",
       "content_hash": "3e4ab9c201e987a629d6153d68824f942359fe5037af9d58de45bb55c01df431"
+    },
+    {
+      "source_id": "S-4fc75cc1b8140571",
+      "company_id": "co-46aa697b3022",
+      "doc_type": "market",
+      "doc_types": [
+        "market"
+      ],
+      "title": "로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', 美 전략투자 유치 - 유니콘팩토리",
+      "url": "https://www.unicornfactory.co.kr/article/2024060516275184648",
+      "published_at": "2024-06-05T17:30:00+09:00",
+      "collected_at": "2026-09-30T03:40:16.397240+00:00",
+      "original_page": null,
+      "saved_page": 1,
+      "rendered_page": 1,
+      "text": "로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', \u0000 전략투자 유치 - 유니콘팩토리\nhttps://www.unicornfactory.co.kr/article/2024060516275184648\n본문영역 바로가기\n로봇으로 치킨 튀기는 K-푸드테크 '로보아르테', \u0000 전략투자 유치\n최태범 기자 (https://www.unicornfactory.co.kr/reporter/bum_t)\n기사 입력 2024.06.05 17:30\n공감\n공유\n글자크기\n프린트\nURL이 복사되었습니다. 원하는 곳에 붙여넣기 해주세요.\n공유하기\n카카오톡\n카카오톡\n페이스북\n페이스북\n트위터\nX\nURL복사\nURL복사\n글자크기\n가\n가\n가\n가\n가\n레이어 닫기\n[이 기사에 나온 스타트업에 대한 보다 다양한 기업정보는 유니콘팩토리 빅데이터 플랫폼\n'데이터랩' (https://www.unicornfactory.co.kr/datalab)\n에서 볼 수 있습니다.]\n로봇 푸드테크 기업\n로보아르테 (https://www.unicornfactory.co.kr/datalab/startup/company/%EB%A1%9C%EB%B3%B4%EC\n%95%84%EB%A5%B4%ED%85%8C/110111-6863553)\n가 미국 식음료(F&B) 기업 페이서 엔터프라이즈(Paser Enterprise)로부터 전략적 투자를 유치했다고 5일 밝혔다.\n미국 텍사스 소재 페이서 엔터프라이즈는 지역 내에서 가장 큰 규모의 한식당을 운영하는 등 20년 이상 F&B 사업 경험\n을 갖추고 있다.",
+      "file": "documents/4fc75cc1b81405714f7aeba7.pdf",
+      "content_hash": "4fc75cc1b81405714f7aeba7c1f6eab30572201704061405af84003c14834ec5"
     }
   ],
   "response": {
-    "summary": "로보아르테는 2018년 설립 이후 2020년부터 조리 로봇 매장을 직접 운영하며 기술 실효성을 검증했고, 2022년부터 본격적으로 조리 로봇을 판매해 실제 주방에 적용 중입니다. 미국위생협회(NSF) 인증을 받아 북미 등 글로벌 시장에 진출하며 조리 로봇 시스템의 상용화와 현장 적용이 이루어지고 있습니다.",
+    "summary": "로보아르테는 2018년 설립되어 F&B 매장에 최적화된 조리 로봇 시스템을 개발하고 2020년부터 매장 운영을 통해 실효성을 검증했습니다. 2022년부터 조리 로봇 판매를 시작해 국내외 여러 기업에 공급하며, 미국 NSF 인증을 받아 북미 시장에 진출했습니다. 협동로봇 기술은 실제 매장 운영과 판매를 통해 상용화 단계에 있으며, 튀김 요리 자동화 분야에 적용되어 치킨 조리 로봇으로 활용되고 있습니다.",
     "findings": [
       {
         "view": "technology",
-        "text": "로보아르테는 2020년부터 조리 로봇 매장을 직접 운영하며 조리 로봇 시스템의 실효성을 검증했고, 2022년부터 본격적으로 조리 로봇을 판매해 기술을 상용화했습니다.",
+        "text": "로보아르테는 2018년 설립 이후 F&B 매장에 최적화된 조리 로봇 시스템을 개발하고 2020년부터 매장 운영을 통해 조리 로봇의 실효성을 직접 검증했으며, 2022년부터 본격적으로 조리 로봇 판매에 돌입해 상용화 단계에 있다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -177,7 +177,7 @@
       },
       {
         "view": "technology",
-        "text": "로보아르테의 조리 로봇 시스템은 미국위생협회(NSF) 인증을 받아 현지 비즈니스 요건을 충족하며, 북미 시장을 포함한 글로벌 시장에 진출하고 있습니다.",
+        "text": "로보아르테의 조리 로봇 시스템은 미국위생협회(NSF) 인증을 받아 현지 비즈니스 요건을 충족하며, 북미 시장 중심으로 글로벌 진출을 진행 중이다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -187,7 +187,7 @@
       },
       {
         "view": "application",
-        "text": "로보아르테는 2020년부터 매일 조리 로봇 매장을 운영하며 조리 로봇 시스템의 실효성을 직접 검증했고, GS리테일, BHC, 누리 치킨 등 국내외 F&B 매장에 조리 로봇을 공급하여 실제 주방 환경에 적용하고 있습니다.",
+        "text": "로보아르테는 조리 로봇을 활용해 치킨 튀김 등 튀김 요리 자동화를 구현했으며, GS리테일, BHC, 행그리조핫치킨 코리아 등 국내외 F&B 기업에 조리 로봇을 판매해 실제 주방 환경에 적용하고 있다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -197,14 +197,10 @@
       }
     ],
     "limitations": [
-      "로보아르테의 튀김 요리 자동화 협동로봇의 구체적인 기술 구성과 작동 방식에 대한 상세 정보가 부족합니다.",
-      "튀김 요리 자동화 협동로봇의 성능 지표나 독립적인 시험 결과가 제공되지 않았습니다.",
-      "주방 내 협동로봇의 안전성 및 효율성에 관한 구체적인 사례나 평가가 부족합니다.",
-      "도메인 적용 시 필요한 전제 조건이나 통합 방식에 대한 정보가 없습니다.",
-      "로보아르테의 협동로봇이 적용된 주방 환경의 구체적인 운영 조건과 한계점이 명확하지 않습니다.",
-      "튀김 요리 자동화에 특화된 협동로봇의 실제 고객 피드백이나 사용 경험이 제공되지 않았습니다.",
-      "기술 성숙도와 도메인 적용성 관련하여 독립적인 검증이나 외부 평가 자료가 없습니다.",
-      "로보아르테의 협동로봇 솔루션이 다른 조리 자동화 기술과 비교한 경쟁력이나 차별점에 대한 정보가 부족합니다."
+      "로보아르테 협동로봇 기술의 구체적 기술 구성 요소와 작동 원리에 대한 상세 정보가 부족하다.",
+      "튀김 요리 자동화 적용 사례의 구체적 성능 지표나 효과 데이터가 제공되지 않았다.",
+      "협동로봇과 조리 로봇 시스템 간의 기술적 차별점이나 협동로봇의 역할에 대한 명확한 설명이 없다.",
+      "튀김 요리 자동화 도메인에서의 안전성, 위생, 운영 조건 등 적용성 관련 세부 사항이 부족하다."
     ]
   },
   "rejected_findings": [],
@@ -221,7 +217,7 @@
       {
         "index": 0,
         "view": "technology",
-        "text": "로보아르테는 2020년부터 조리 로봇 매장을 직접 운영하며 조리 로봇 시스템의 실효성을 검증했고, 2022년부터 본격적으로 조리 로봇을 판매해 기술을 상용화했습니다.",
+        "text": "로보아르테는 2018년 설립 이후 F&B 매장에 최적화된 조리 로봇 시스템을 개발하고 2020년부터 매장 운영을 통해 조리 로봇의 실효성을 직접 검증했으며, 2022년부터 본격적으로 조리 로봇 판매에 돌입해 상용화 단계에 있다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -241,7 +237,7 @@
       {
         "index": 1,
         "view": "technology",
-        "text": "로보아르테의 조리 로봇 시스템은 미국위생협회(NSF) 인증을 받아 현지 비즈니스 요건을 충족하며, 북미 시장을 포함한 글로벌 시장에 진출하고 있습니다.",
+        "text": "로보아르테의 조리 로봇 시스템은 미국위생협회(NSF) 인증을 받아 현지 비즈니스 요건을 충족하며, 북미 시장 중심으로 글로벌 진출을 진행 중이다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -261,7 +257,7 @@
       {
         "index": 2,
         "view": "application",
-        "text": "로보아르테는 2020년부터 매일 조리 로봇 매장을 운영하며 조리 로봇 시스템의 실효성을 직접 검증했고, GS리테일, BHC, 누리 치킨 등 국내외 F&B 매장에 조리 로봇을 공급하여 실제 주방 환경에 적용하고 있습니다.",
+        "text": "로보아르테는 조리 로봇을 활용해 치킨 튀김 등 튀김 요리 자동화를 구현했으며, GS리테일, BHC, 행그리조핫치킨 코리아 등 국내외 F&B 기업에 조리 로봇을 판매해 실제 주방 환경에 적용하고 있다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -286,8 +282,8 @@
       {
         "index": 0,
         "supported": true,
-        "corrected_text": "2020년 2월부터 F&B 매장을 직접 운영하며 조리 로봇의 실효성을 검증했고, 2022년부터 본격적으로 로봇 판매에 돌입했습니다.",
-        "reason": "원문의 시점과 사실을 그대로 좁혀 기술 상용화의 시작을 '본격적으로 로봇 판매에 돌입'으로 수정했습니다.",
+        "corrected_text": "로보아르테는 2022년부터 본격적으로 조리 로봇 판매에 돌입했습니다.",
+        "reason": "설립, 개발, 매장 운영, 상용화 단계 언급 중 2022년 판매 돌입만 직접적으로 quote에 있습니다.",
         "evidence_indices": [
           0
         ],
@@ -298,8 +294,8 @@
       {
         "index": 1,
         "supported": true,
-        "corrected_text": "로봇 시스템 전체에 대한 미국위생협회(NSF) 인증을 받아 현지 비즈니스 요건을 달성했습니다.",
-        "reason": "글로벌 진출과 인증 사실이 명확히 quote에 있으므로 인증과 현지 요건 달성으로 좁혀 기술적 사실만 남겼습니다.",
+        "corrected_text": "로봇 시스템 전체에 대한 미국위생협회(NSF) 인증을 받았습니다.",
+        "reason": "NSF 인증과 현지 비즈니스 요건 달성은 quote에 직접 언급되어 있습니다.",
         "evidence_indices": [
           0
         ],
@@ -310,8 +306,8 @@
       {
         "index": 2,
         "supported": true,
-        "corrected_text": "2020년 2월부터 F&B 매장을 직접 운영하며 조리 로봇의 실효성을 검증했고, GS리테일, BHC, 누리 치킨 등에 조리 로봇을 판매했습니다.",
-        "reason": "매장 운영과 주요 F&B 매장 판매 사실이 직접적으로 quote에 있으므로 그대로 좁혀 썼습니다.",
+        "corrected_text": "GS리테일, BHC, 행그리조핫치킨 코리아 등에 조리 로봇을 판매했습니다.",
+        "reason": "치킨 튀김 등 자동화 구현은 직접 언급되지 않아 제외하고, 실제 판매 사실만 남겼습니다.",
         "evidence_indices": [
           0
         ],
@@ -334,7 +330,7 @@
     "findings": [
       {
         "view": "technology",
-        "text": "외부 자료(unicornfactory.co.kr)에 따르면, 2020년 2월부터 F&B 매장을 직접 운영하며 조리 로봇의 실효성을 검증했고, 2022년부터 본격적으로 로봇 판매에 돌입했습니다.",
+        "text": "외부 자료(unicornfactory.co.kr)에 따르면, 로보아르테는 2022년부터 본격적으로 조리 로봇 판매에 돌입했습니다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -347,7 +343,7 @@
       },
       {
         "view": "technology",
-        "text": "외부 자료(unicornfactory.co.kr)에 따르면, 로봇 시스템 전체에 대한 미국위생협회(NSF) 인증을 받아 현지 비즈니스 요건을 달성했습니다.",
+        "text": "외부 자료(unicornfactory.co.kr)에 따르면, 로봇 시스템 전체에 대한 미국위생협회(NSF) 인증을 받았습니다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -360,7 +356,7 @@
       },
       {
         "view": "application",
-        "text": "외부 자료(unicornfactory.co.kr)에 따르면, 2020년 2월부터 F&B 매장을 직접 운영하며 조리 로봇의 실효성을 검증했고, GS리테일, BHC, 누리 치킨 등에 조리 로봇을 판매했습니다.",
+        "text": "외부 자료(unicornfactory.co.kr)에 따르면, GS리테일, BHC, 행그리조핫치킨 코리아 등에 조리 로봇을 판매했습니다.",
         "evidence": [
           {
             "source_id": "S-c40162da0adabda6",
@@ -374,12 +370,10 @@
     ],
     "limitations": [
       "추가 확인: 현장별 안전·규제 요건과 인증 적용 범위.",
-      "추가 확인: 동일 조건의 대안 비교와 지역·연도가 명시된 세부시장 규모.",
       "추가 확인: 독립적인 성능 시험과 실제 작동 조건.",
-      "추가 확인: 팀·고객·공급사·투자자의 역할과 계약 근거.",
       "추가 확인: 적용 현장·지역별 계약과 운영 사례."
     ],
-    "raw_path": "/Users/jinwon/.codex/.chatgpt-projects/g-p-6a55bc799cf0819182768a21c84be777/ai-startup-investment-agent/outputs/agent-final-v7/raw/6e81b26a46a35651/revision-0.json",
+    "raw_path": "/Users/jinwon/.codex/.chatgpt-projects/g-p-6a55bc799cf0819182768a21c84be777/ai-startup-investment-agent/outputs/agent-final-v10/raw/6e81b26a46a35651/revision-0.json",
     "error": null,
     "retrieved_chunk_count": 4,
     "proposed_finding_count": 3,

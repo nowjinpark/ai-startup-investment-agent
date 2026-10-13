@@ -1,16 +1,16 @@
 {
-  "trace_id": "48f0f444-b67b-421d-8de0-94d1302b8730",
-  "run_id": "3f0f53a2-4e95-4dfa-b52c-627ddf7c9d40",
+  "trace_id": "ad1f9c12-ce03-427d-b546-e218d0e3bdfd",
+  "run_id": "34585caa-696a-4d4a-94f0-5b41b805b936",
   "status": "approved",
-  "elapsed_seconds": 23.456,
-  "segment_seconds": 19.377,
+  "elapsed_seconds": 22.206,
+  "segment_seconds": 18.522,
   "company_count": 1,
   "task_count": 1,
   "revision": 0,
   "step_count": 4,
   "corpus_pages": 164,
   "result_count": 1,
-  "llm_calls": 5,
-  "estimated_cost_usd": 0.048427,
+  "llm_calls": 6,
+  "estimated_cost_usd": 0.049728,
   "resumed": true
 }

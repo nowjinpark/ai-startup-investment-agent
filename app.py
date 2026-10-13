@@ -57,6 +57,18 @@ def implementation_hashes():
     return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest() for path in files}
 
 
+def restore_runtime_history(runtime, folder):
+    """재개 전 비용·성공·실패 이력을 복원하고 호출 번호를 이어갑니다."""
+    old_cost = read_json(folder / 'cost.json') if (folder / 'cost.json').exists() else {}
+    runtime.spent_usd = old_cost.get('estimated_spent_usd', 0) + old_cost.get('reserved_usd', 0)
+    runtime.carried_cost_from = str(folder / 'cost.json')
+    runtime.metrics = read_json(folder / 'llm_usage.json') if (folder / 'llm_usage.json').exists() else []
+    runtime.failures = read_json(folder / 'llm_errors.json') if (folder / 'llm_errors.json').exists() else []
+    completed_ids = [int(path.name.split('-')[0]) for path in (folder / 'responses').glob('*.json')]
+    failed_ids = [int(error['call_id']) for error in runtime.failures]
+    runtime._call_id = max([0, *completed_ids, *failed_ids])
+
+
 def execute(args):
     from dotenv import load_dotenv
     load_dotenv(args.env_file or ROOT / '.env', override=False)
@@ -88,11 +100,7 @@ def execute(args):
             raise ValueError('중단 후 실행 코드가 바뀌었습니다. 원래 코드를 복원하거나 새 실행 폴더를 사용하세요.')
         if args.max_cost_usd != saved['max_cost_usd']:
             raise ValueError('resume의 비용 한도는 원래 실행과 같아야 합니다.')
-        old_cost = read_json(folder / 'cost.json') if (folder / 'cost.json').exists() else {}
-        runtime.spent_usd = old_cost.get('estimated_spent_usd', 0) + old_cost.get('reserved_usd', 0)
-        runtime.carried_cost_from = str(folder / 'cost.json')
-        runtime.metrics = read_json(folder / 'llm_usage.json') if (folder / 'llm_usage.json').exists() else []
-        runtime._call_id = max([int(path.name.split('-')[0]) for path in (folder / 'responses').glob('*.json')] or [0])
+        restore_runtime_history(runtime, folder)
         initial = None
     else:
         names = [name.strip() for name in args.companies.split(',') if name.strip()]

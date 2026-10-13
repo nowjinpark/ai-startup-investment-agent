@@ -4,28 +4,28 @@
       "company_id": "co-46aa697b3022",
       "view": "technology",
       "finding_ids": [
-        "task-01:0"
+        "task-01:5"
       ],
       "condition_codes": [
-        "independent",
-        "scope"
+        "independent"
       ]
     },
     {
       "company_id": "co-46aa697b3022",
       "view": "market",
       "finding_ids": [
-        "task-01:1"
+        "task-01:0"
       ],
       "condition_codes": [
         "paid",
-        "scope"
+        "market_size"
       ]
     },
     {
       "company_id": "co-46aa697b3022",
       "view": "stakeholders",
       "finding_ids": [
+        "task-01:2",
         "task-01:3"
       ],
       "condition_codes": [
@@ -36,10 +36,11 @@
       "company_id": "co-46aa697b3022",
       "view": "application",
       "finding_ids": [
-        "task-01:5"
+        "task-01:4"
       ],
       "condition_codes": [
-        "scope"
+        "scope",
+        "planned"
       ]
     }
   ],
@@ -49,28 +50,28 @@
         "company_id": "co-46aa697b3022",
         "view": "technology",
         "finding_ids": [
-          "task-01:0"
+          "task-01:5"
         ],
         "condition_codes": [
-          "independent",
-          "scope"
+          "independent"
         ]
       },
       {
         "company_id": "co-46aa697b3022",
         "view": "market",
         "finding_ids": [
-          "task-01:1"
+          "task-01:0"
         ],
         "condition_codes": [
           "paid",
-          "scope"
+          "market_size"
         ]
       },
       {
         "company_id": "co-46aa697b3022",
         "view": "stakeholders",
         "finding_ids": [
+          "task-01:2",
           "task-01:3"
         ],
         "condition_codes": [
@@ -81,10 +82,11 @@
         "company_id": "co-46aa697b3022",
         "view": "application",
         "finding_ids": [
-          "task-01:5"
+          "task-01:4"
         ],
         "condition_codes": [
-          "scope"
+          "scope",
+          "planned"
         ]
       }
     ]

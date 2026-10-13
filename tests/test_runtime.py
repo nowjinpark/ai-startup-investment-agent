@@ -142,3 +142,44 @@ def test_length_finish_metadata_retries_after_settling_actual_usage(monkeypatch,
     rt.ask(schema, '', {})
     assert len(calls) == 2 and limits == [4096, 8192]
     assert rt.spent_usd == pytest.approx((200 * .4 + 4146 * 1.6) * 1e-6)
+
+
+@pytest.mark.parametrize('completed_id,failed_id', [(2, 6), (7, 3), (None, 4), (3, None), (None, None)])
+def test_resume_preserves_errors_and_continues_after_all_recorded_calls(monkeypatch, tmp_path, completed_id, failed_id):
+    from app import restore_runtime_history
+
+    outcomes = [TimeoutError('private failure text')]
+    rt, schema, calls, _, success = fake_llm_runtime(monkeypatch, tmp_path, outcomes)
+    outcomes.append(success)
+    old_errors = ([{'call_id': failed_id, 'schema': 'Output', 'error_type': 'ValueError',
+                   'kind': 'request_failed', 'max_tokens': 4096, 'attempt': 1}]
+                  if failed_id is not None else [])
+    old_metrics = [{'stage': 'Output', 'model': 'gpt-4.1-mini', 'seconds': 1, 'usage': {}}]
+    if old_errors:
+        (tmp_path / 'llm_errors.json').write_text(json.dumps(old_errors))
+    (tmp_path / 'llm_usage.json').write_text(json.dumps(old_metrics))
+    (tmp_path / 'cost.json').write_text(json.dumps({'estimated_spent_usd': .04, 'reserved_usd': .01}))
+    if completed_id is not None:
+        (tmp_path / 'responses').mkdir()
+        original = tmp_path / 'responses' / f'{completed_id:03d}-Output.json'
+        original.write_text('{"original": true}')
+
+    restore_runtime_history(rt, tmp_path)
+    previous_max = max(completed_id or 0, failed_id or 0)
+    assert rt._call_id == previous_max
+    assert rt.spent_usd == pytest.approx(.05) and rt.reserved_usd == 0
+    assert rt.metrics == old_metrics and rt.failures == old_errors
+    with pytest.raises(TimeoutError):
+        rt.ask(schema, '', {})
+    assert rt.ask(schema, '', {}) == {'value': 'ok'}
+
+    saved_errors = json.loads((tmp_path / 'llm_errors.json').read_text())
+    assert saved_errors[:-1] == old_errors
+    assert saved_errors[-1]['call_id'] == previous_max + 1
+    assert 'private failure text' not in (tmp_path / 'llm_errors.json').read_text()
+    assert (tmp_path / 'responses' / f'{previous_max + 2:03d}-Output.json').exists()
+    assert rt._call_id == previous_max + 2 and len(calls) == 2
+    assert rt.metrics[0] == old_metrics[0] and len(rt.metrics) == 2
+    assert .05 < rt.spent_usd <= rt.cost_limit
+    if completed_id is not None:
+        assert original.read_text() == '{"original": true}'

@@ -1,22 +1,22 @@
 {
-  "source_run": "agent-resume-v7",
+  "source_run": "agent-resume-v10",
   "note": "실행 파일을 내용 변경 없이 복사했습니다. 원 실행 경로는 당시 기록이며 재실행 경로가 아닙니다.",
   "sha256": {
-    "state.json": "96b96579854cdcdc3bcdb7aac50327ca14e71ef54ea00b28610b92bcefcf77cd",
-    "report.md": "efbaf280f5e54faf1b9a2cd36c7b201f4a3781aa76c936f3fec8d02a0f05168b",
-    "execution-summary.json": "3c3d52b9c95cf6f1548003f8f266960650194fc10ec9fbe03baf3b52d38e83bd",
-    "execution-segments.json": "e997d713c1b8c3f27181a3fc6dc21b5222fda7488873ed3d07b44614b4dadf2d",
-    "run-config.json": "4820e26056fb14b5f266d965e084bff04ce07f0de21e703f4a4decbbdf8c62be",
-    "trace.json": "2975683324716cbb579f5cce99090d2fd04bf5fc1a283c20f9165c11344949f6",
-    "trace-verification.json": "765e75a7466a0dc4f948a924a52e7f63d3cce048dda4b6a0d6c1c0896b99c5b3",
-    "report-versions.json": "586b65069a466c5a39528037039de5dc5e991e5c74f307c50d03ad32b8de9981",
-    "events.jsonl": "51d4bc481dc82ad35e1b35dfaec1741c5fdc772aba5ce4a4ab8f9f49974bc122",
-    "llm_usage.json": "cc7a92955fd7d5144466ebbcdc03551a5a51e3cfb7a3b5c7f4fd26c3a968a358",
-    "cost.json": "b9088a2859f796ec118bb2a0bb8216cb2f101fcfdf28a5f91e8d0c0f08c32aaf",
-    "retrieval.json": "d0765f41207202dc123217ec147370d82729ce4908ef23f738eb8f382b02a002",
+    "state.json": "e506ef9b42153b973394c3c08358257a0dcbde01768e36eb5aac94001e61bd57",
+    "report.md": "a5c4951f39c6639bd74dac9d2a60d18603dadf7a76d694156924bdf2fad23098",
+    "execution-summary.json": "1e62b8aa565de0cd280576ccd14d7fff1948f061cfe93c8f105ebc10d0d7e0aa",
+    "execution-segments.json": "9b87dc298beedee86a9312531acf08215ddf009c0c535fd53f37c89f6d2f33e7",
+    "run-config.json": "45dc652e60643ad814503655af2cfdd90e978877519ed678e163d7806af506bd",
+    "trace.json": "3f38be585898dc473862f8a6d703f0538710487bc3e9c34d74fb7b2453c16bbb",
+    "trace-verification.json": "8fb0e59688e28dcd8bf807c031d19fbaf5e050465507518f937ab3bd50f5a0e5",
+    "report-versions.json": "42c3f785b845b92f54d1d26a31681a292321b35aa2942024345ff116378a37cf",
+    "events.jsonl": "0e1d88d4d2cb45f84ce4fffb9d2cee9fba8733e8bb215842079bbced762534e4",
+    "llm_usage.json": "d9e9d46be14e7f39da1ec61ace21c7d059552c9a34c6b9875569889073ee99b3",
+    "cost.json": "9bb87d94cce945f287ca7062809054a471df2375934645995cb9c6206c912692",
+    "retrieval.json": "b0791b5e950b2932ac700a6472e37c55e27872231d699cd7ae734a6a98623db5",
     "graph.mmd": "861a937c0d972447a4878d2c2b8ddd6444be94b8c70fe5488f61329aa603635c",
-    "raw/evaluation-0.json": "cadd86680fa8765e5fe25f7e406a5c1d05f0f7a84eb8b7fe74d723d6155b2f9b",
-    "raw/6e81b26a46a35651/revision-0.json": "7bb1547d3ad07360ec1d0b48255c0a72cd45d58fc5efd9169d6539a3f8d26290",
-    "raw/report-0.json": "5749431e8a29c9eff07830b669eefb775ef7d3a2cad30c341012a298288ec004"
+    "raw/evaluation-0.json": "ab1babe9e17c1ae665ee5afaefbeb1c40fae286d7fb2b81d4f26f509bcf01ca6",
+    "raw/6e81b26a46a35651/revision-0.json": "e0d284e8d45789db2f5e8744581437b2a02f6a2b2c72adc20780e56491f454bd",
+    "raw/report-0.json": "a1afa881ac783f335f3236f1a3539aee18c58584e8dbf65dc8b5d1d31868f6ef"
   }
 }

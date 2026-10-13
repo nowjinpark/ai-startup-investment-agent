@@ -12,5 +12,19 @@
     "faiss-cpu": "1.13.2",
     "pydantic": "2.12.3",
     "reportlab": "4.5.1"
+  },
+  "embedding_execution": {
+    "model": "BAAI/bge-m3",
+    "cache": "existing local model cache",
+    "environment_variables": {
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1"
+    },
+    "applies_to": [
+      "agent-final-v10",
+      "agent-resume-v10 pause",
+      "agent-resume-v10 resume"
+    ],
+    "note": "보존 실행은 이미 다운로드한 모델을 사용했습니다. 새 환경의 첫 설치는 모델 다운로드가 필요하므로 README 일반 실행 명령에는 오프라인 설정을 넣지 않았습니다."
   }
 }

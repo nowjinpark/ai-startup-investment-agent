@@ -97,6 +97,15 @@ def complete_state(s):
     return state
 
 
+def test_planning_validation_feedback_reaches_model_payload(tmp_path):
+    s = service(tmp_path, responses={'Plan': {'reason': '보완한 계획', 'tasks': [TASK]}})
+    feedback = '기업별 필수 관점 누락: co-a market, stakeholders'
+    response = s.plan({'request': '네 관점으로 검토', 'companies': [COMPANY],
+                       'planning_feedback': feedback})
+    assert s.runtime.calls[0]['payload']['planning_feedback'] == feedback
+    assert response['tasks'] == [TASK]
+
+
 def test_research_limits_queries_and_keeps_full_source_outside_state(tmp_path):
     s = service(tmp_path)
     task = {**TASK, 'queries': ['질문1', '질문2', '질문3', '질문4']}
@@ -651,6 +660,37 @@ def test_generic_data_or_investor_funding_supply_is_not_a_market_fact(tmp_path):
     # 잘못된 모델 라벨도 일반 기능 설명을 시장 실적으로 바꾸지 않습니다.
     facts[0]['suitable_views'].append('market')
     assert not s._view_hint(facts[0], 'market')
+
+
+@pytest.mark.parametrize('text,expected', [
+    ('회사는 철근가공 로봇 사업부로 시작해 2020년에 분사했습니다.', True),
+    ('회사는 모회사에서 분사한 기업입니다.', True),
+    ('회사는 계열사로부터 2020년에 분사했습니다.', True),
+    ('장비가 물을 분사했습니다.', False),
+    ('회사는 당진에 1만 평 규모 공장을 운영합니다.', False),
+    ('회사는 2016년에 설립되어 2020년에 이름을 바꿨습니다.', False),
+    ('회사 사업부에서 노즐이 고압수를 분사했습니다.', False),
+    ('회사는 분사기를 개발합니다.', False),
+])
+def test_organization_spinoff_hint_excludes_equipment_and_generic_history(text, expected):
+    assert LiveService._view_hint({'text': text}, 'stakeholders') is expected
+
+
+def test_verified_spinoff_relation_keeps_quote_and_requires_semantic_view(tmp_path):
+    text = '연습기업은 모회사에서 2020년에 분사한 기업입니다.'
+    corpus = MockCorpus()
+    corpus.sources['S-one']['text'] = text
+    corpus.retrieve = lambda *args, **kwargs: [{**corpus.sources['S-one'], 'chunk_id': 'S-one:c1'}]
+    claim = {**finding('stakeholders', quote=text), 'text': text}
+    s = service(tmp_path, corpus=corpus, responses={'Research': research_response([claim])})
+    worker = s.research({**TASK, 'views': ['stakeholders']}, 0, '')
+    assert worker['missing_views'] == [] and worker['grounding_status'] == 'reviewed'
+    assert worker['findings'][0]['evidence'] == claim['evidence']
+    assert text in worker['findings'][0]['text']
+    assert list(s._view_candidates(s._catalog([worker]), 'co-a', 'stakeholders')) == ['task-01:0']
+    # 조직 관계라는 단어만으로 의미 검수자가 인정하지 않은 관점을 추가하지 않습니다.
+    worker['findings'][0]['suitable_views'] = ['application']
+    assert not s._view_candidates(s._catalog([worker]), 'co-a', 'stakeholders')
 
 
 def test_omitted_writer_slots_are_repaired_only_from_valid_candidates_and_audited(tmp_path):

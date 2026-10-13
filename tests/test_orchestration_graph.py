@@ -112,6 +112,38 @@ def test_invalid_plan_does_not_start_workers(tmp_path):
     assert result['status'] == 'fallback' and not service.calls
 
 
+def test_missing_views_are_replanned_with_company_specific_feedback(tmp_path):
+    class CorrectingPlanner(FakeService):
+        def __init__(self):
+            super().__init__()
+            self.planning_inputs = []
+
+        def plan(self, state):
+            self.planning_inputs.append(deepcopy(state))
+            plan = super().plan(state)
+            if not state.get('planning_feedback'):
+                plan['tasks'][0]['views'] = ['technology', 'application']
+                plan['tasks'][1]['views'] = ['market']
+            else:
+                feedback = state['planning_feedback']
+                missing = json.loads(feedback[feedback.index('{'):])
+                assert missing == {'c0': ['market', 'stakeholders'],
+                                   'c1': ['technology', 'stakeholders', 'application']}
+                plan['tasks'][0]['question'] = '피드백을 확인한 모델이 다시 정한 질문'
+            return plan
+
+    service = CorrectingPlanner()
+    state = initial(2)
+    result = build_graph(service, EventLog(tmp_path)).invoke(state)
+    assert result['status'] == 'approved' and len(service.planning_inputs) == 2
+    assert len(service.calls) == 2  # 잘못된 첫 계획은 실행되지 않습니다.
+    assert result['plan'][0]['question'] == '피드백을 확인한 모델이 다시 정한 질문'
+    assert 'planning_feedback' not in state and 'planning_feedback' not in result
+    events = [json.loads(line) for line in (tmp_path / 'events.jsonl').read_text().splitlines()]
+    retry = next(event for event in events if event['decision'] == 'retry')
+    assert retry['validation_feedback'] == service.planning_inputs[1]['planning_feedback']
+
+
 @pytest.mark.parametrize('change', ['duplicate', 'outsider', 'missing_view', 'unsafe_id', 'many_queries'])
 def test_plan_scope_contract(change):
     state = initial()

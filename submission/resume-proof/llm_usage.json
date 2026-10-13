@@ -1,11 +1,11 @@
 [
   {
     "stage": "Plan",
-    "seconds": 2.485,
+    "seconds": 2.441,
     "usage": {
-      "input_tokens": 857,
-      "output_tokens": 328,
-      "total_tokens": 1185,
+      "input_tokens": 938,
+      "output_tokens": 360,
+      "total_tokens": 1298,
       "input_token_details": {
         "audio": 0,
         "cache_read": 0
@@ -19,11 +19,11 @@
   },
   {
     "stage": "Research",
-    "seconds": 7.273,
+    "seconds": 6.863,
     "usage": {
-      "input_tokens": 5510,
-      "output_tokens": 1137,
-      "total_tokens": 6647,
+      "input_tokens": 5541,
+      "output_tokens": 1168,
+      "total_tokens": 6709,
       "input_token_details": {
         "audio": 0,
         "cache_read": 0
@@ -37,11 +37,29 @@
   },
   {
     "stage": "GroundingReview",
-    "seconds": 4.451,
+    "seconds": 3.164,
     "usage": {
-      "input_tokens": 9910,
-      "output_tokens": 650,
-      "total_tokens": 10560,
+      "input_tokens": 7997,
+      "output_tokens": 518,
+      "total_tokens": 8515,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    "model": "gpt-4.1"
+  },
+  {
+    "stage": "GroundingReview",
+    "seconds": 1.298,
+    "usage": {
+      "input_tokens": 2849,
+      "output_tokens": 106,
+      "total_tokens": 2955,
       "input_token_details": {
         "audio": 0,
         "cache_read": 0
@@ -55,11 +73,11 @@
   },
   {
     "stage": "Report",
-    "seconds": 1.38,
+    "seconds": 1.533,
     "usage": {
-      "input_tokens": 3940,
-      "output_tokens": 140,
-      "total_tokens": 4080,
+      "input_tokens": 4026,
+      "output_tokens": 147,
+      "total_tokens": 4173,
       "input_token_details": {
         "audio": 0,
         "cache_read": 0
@@ -73,11 +91,11 @@
   },
   {
     "stage": "Evaluation",
-    "seconds": 4.49,
+    "seconds": 4.029,
     "usage": {
-      "input_tokens": 5694,
-      "output_tokens": 666,
-      "total_tokens": 6360,
+      "input_tokens": 6117,
+      "output_tokens": 491,
+      "total_tokens": 6608,
       "input_token_details": {
         "audio": 0,
         "cache_read": 0
